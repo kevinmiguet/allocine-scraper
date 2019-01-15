@@ -1,0 +1,8 @@
+*.jpg
+*.json
+*.lock
+*.log
+database/
+build/
+.vscode
+node_modules/
