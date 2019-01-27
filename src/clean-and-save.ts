@@ -1,4 +1,4 @@
-import { getMovie, getCine, setCine, setMovie, getSchedule, writeDatabase, setSchedule } from './database';
+import { getMovie, getCine, setCine, setMovie, getSchedule, writeDatabase, setSchedule } from './utils/database';
 
 /// IN
 export type allocineScrap = {
@@ -78,9 +78,10 @@ export interface Schedule {
     cineId: string;
     schedule: Week;
 }
+export interface MoviesById {[movieId: string]: Movie; }
 export interface Database {
     schedules: {[scheduleId: string]: Schedule};
-    movies: {[movieId: string]: Movie};
+    movies: MoviesById;
     cinemas: {[cinemaId: string]: Cinema};
 }
 

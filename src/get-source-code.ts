@@ -1,12 +1,6 @@
 import * as puppeteer from 'puppeteer';
-import { scrap } from './scrape';
-import { cleaner, dataToBeEnriched } from './clean-and-save';
-import { enrich } from './enrich';
+import { browserOptions } from './main';
 
-export const browserOptions: puppeteer.LaunchOptions = {
-    headless: false,
-    // timeout: 0,
-};
 const advertiseSelector = '#wbdds_insertion_116888_interstitial_close_button';
 const isAdvertisePage = (_page: puppeteer.Page) => _page.evaluate(selector => Boolean(document.querySelector(selector)), advertiseSelector);
 const abortUselessRequests = (request: puppeteer.Request) => {
@@ -31,7 +25,7 @@ const getSourceCode = async(url: string, browser: puppeteer.Browser): Promise<st
     return await page.content();
 };
 const n = 11; // 11 should do
-const getAllSourceCodes = async(): Promise<string[]> => {
+export const getAllSourceCodes = async(): Promise<string[]> => {
     const browser = await puppeteer.launch(browserOptions);
 
     return Promise.all([...Array(n).keys()]
@@ -45,24 +39,3 @@ const getAllSourceCodes = async(): Promise<string[]> => {
         return sources;
     });
 };
-
-getAllSourceCodes()
-.then(sourceCodes => Promise.all(sourceCodes.map(sourceCode => scrap(sourceCode))))
-.then(scraps => Promise.all(scraps.map(scrapped => cleaner(scrapped))))
-.then(() => {
-    enrich(dataToBeEnriched.movieIds);
-});
-
-const chunkArray = (array: any[], groupSize: number): any[][] => {
-    let sets = [];
-    let i = 0;
-    let chunks = array.length / groupSize;
-
-    while (i < chunks) {
-        sets[i] = array.splice(0, groupSize);
-        i++;
-    }
-
-    return sets;
-};
-

@@ -1,16 +1,22 @@
 import * as fs from 'fs';
-import { Database, Cinema, Movie, Schedule } from './clean-and-save';
-// @TODO: try to find a database.json file to populate the variable,
-// otherwise create an empty one
+import { Database, Cinema, Movie, Schedule } from '../clean-and-save';
+
+export const paths = {
+    // based on where the script is launched
+    movieDb: './movies.json',
+    cinemasDb: './cinemas.json',
+};
+
 export let database: Database = {
     cinemas: {},
     movies: {},
     schedules: {},
 };
-if (fs.existsSync('./database.json')) {
-    const {cinemas, movies}: Database = JSON.parse(fs.readFileSync('./database.json', 'utf8'));
-    database.cinemas = cinemas;
-    database.movies = movies;
+if (fs.existsSync(paths.movieDb)) {
+    database.movies = JSON.parse(fs.readFileSync(paths.movieDb, 'utf8'));
+}
+if (fs.existsSync(paths.cinemasDb)) {
+    database.cinemas = JSON.parse(fs.readFileSync(paths.cinemasDb, 'utf8'));
 }
 export const getMovie = (movieId: string): Movie => database.movies[movieId];
 export const getCine = (cineId: string): Cinema => database.cinemas[cineId];
@@ -32,7 +38,7 @@ const indexedScheduleIds: IndexedScheduleIds = scheduleIds.reduce((_indexedSched
     if (!_indexedScheduleIds[schedule.cineId]) {
         _indexedScheduleIds[schedule.cineId] = [];
     }
-    if (_indexedScheduleIds[schedule.movieId]) {
+    if (!_indexedScheduleIds[schedule.movieId]) {
         _indexedScheduleIds[schedule.movieId] = [];
     }
     _indexedScheduleIds[schedule.cineId].push(scheduleId);
@@ -65,8 +71,5 @@ export const getSchedules = (args: getSchedulesArgs): Schedule[] => {
 
 export const writeDatabase = (): void => {
     fs.writeFileSync('./schedules.json', JSON.stringify(database.schedules, null, 4));
-    fs.writeFileSync('./database.json', JSON.stringify({
-        movies: database.movies,
-        cinemas: database.cinemas,
-    }, null, 4));
+    fs.writeFileSync('./movies.json', JSON.stringify(database.movies, null, 4));
 };

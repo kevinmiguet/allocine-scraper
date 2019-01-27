@@ -1,8 +1,11 @@
 *.jpg
-*.json
 *.lock
 *.log
 database/
+export/
+package-lock.json
+movies.json
+schedules.json
 build/
 .vscode
 node_modules/
