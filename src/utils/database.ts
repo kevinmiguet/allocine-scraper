@@ -72,4 +72,5 @@ export const getSchedules = (args: getSchedulesArgs): Schedule[] => {
 export const writeDatabase = (): void => {
     fs.writeFileSync('./schedules.json', JSON.stringify(database.schedules, null, 4));
     fs.writeFileSync('./movies.json', JSON.stringify(database.movies, null, 4));
+    fs.writeFileSync('./cinemas.json', JSON.stringify(database.cinemas, null, 4));
 };

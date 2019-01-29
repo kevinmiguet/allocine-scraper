@@ -6,12 +6,12 @@ import { getAllSourceCodes } from './get-source-code';
 import { bakeForFront } from './bake-for-front';
 
 export const browserOptions: puppeteer.LaunchOptions = {
-    headless: false,
+    headless: true,
     // timeout: 0,
 };
 
 getAllSourceCodes()
     .then(sourceCodes => Promise.all(sourceCodes.map(sourceCode => scrap(sourceCode))))
     .then(scraps => Promise.all(scraps.map(scrapped => cleaner(scrapped))))
-    .then(() => enrich(dataToBeEnriched.movieIds))
+    .then(() => enrich())
     .then(() => bakeForFront());
