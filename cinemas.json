@@ -1,10 +1,4 @@
 {
-    "W4917": {
-        "name": "Salle Saint Louis (CinéVillages)",
-        "id": "W4917",
-        "address": "\n4 rue des Ferrières 49170 Saint-Léger-des-Bois\n",
-        "pos": null
-    },
     "C0013": {
         "name": "Luminor Hôtel de Ville",
         "id": "C0013",
@@ -479,6 +473,18 @@
         "address": "\nPlace du maquis du Vercors 75020 Paris 20e arrondissement\n",
         "pos": null
     },
+    "W0375": {
+        "name": "Centre Culturel Suisse",
+        "id": "W0375",
+        "address": "\n38 rue des Francs-Bourgeois 75003 Paris 3e arrondissement\n",
+        "pos": null
+    },
+    "C0096": {
+        "name": "Etoile Saint-Germain-des-Prés (Beau Regard)",
+        "id": "C0096",
+        "address": "\n22, Rue Guillaume Apollinaire 75006 Paris 6e arrondissement\n",
+        "pos": null
+    },
     "B0089": {
         "name": "Cinéma Marcel-Pagnol",
         "id": "B0089",
@@ -501,36 +507,6 @@
         "name": "UGC Ciné Cité Paris 19",
         "id": "W7509",
         "address": "\n166, boulevard Mac Donald 75019 Paris 19e arrondissement\n",
-        "pos": null
-    },
-    "W7520": {
-        "name": "Pathé La Villette",
-        "id": "W7520",
-        "address": "\n30 avenue Corentin Cariou 75019 Paris 19e arrondissement\n",
-        "pos": null
-    },
-    "W9411": {
-        "name": "Mégarama Arcueil",
-        "id": "W9411",
-        "address": "\n8 av du Président Allende 94110 Arcueil\n",
-        "pos": null
-    },
-    "B0013": {
-        "name": "Ciné Montrouge",
-        "id": "B0013",
-        "address": "\n88, rue Racine 92120 Montrouge\n",
-        "pos": null
-    },
-    "B0137": {
-        "name": "Le Luxy",
-        "id": "B0137",
-        "address": "\n77, av. Georges-Gosnat 94200 Ivry-sur-Seine\n",
-        "pos": null
-    },
-    "C0175": {
-        "name": "UGC Maillot",
-        "id": "C0175",
-        "address": "\nporte Maillot, Palais des Congres 75017 Paris 17e arrondissement\nMétro Porte-Maillot\n",
         "pos": null
     }
 }

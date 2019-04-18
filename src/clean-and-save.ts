@@ -1,4 +1,4 @@
-import { getMovie, getCine, setCine, setMovie, getSchedule, writeDatabase, setSchedule } from './utils/database';
+import { getMovie, getCine, setCine, setMovie, getSchedule, setSchedule, writeDatabases } from './utils/database';
 
 /// IN
 export type allocineScrap = {
@@ -114,7 +114,6 @@ function cleanAndSaveMovieData (scrapedDataFromOnePage: allocineScrap): void {
 
 function cleanAndSaveCineData (scrapedDataFromOnePage: allocineScrap): void {
     const cineData = scrapedDataFromOnePage.cinemaData;
-    // @TODO: make a CRC32 hash of the allocine id
     const cineShouldBeSaved = !getCine(cineData.id);
     if (cineShouldBeSaved) {
         setCine({
@@ -174,8 +173,7 @@ export function cleaner(scrapedData: allocineScrap[]): Promise<void> {
         // add data to schedule database
         cleanAndSaveScheduleData(scrapedDataFromOnePage);
         // force to write database to files
-        writeDatabase();
+        writeDatabases();
     });
-    // @TODO return a list of movies and cine ids to enrich
     return Promise.resolve();
 }

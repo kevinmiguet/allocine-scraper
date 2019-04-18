@@ -1,6 +1,7 @@
 steps:
 
-1. scrape
-2. clean and save
-3. enrich
-4. bake for front
+1. get source code
+2. scrape
+3. clean and save
+4. enrich
+5. bake for front

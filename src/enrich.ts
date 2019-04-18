@@ -1,11 +1,10 @@
 import * as puppeteer from 'puppeteer';
 import * as fs from 'fs';
 import { browserOptions } from './main';
-import { getMovie, setMovie, writeDatabase } from './utils/database';
+import { getMovie, setMovie, writeDatabases } from './utils/database';
 import { Movie, dataToBeEnriched } from './clean-and-save';
 import { asyncAllLimit } from './utils/asyncLimit';
 
-// @TODO: retrieve release date in france and nationality
 
 export const enrich = async (): Promise<void> => {
     const movies = dataToBeEnriched.movieIds.map(movieId => getMovie(movieId));
@@ -36,11 +35,10 @@ const getPosters = async (movies: Movie[]): Promise<void> => {
         // close the browser
         browser.close();
         // force to write the databases
-        writeDatabase();
+        writeDatabases();
         return Promise.resolve();
     });
 };
-
 const getImageAndSaveIt = async (url: string, filename: string, _browser: puppeteer.Browser): Promise<boolean> => {
     const FILESTOSAVE = ['jpg', 'png'];
     const IMAGE_FOLDER = './posters';
@@ -69,3 +67,5 @@ const getImageAndSaveIt = async (url: string, filename: string, _browser: puppet
         });
     return Promise.resolve(foundImage);
 };
+
+

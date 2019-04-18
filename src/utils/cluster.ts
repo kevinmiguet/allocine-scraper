@@ -21,7 +21,7 @@ export const getOldMovies = (movies: MoviesById): MovieCluster[] => {
     // @TODO: add a button to sort movies by release date on front
     return [{
         movieIds: oldMovieIds,
-        title: '',
+        title: 'old movies',
     }];
 };
 
@@ -29,7 +29,6 @@ export const getRetrospectives = (movies: MoviesById): MovieCluster[] => {
     // group movies by directors
     const movieIdsByDirector: {[director: string]: string[]} = {};
     Object.keys(movies).forEach(movieId => {
-        // @TODO: handle several directors
         const director = movies[movieId].directors[0];
         if (director === '') {
             return;
@@ -38,16 +37,18 @@ export const getRetrospectives = (movies: MoviesById): MovieCluster[] => {
             movieIdsByDirector[director] = [];
         } movieIdsByDirector[director].push(movieId);
     });
-    // remove the one with only one movie
-    // return the right format
-    // and sort by number of movies
     return Object.keys(movieIdsByDirector)
+        // remove those with only one movie
         .filter(director => movieIdsByDirector[director].length > 2)
+        // return the right format
         .map(directorWithMoreThanTwoMovies => {
             return {
                 title: directorWithMoreThanTwoMovies,
                 movieIds: movieIdsByDirector[directorWithMoreThanTwoMovies],
             };
         })
+        // and sort by number of movies
         .sort((a, b) => b.movieIds.length - a.movieIds.length);
 };
+// add get by country and get by genre
+// use the clusters for search function in front
