@@ -6,7 +6,7 @@ import { getAllSourceCodes } from './get-source-code';
 import { bakeForFront } from './bake-for-front';
 
 export const browserOptions: puppeteer.LaunchOptions = {
-    headless: false,
+    headless: true,
     timeout: 1000 * 60 * 3,
 };
 

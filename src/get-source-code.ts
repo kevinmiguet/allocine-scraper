@@ -12,6 +12,7 @@ const abortUselessRequests = (request: puppeteer.Request) => {
 };
 // get the source code of one page
 const getSourceCode = async(url: string, browser: puppeteer.Browser): Promise<string> => {
+    console.log('getting source code of ' + url);
     let page = await browser.newPage();
     await page.setRequestInterception(true);
     page.on('request', abortUselessRequests);
@@ -27,7 +28,7 @@ const getSourceCode = async(url: string, browser: puppeteer.Browser): Promise<st
 const n = 11; // 11 should do
 export const getAllSourceCodes = async(): Promise<string[]> => {
     const browser = await puppeteer.launch(browserOptions);
-
+    console.log('starting to get source code');
     return Promise.all([...Array(n).keys()]
     // get the sources on all pages in parallel
     .map(nb => getSourceCode(`http://www.allocine.fr/salle/cinemas-pres-de-115755/?page=${nb}`, browser)))
