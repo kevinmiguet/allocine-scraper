@@ -6,10 +6,9 @@ import { Movie, dataToBeEnriched } from './clean-and-save';
 import { asyncAllLimit } from './utils/asyncLimit';
 
 
-export const enrich = async (): Promise<void> => {
+export const enrich = async (): Promise<any> => {
     const movies = dataToBeEnriched.movieIds.map(movieId => getMovie(movieId));
     return asyncAllLimit(getPosters, movies, 5);
-
 };
 
 const getPosters = async (movies: Movie[]): Promise<void> => {

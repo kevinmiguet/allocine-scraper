@@ -1,4 +1,4 @@
-type AsyncFunction = (arg?: any) => Promise<void>;
+type AsyncFunction = (arg?: any) => Promise<any>;
 function chunkArray(arr: any[], chunkSize: number): any[][] {
     let index = 0;
     let arrayLength = arr.length;
@@ -12,22 +12,23 @@ function chunkArray(arr: any[], chunkSize: number): any[][] {
     return tempArray;
 }
 
-export async function asyncAllLimit(asyncFn: AsyncFunction, arr: any[], limit: number): Promise<void> {
+export async function asyncAllLimit(asyncFn: AsyncFunction, arr: any[], limit: number): Promise<any[]> {
     if (arr.length === 0) {
-        return Promise.resolve();
+        return Promise.resolve([]);
     }
     const chunkedArray = chunkArray(arr, limit);
-    const _pipeAsyncStuff = (_chunkedArray: any[][], i: number, asyncFunc: AsyncFunction ): Promise<void> => {
+    const _pipeAsyncStuff = (_chunkedArray: any[][], i: number, asyncFunc: AsyncFunction, acc: any[] = []): Promise<any[]> => {
         console.log(`treating chunk ${i}...`);
         return asyncFunc(_chunkedArray[i])
         // launch async function on all elements of first chunk
         // do it on next chunk or resolve promise if there is none
-        .then(() => {
+        .then(result => {
+            acc = acc.concat(result);
             const nextChunk = _chunkedArray[i + 1];
             if (nextChunk) {
-                return _pipeAsyncStuff(_chunkedArray, i + 1, asyncFunc);
+                return _pipeAsyncStuff(_chunkedArray, i + 1, asyncFunc, acc);
             } else {
-                return Promise.resolve();
+                return Promise.resolve(acc);
             }
         });
     };
