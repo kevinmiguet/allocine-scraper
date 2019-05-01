@@ -12,6 +12,7 @@ export type acDay = {
 };
 export type acCinema = {
     name: string;
+    url: string;
     id: string;
     address: string;
 };
@@ -52,7 +53,6 @@ export interface Movie {
     genres: string[];
     poster: string;
 }
-
 export interface Week {
     lundi: string[];
     mardi: string[];
@@ -66,6 +66,7 @@ export interface Week {
 export interface Cinema {
     id: string;
     name: string;
+    url?: string;
     address: string;
     pos: {
         lat: number;
@@ -85,10 +86,6 @@ export interface Database {
     cinemas: {[cinemaId: string]: Cinema};
 }
 
-export let dataToBeEnriched: CleanerOutput = {
-    cineIds: [],
-    movieIds: [],
-};
 function cleanAndSaveMovieData (scrapedDataFromOnePage: allocineScrap): void {
     scrapedDataFromOnePage.schedule
     .forEach(_scheduleData => _scheduleData.movieDatas.forEach(movieData => {
@@ -105,9 +102,6 @@ function cleanAndSaveMovieData (scrapedDataFromOnePage: allocineScrap): void {
                 genres: movieToBeSaved.genre,
                 poster: movieToBeSaved.poster,
             });
-            // since we just saved this movie, it needs to be added to the output
-            // so that the 'ENRICH' step treat it (download its poster, etc...)
-            dataToBeEnriched.movieIds.push(movieToBeSaved.id);
         }
     }));
 }
@@ -135,10 +129,10 @@ function cleanAndSaveScheduleData(scrapedDataFromOnePage: allocineScrap): void {
         if (scheduleOfOneDay.movieTimes.length !== scheduleOfOneDay.movieDatas.length) {
             throw new Error('movieTimes and movieDatas don\'t have the same length');
         }
-        // we only need the id of movies at this step
-        const movieIds = scheduleOfOneDay.movieDatas.map(m => m.movie.id);
+        const movieDatas = scheduleOfOneDay.movieDatas;
         // setting schedule here
-        movieIds.forEach((movieId, i) => {
+        movieDatas.forEach((movieData, i) => {
+            const movieId = movieData.movie.id;
             const cineId = scrapedDataFromOnePage.cinemaData.id;
             let scheduleToModify = getSchedule(movieId, cineId);
             // it's the first time we encounter this movie/cine combination
@@ -153,9 +147,15 @@ function cleanAndSaveScheduleData(scrapedDataFromOnePage: allocineScrap): void {
             // monday, tuesday ....
             const dayName = dayIdToDayName[scheduleOfOneDay.dayId];
             const thisMovieScheduleForThisDay = scheduleOfOneDay.movieTimes[i];
+            const normalizedScheduleForThisDay = thisMovieScheduleForThisDay.map(schedule => schedule.debut);
             scheduleToModify.schedule = {
                 ...scheduleToModify.schedule,
-                [dayName]: thisMovieScheduleForThisDay.map(schedule => schedule.debut),
+                // we may have already saved something for this day,
+                // ie if the same movie in another version
+                [dayName]: {
+                    ...scheduleToModify.schedule[dayName],
+                    [movieData.version]: normalizedScheduleForThisDay,
+                },
             };
         });
     });

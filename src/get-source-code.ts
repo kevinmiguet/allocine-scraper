@@ -1,12 +1,13 @@
 import * as puppeteer from 'puppeteer';
 import { browserOptions } from './main';
 import { asyncAllLimit } from './utils/asyncLimit';
+import * as fs from 'fs';
 
 const advertiseSelector = '#wbdds_insertion_116888_interstitial_close_button';
 const isAdvertisePage = (_page: puppeteer.Page) => _page.evaluate(selector => Boolean(document.querySelector(selector)), advertiseSelector);
 // we need this so that we only load text
 const abortUselessRequests = (request: puppeteer.Request) => {
-    if (['image', 'stylesheet', 'font', 'script'].indexOf(request.resourceType()) !== -1) {
+    if (['image', 'stylesheet', 'font', 'script', 'media'].indexOf(request.resourceType()) !== -1) {
         request.abort();
     } else {
         request.continue();
@@ -42,9 +43,16 @@ export const getSourceCode = async(urls: string[]): Promise<string[]> => {
 };
 
 
-const n = 11; // 11 should do
+const n = 22; // 11 should do
 export const getAllSourceCodes = async(): Promise<string[]> => {
     console.log('starting to get source code');
     const urls =  [...Array(n).keys()].map(nb => `http://www.allocine.fr/salle/cinemas-pres-de-115755/?page=${nb}`);
     return asyncAllLimit(getSourceCode, urls, 5);
+};
+
+export const getAllSourceCodesByGoingOnEachCinemaPage = async(): Promise<string[]> => {
+    const cinefile = fs.readFileSync('./cinemas.json', 'utf8');
+    const cines = JSON.parse(cinefile);
+    const cineUrls = Object.keys(cines).map(cineId => `http://www.allocine.fr/${cines[cineId].url}`);
+    return asyncAllLimit(getSourceCode, [cineUrls[3]], 10);
 };

@@ -1,20 +1,23 @@
 import * as puppeteer from 'puppeteer';
 import * as fs from 'fs';
 import { browserOptions } from './main';
-import { getMovie, setMovie, writeDatabases } from './utils/database';
-import { Movie, dataToBeEnriched } from './clean-and-save';
+import { getMovie, setMovie, writeDatabases, database } from './utils/database';
+import { Movie } from './clean-and-save';
 import { asyncAllLimit } from './utils/asyncLimit';
 
 
 export const enrich = async (): Promise<any> => {
-    const movies = dataToBeEnriched.movieIds.map(movieId => getMovie(movieId));
+    const movieIds = Object.keys(database.movies);
+    const doesMovieNeedPoster = ((movie: Movie) => movie.poster && movie.poster.indexOf('http://') > -1);
+    const movies = movieIds
+        .map(movieId => getMovie(movieId))
+        .filter(movie => doesMovieNeedPoster(movie));
     return asyncAllLimit(getPosters, movies, 5);
 };
 
 const getPosters = async (movies: Movie[]): Promise<void> => {
     const browser = await puppeteer.launch(browserOptions);
-    const moviesToEnrich = movies.filter(movie => movie.poster && movie.poster !== '');
-    return Promise.all(moviesToEnrich.map(async (movie) => {
+    return Promise.all(movies.map(async (movie) => {
         const url = movie.poster;
         const filename = `${movie.id}.jpg`;
         await getImageAndSaveIt(url, filename, browser)
@@ -25,7 +28,7 @@ const getPosters = async (movies: Movie[]): Promise<void> => {
                         poster: filename,
                     });
                 } else {
-                    console.log('did not find');
+                    console.log(`did not find poster at ${url}`);
                 }
             });
     }))
@@ -39,7 +42,7 @@ const getPosters = async (movies: Movie[]): Promise<void> => {
     });
 };
 const getImageAndSaveIt = async (url: string, filename: string, _browser: puppeteer.Browser): Promise<boolean> => {
-    const FILESTOSAVE = ['jpg', 'png'];
+    const FILESTOSAVE = ['jpg', 'png', 'gif', 'jpeg'];
     const IMAGE_FOLDER = './posters';
     let newPosterPath: string = '';
     let foundImage = false;

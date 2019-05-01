@@ -50,8 +50,12 @@ type getSchedulesArgs = {
     movieId?: string;
     cineId?: string;
 };
+export const getScheduleId = (schedule: Schedule): string => {
+    return `${schedule.movieId}-${schedule.cineId}`;
+}
 export const setSchedule = (schedule: Schedule): Schedule => {
-    database.schedules[`${schedule.movieId}-${schedule.cineId}`] = schedule;
+    const scheduleId = getScheduleId(schedule);
+    database.schedules[scheduleId] = schedule;
     return getSchedule(schedule.movieId, schedule.cineId);
 };
 export const getSchedule = (movieId: string, cineId: string): Schedule => {
