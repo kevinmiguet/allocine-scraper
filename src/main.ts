@@ -4,15 +4,16 @@ import { enrich } from './enrich';
 import * as puppeteer from 'puppeteer';
 import { getAllSourceCodes } from './get-source-code';
 import { bakeForFront } from './bake-for-front';
+import * as tmp from './utils/temp';
 
 export const browserOptions: puppeteer.LaunchOptions = {
-    headless: false,
+    headless: true,
     timeout: 1000 * 60 * 5,
 };
 
 async function main(): Promise<void> {
     // get source code of pages (on the website)
-    getAllSourceCodes()
+    return getAllSourceCodes()
         // analyze and extract information from it (offline)
         .then(sourceCodes => {
             return Promise.all(sourceCodes.map(sourceCode => scrap(sourceCode)));
@@ -32,4 +33,7 @@ async function main(): Promise<void> {
 //     // get source code of pages (on the website)
 //     .then(sourceCodes => Promise.all(sourceCodes.map(sourceCode => scrapForMoviePage(sourceCode))));
 
-main();
+main()
+    .then(() => {
+        tmp.clean();
+    });

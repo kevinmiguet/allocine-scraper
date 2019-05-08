@@ -1265,5 +1265,201 @@
         "id": "W9360",
         "address": "\nCentre commercial O’Parinor Le Haut de Galy 93600 Aulnay-sous-Bois\n",
         "pos": null
+    },
+    "B0074": {
+        "name": "L'Alcazar",
+        "url": "/seance/salle_gen_csalle=B0074.html",
+        "id": "B0074",
+        "address": "\n1, rue de la Station 92600 Asnières-sur-Seine\n",
+        "pos": null
+    },
+    "B0080": {
+        "name": "Cinéma de Châtillon",
+        "url": "/seance/salle_gen_csalle=B0080.html",
+        "id": "B0080",
+        "address": "\n7bis, rue de la Mairie 92320 Châtillon\n",
+        "pos": null
+    },
+    "P9316": {
+        "name": "Le Bijou",
+        "url": "/seance/salle_gen_csalle=P9316.html",
+        "id": "P9316",
+        "address": "\n4 place de la libération 93160 Noisy-le-Grand\n",
+        "pos": null
+    },
+    "W9516": {
+        "name": "Cinéma l'Eden ",
+        "url": "/seance/salle_gen_csalle=W9516.html",
+        "id": "W9516",
+        "address": "\n5 bis rue de Pontoise 95160 Montmorency\n",
+        "pos": null
+    },
+    "B0196": {
+        "name": "Espace Jean-Marie Poirier",
+        "url": "/seance/salle_gen_csalle=B0196.html",
+        "id": "B0196",
+        "address": "\n1 esplanade du 18 juin 1940 94370 Sucy-en-Brie\n",
+        "pos": null
+    },
+    "B0022": {
+        "name": "Cinema du Theatre",
+        "url": "/seance/salle_gen_csalle=B0022.html",
+        "id": "B0022",
+        "address": "\n8E, av. Charles-de-Gaulle (mairie) 78170 La Celle-Saint-Cloud\n",
+        "pos": null
+    },
+    "P9130": {
+        "name": "Pathé Massy ",
+        "url": "/seance/salle_gen_csalle=P9130.html",
+        "id": "P9130",
+        "address": "\n21, Place du Grand Ouest 91300 Massy\n",
+        "pos": null
+    },
+    "B1540": {
+        "name": "L'Avant-Scène",
+        "url": "/seance/salle_gen_csalle=B1540.html",
+        "id": "B1540",
+        "address": "\n78-80 avenue d'Alsace Lorraine 91550 Paray-Vieille-Poste\n",
+        "pos": null
+    },
+    "W9560": {
+        "name": "L'Orange Bleue - Espace Culturel d'Eaubonne",
+        "url": "/seance/salle_gen_csalle=W9560.html",
+        "id": "W9560",
+        "address": "\n7, rue Jean Mermoz 95600 Eaubonne\n",
+        "pos": null
+    },
+    "B0225": {
+        "name": "Centre culturel Wladimir-d'Ormesson",
+        "url": "/seance/salle_gen_csalle=B0225.html",
+        "id": "B0225",
+        "address": "\n14-22 avenue Wladimir d'Ormesson 94490 Ormesson-sur-Marne\n",
+        "pos": null
+    },
+    "B0226": {
+        "name": "Cinéma Pierre Fresnay ",
+        "url": "/seance/salle_gen_csalle=B0226.html",
+        "id": "B0226",
+        "address": "\n3, rue Saint-Flaive prolongée 95120 Ermont\n",
+        "pos": null
+    },
+    "B0211": {
+        "name": "Cinéma Yves-Montand",
+        "url": "/seance/salle_gen_csalle=B0211.html",
+        "id": "B0211",
+        "address": "\n36, rue Eugene-Masse 93190 Livry-Gargan\n",
+        "pos": null
+    },
+    "P9443": {
+        "name": "Ciné Pince Vent",
+        "url": "/seance/salle_gen_csalle=P9443.html",
+        "id": "P9443",
+        "address": "\nCentre Commercial Pince-Vent 94430 Chennevières-sur-Marne\n",
+        "pos": null
+    },
+    "B0046": {
+        "name": "Cinéma Jean-Marais",
+        "url": "/seance/salle_gen_csalle=B0046.html",
+        "id": "B0046",
+        "address": "\n59, bd. Carnot 78110 Le Vésinet\n",
+        "pos": null
+    },
+    "B0035": {
+        "name": "Cinéma Ventura",
+        "url": "/seance/salle_gen_csalle=B0035.html",
+        "id": "B0035",
+        "address": "\n4, rue Samuel-Desbordes 91200 Athis-Mons\n",
+        "pos": null
+    },
+    "P2540": {
+        "name": "Salle Le Cormier ",
+        "url": "/seance/salle_gen_csalle=P2540.html",
+        "id": "P2540",
+        "address": "\n123 Rue de Saint Germain 95240 Cormeilles-en-Parisis\n",
+        "pos": null
+    },
+    "B0040": {
+        "name": "CIN'HOCHE",
+        "url": "/seance/salle_gen_csalle=B0040.html",
+        "id": "B0040",
+        "address": "\n6, rue Hoche 78500 Sartrouville\n",
+        "pos": null
+    },
+    "B0181": {
+        "name": "CINEPAL' le Cinéma à Palaiseau",
+        "url": "/seance/salle_gen_csalle=B0181.html",
+        "id": "B0181",
+        "address": "\n10 avenue du 8 mai 1945 91120 Palaiseau\n",
+        "pos": null
+    },
+    "B0044": {
+        "name": "UGC Roxane ",
+        "url": "/seance/salle_gen_csalle=B0044.html",
+        "id": "B0044",
+        "address": "\n6, rue Saint-Simon 78000 Versailles\n",
+        "pos": null
+    },
+    "B0162": {
+        "name": "Cinéma Henri-Langlois",
+        "url": "/seance/salle_gen_csalle=B0162.html",
+        "id": "B0162",
+        "address": "\n32 bis rue de la Station 95130 Franconville\n",
+        "pos": null
+    },
+    "B0045": {
+        "name": "UGC Cyrano ",
+        "url": "/seance/salle_gen_csalle=B0045.html",
+        "id": "B0045",
+        "address": "\n7, rue Rameau 78000 Versailles\n",
+        "pos": null
+    },
+    "B0192": {
+        "name": "Cinéma François-Truffaut",
+        "url": "/seance/salle_gen_csalle=B0192.html",
+        "id": "B0192",
+        "address": "\n2, rue de l'Ecole 91380 Chilly-Mazarin\n",
+        "pos": null
+    },
+    "B0163": {
+        "name": "Jacques-Prevert",
+        "url": "/seance/salle_gen_csalle=B0163.html",
+        "id": "B0163",
+        "address": "\nPlace Aimé Césaire - La Fauconnière 95500 Gonesse\n",
+        "pos": null
+    },
+    "B0003": {
+        "name": "Etoile Cosmos",
+        "url": "/seance/salle_gen_csalle=B0003.html",
+        "id": "B0003",
+        "address": "\n22, av. de la Resistance 77500 Chelles\n",
+        "pos": null
+    },
+    "B0113": {
+        "name": "Espace Paul-Valery",
+        "url": "/seance/salle_gen_csalle=B0113.html",
+        "id": "B0113",
+        "address": "\n72-74 av. Ardouin 94420 Le Plessis-Trévise\n",
+        "pos": null
+    },
+    "B0256": {
+        "name": "L'Atalante",
+        "url": "/seance/salle_gen_csalle=B0256.html",
+        "id": "B0256",
+        "address": "\n48, rue du Prieuré 78600 Maisons-Laffitte\n",
+        "pos": null
+    },
+    "B0232": {
+        "name": "Cinéma Varda",
+        "url": "/seance/salle_gen_csalle=B0232.html",
+        "id": "B0232",
+        "address": "\n37-39 Grande-Rue 91260 Juvisy-sur-Orge\n",
+        "pos": null
+    },
+    "B0183": {
+        "name": "Le Fontenelle",
+        "url": "/seance/salle_gen_csalle=B0183.html",
+        "id": "B0183",
+        "address": "\nPlace de la Gare 78160 Marly-le-Roi\n",
+        "pos": null
     }
 }

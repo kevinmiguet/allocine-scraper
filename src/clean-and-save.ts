@@ -53,16 +53,6 @@ export interface Movie {
     genres: string[];
     poster: string;
 }
-export interface Week {
-    lundi: string[];
-    mardi: string[];
-    mercredi: string[];
-    jeudi: string[];
-    vendredi: string[];
-    samedi: string[];
-    dimanche: string[];
-}
-
 export interface Cinema {
     id: string;
     name: string;
@@ -73,7 +63,15 @@ export interface Cinema {
         lng: number;
     };
 }
-
+export interface Week {
+    lundi: string[];
+    mardi: string[];
+    mercredi: string[];
+    jeudi: string[];
+    vendredi: string[];
+    samedi: string[];
+    dimanche: string[];
+}
 export interface Schedule {
     movieId: string;
     cineId: string;
