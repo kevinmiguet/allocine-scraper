@@ -2,6 +2,7 @@ import * as puppeteer from 'puppeteer';
 import { browserOptions } from './main';
 import { asyncAllLimit } from './utils/asyncLimit';
 import * as fs from 'fs';
+import * as tmp from './utils/temp';
 
 const advertiseSelector = '#wbdds_insertion_116888_interstitial_close_button';
 const isAdvertisePage = (_page: puppeteer.Page) => _page.evaluate(selector => Boolean(document.querySelector(selector)), advertiseSelector);
@@ -15,6 +16,11 @@ const abortUselessRequests = (request: puppeteer.Request) => {
 };
 
 const getSourceCodeOnOnePage = async(url: string, browser: puppeteer.Browser): Promise<string> => {
+    // try to get result from ram first
+    const tempResult = await tmp.get(url);
+    if (tempResult) {
+        return tempResult;
+    }
     let page = await browser.newPage();
     await page.setRequestInterception(true);
     page.on('request', abortUselessRequests);
@@ -25,10 +31,13 @@ const getSourceCodeOnOnePage = async(url: string, browser: puppeteer.Browser): P
         await page.click(advertiseSelector);
     }
     // get source
-    return await page.content();
+    const source = await page.content();
+    // save in ram in case it crashes
+    tmp.save(source, url);
+    return source;
 };
 
-export const getSourceCode = async(urls: string[]): Promise<string[]> => {
+const getSourceCode = async(urls: string[]): Promise<string[]> => {
     const browser = await puppeteer.launch(browserOptions);
     return Promise.all(urls
     // get the sources on all pages in parallel
