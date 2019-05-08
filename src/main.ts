@@ -16,6 +16,7 @@ async function main(): Promise<void> {
     return getAllSourceCodes()
         // analyze and extract information from it (offline)
         .then(sourceCodes => {
+            console.log('Scraping');
             return Promise.all(sourceCodes.map(sourceCode => scrap(sourceCode)));
         })
         // structure this information properly and save it
@@ -32,8 +33,5 @@ async function main(): Promise<void> {
 // getAllSourceCodesByGoingOnEachCinemaPage()
 //     // get source code of pages (on the website)
 //     .then(sourceCodes => Promise.all(sourceCodes.map(sourceCode => scrapForMoviePage(sourceCode))));
-
-main()
-    .then(() => {
-        tmp.clean();
-    });
+tmp.clean();
+main();

@@ -163,6 +163,7 @@ export interface CleanerOutput {
     cineIds: string[];
 }
 export function cleaner(scrapedData: allocineScrap[]): Promise<void> {
+    console.log('cleaning data');
     scrapedData.forEach(scrapedDataFromOnePage => {
         // add data to movies database
         cleanAndSaveMovieData(scrapedDataFromOnePage);

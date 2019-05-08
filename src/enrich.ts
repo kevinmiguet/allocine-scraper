@@ -7,6 +7,7 @@ import { asyncAllLimit } from './utils/asyncLimit';
 
 
 export const enrich = async (): Promise<any> => {
+    console.log('enriching data');
     const movieIds = Object.keys(database.movies);
     const doesMovieNeedPoster = ((movie: Movie) => movie.poster && movie.poster.indexOf('http://') > -1);
     const movies = movieIds
