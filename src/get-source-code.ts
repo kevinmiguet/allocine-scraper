@@ -39,17 +39,25 @@ export const getSourceCode = async(urls: string[]): Promise<string[]> => {
     .then(sources => {
         browser.close();
         return sources;
+    })
+
+    // if it fails, we should close the browser too
+    .catch(() => {
+        browser.close();
+        return Promise.reject();
     });
 };
 
 
-const n = 22; // 11 should do
+const n = 22;
 export const getAllSourceCodes = async(): Promise<string[]> => {
     console.log('starting to get source code');
     const urls =  [...Array(n).keys()].map(nb => `http://www.allocine.fr/salle/cinemas-pres-de-115755/?page=${nb}`);
     return asyncAllLimit(getSourceCode, urls, 5);
 };
 
+
+// another scenario. not used yet
 export const getAllSourceCodesByGoingOnEachCinemaPage = async(): Promise<string[]> => {
     const cinefile = fs.readFileSync('./cinemas.json', 'utf8');
     const cines = JSON.parse(cinefile);

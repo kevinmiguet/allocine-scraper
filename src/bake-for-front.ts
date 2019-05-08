@@ -34,11 +34,10 @@ export const bakeForFront = () => {
     fs.writeFileSync(`${exportFolder}/schedules.json`, JSON.stringify(schedulesForFront, null, 4));
     fs.writeFileSync(`${exportFolder}/clusters.json`, JSON.stringify(clusters, null, 4));
 };
+
 const getParisianCinemas = (): Cinemas => {
     return Object.keys(database.cinemas)
-        .filter(key => {
-            return database.cinemas[key].address.indexOf('750') > -1;
-        })
+        .filter(key => database.cinemas[key].address.indexOf('750') > -1)
         .reduce((parisianCinemas, cinemaId) => {
             // only keep necessary stuff here
             const {address, id, name, pos} = database.cinemas[cinemaId];

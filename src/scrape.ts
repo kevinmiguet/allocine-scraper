@@ -98,6 +98,7 @@ export const scrap = (html: string): Promise<allocineScrap[]> => {
     }).get();
     return Promise.resolve(result);
 };
+
 /*
 Schema - Allocine - cinema page
 http://www.allocine.fr/seance/salle_gen_csalle=C0013.html
