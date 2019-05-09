@@ -11,23 +11,28 @@ export const browserOptions: puppeteer.LaunchOptions = {
     timeout: 1000 * 60 * 5,
 };
 
+export type Key = string;
+
 async function main(): Promise<void> {
     // get source code of pages (on the website)
     return getAllSourceCodes()
         // analyze and extract information from it (offline)
-        .then(sourceCodes => {
+        .then(sourceCodesKeys => {
             console.log('Scraping');
-            return Promise.all(sourceCodes.map(sourceCode => scrap(sourceCode)));
+            return Promise.all(sourceCodesKeys.map(sourceCodesKey => scrap(sourceCodesKey)));
         })
         // structure this information properly and save it
-        .then(scraps => Promise.all(scraps.map(scrapped => cleaner(scrapped))))
+        .then(scrappedKeys => Promise.all(scrappedKeys.map(scrappedKey => cleaner(scrappedKey))))
         // get extra information and download images (on the website)
         .then(() => enrich())
         // format it for front (offline)
         .then(() => bakeForFront())
 
         // if it fails somewhere, try again
-        .catch(() => main());
+        .catch((error) => {
+            console.log(error);
+            main();
+        });
 }
 
 // getAllSourceCodesByGoingOnEachCinemaPage()

@@ -1,5 +1,7 @@
 import * as cheerio from 'cheerio';
 import { allocineScrap, acMovieTime } from './clean-and-save';
+import { Key } from './main';
+import * as tmp from './utils/temp';
 
 const jsonIfy = (input: any): JSON => {
     if (typeof input === 'string') {
@@ -39,7 +41,8 @@ http://www.allocine.fr/salle/cinemas-pres-de-115755/?page=n
         </Jour>
     </Cinema>
 */
-export const scrap = (html: string): Promise<allocineScrap[]> => {
+export const scrap = async (sourceCodeKey: Key): Promise<Key> => {
+    const html = await tmp.get(sourceCodeKey);
     const $ = cheerio.load(html);
     const result: allocineScrap[] = $('.theaterblock.j_entity_container') // <Cinema>
     .map((id, cineNode) => {
@@ -96,7 +99,8 @@ export const scrap = (html: string): Promise<allocineScrap[]> => {
         };
 
     }).get();
-    return Promise.resolve(result);
+
+    return Promise.resolve(tmp.saveAndGetKey(result));
 };
 
 /*

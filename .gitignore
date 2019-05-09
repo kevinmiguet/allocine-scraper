@@ -9,3 +9,4 @@ schedules.json
 build/
 .vscode
 node_modules/
+tmp/
