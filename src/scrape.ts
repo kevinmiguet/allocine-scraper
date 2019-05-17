@@ -41,7 +41,7 @@ http://www.allocine.fr/salle/cinemas-pres-de-115755/?page=n
         </Jour>
     </Cinema>
 */
-export const scrap = async (sourceCodeKey: Key): Promise<Key> => {
+export async function scrap(sourceCodeKey: Key): Promise<Key> {
     const html = await tmp.get(sourceCodeKey);
     const $ = cheerio.load(html);
     const result: allocineScrap[] = $('.theaterblock.j_entity_container') // <Cinema>
@@ -84,8 +84,11 @@ export const scrap = async (sourceCodeKey: Key): Promise<Key> => {
                 movieTimes,
             };
         }).get();
+
         // days Names
         const days = $(cineNode).find('ul.items > li > a').map((i, a) => $(a).data()).get();
+
+        // Cinema data
         const cinemaData = {
             name :  $(cineNode).find('h2 > a').text(),
             url :  $(cineNode).find('h2 > a').attr('href'),
@@ -97,11 +100,10 @@ export const scrap = async (sourceCodeKey: Key): Promise<Key> => {
             days,
             schedule,
         };
-
     }).get();
 
     return Promise.resolve(tmp.saveAndGetKey(result));
-};
+}
 
 /*
 Schema - Allocine - cinema page

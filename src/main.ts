@@ -5,11 +5,16 @@ import * as puppeteer from 'puppeteer';
 import { getAllSourceCodes } from './get-source-code';
 import { bakeForFront } from './bake-for-front';
 import * as tmp from './utils/temp';
+import { logger } from './utils/logger';
+import { asyncAllLimit } from './utils/asyncLimit';
 
 export const browserOptions: puppeteer.LaunchOptions = {
     headless: true,
     timeout: 1000 * 60 * 5,
 };
+export const nbCinePageSourceToGet = 22;
+export const chunkSizeForSourceGetter = 5;
+export const chunkSizeForScrap = 5;
 
 export type Key = string;
 
@@ -18,8 +23,11 @@ async function main(): Promise<void> {
     return getAllSourceCodes()
         // analyze and extract information from it (offline)
         .then(sourceCodesKeys => {
-            console.log('Scraping');
-            return Promise.all(sourceCodesKeys.map(sourceCodesKey => scrap(sourceCodesKey)));
+            logger.info('scraping...');
+            async function scrapFn(keys: Key[]): Promise<any[]> {
+                return Promise.all(keys.map(sourceCodesKey => scrap(sourceCodesKey)));
+            }
+            return asyncAllLimit(scrapFn, sourceCodesKeys, chunkSizeForScrap);
         })
         // structure this information properly and save it
         .then(scrappedKeys => Promise.all(scrappedKeys.map(scrappedKey => cleaner(scrappedKey))))
@@ -30,7 +38,7 @@ async function main(): Promise<void> {
 
         // if it fails somewhere, try again
         .catch((error) => {
-            console.log(error);
+            logger.error(error);
             main();
         });
 }
@@ -38,5 +46,7 @@ async function main(): Promise<void> {
 // getAllSourceCodesByGoingOnEachCinemaPage()
 //     // get source code of pages (on the website)
 //     .then(sourceCodes => Promise.all(sourceCodes.map(sourceCode => scrapForMoviePage(sourceCode))));
-tmp.clean();
+// tmp.clean();
+
+tmp.clean()
 main();

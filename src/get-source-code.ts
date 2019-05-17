@@ -1,8 +1,9 @@
 import * as puppeteer from 'puppeteer';
-import { browserOptions, Key } from './main';
+import { browserOptions, Key, nbCinePageSourceToGet, chunkSizeForSourceGetter } from './main';
 import { asyncAllLimit } from './utils/asyncLimit';
 import * as fs from 'fs';
 import * as tmp from './utils/temp';
+import { logger } from './utils/logger';
 
 const advertiseSelector = '#wbdds_insertion_116888_interstitial_close_button';
 const isAdvertisePage = (_page: puppeteer.Page) => _page.evaluate(selector => Boolean(document.querySelector(selector)), advertiseSelector);
@@ -56,12 +57,10 @@ const getSourceCode = async(urls: string[]): Promise<Key[]> => {
     });
 };
 
-
-const n = 22;
 export const getAllSourceCodes = async(): Promise<Key[]> => {
-    console.log('starting to get source code');
-    const urls =  [...Array(n).keys()].map(nb => `http://www.allocine.fr/salle/cinemas-pres-de-115755/?page=${nb}`);
-    return asyncAllLimit(getSourceCode, urls, 5);
+    logger.info('starting to get source code');
+    const urls =  [...Array(nbCinePageSourceToGet).keys()].map(nb => `http://www.allocine.fr/salle/cinemas-pres-de-115755/?page=${nb}`);
+    return asyncAllLimit(getSourceCode, urls, chunkSizeForSourceGetter);
 };
 
 

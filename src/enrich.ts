@@ -4,10 +4,11 @@ import { browserOptions } from './main';
 import { getMovie, setMovie, writeDatabases, database } from './utils/database';
 import { Movie } from './clean-and-save';
 import { asyncAllLimit } from './utils/asyncLimit';
+import { logger } from './utils/logger';
 
 
 export const enrich = async (): Promise<any> => {
-    console.log('enriching data');
+    logger.info('enriching data');
     const movieIds = Object.keys(database.movies);
     const doesMovieNeedPoster = ((movie: Movie) => movie.poster && movie.poster.indexOf('http://') > -1);
     const movies = movieIds
@@ -29,7 +30,7 @@ const getPosters = async (movies: Movie[]): Promise<void> => {
                         poster: filename,
                     });
                 } else {
-                    console.log(`did not find poster at ${url}`);
+                    logger.error(`did not find poster at ${url}`);
                 }
             });
     }))
@@ -66,7 +67,7 @@ const getImageAndSaveIt = async (url: string, filename: string, _browser: puppet
     await page.on('response', _saveImageOnResponse);
     await page.goto(url, { waitUntil: 'networkidle0' })
         .catch(error => {
-            console.log(error);
+            logger.error(error);
         });
     return Promise.resolve(foundImage);
 };

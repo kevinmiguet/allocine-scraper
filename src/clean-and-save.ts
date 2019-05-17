@@ -1,6 +1,7 @@
 import { getMovie, getCine, setCine, setMovie, getSchedule, setSchedule, writeDatabases } from './utils/database';
 import { Key } from './main';
 import { get } from './utils/temp';
+import { logger } from './utils/logger';
 
 /// IN
 export type allocineScrap = {
@@ -165,9 +166,9 @@ export interface CleanerOutput {
     cineIds: string[];
 }
 export async function cleaner(scrapedDataKey: Key): Promise<void> {
-    console.log('cleaning data');
+    logger.info(`cleaning data`);
     const scrapedData: any[] = await get(scrapedDataKey);
-    scrapedData.forEach(scrapedDataFromOnePage => {
+    scrapedData.forEach((scrapedDataFromOnePage: allocineScrap) => {
         // add data to movies database
         cleanAndSaveMovieData(scrapedDataFromOnePage);
         // add data to cinema database
