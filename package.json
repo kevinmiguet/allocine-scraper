@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc --skipLibCheck",
     "build:watch": "tsc --skipLibCheck --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "launch": "tsc && node build/main.js",
+    "clean": "rm -rf ./tmp"
   },
   "author": "",
   "license": "ISC",

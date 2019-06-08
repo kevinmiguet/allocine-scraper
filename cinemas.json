@@ -1461,5 +1461,33 @@
         "id": "B0183",
         "address": "\nPlace de la Gare 78160 Marly-le-Roi\n",
         "pos": null
+    },
+    "C0172": {
+        "name": "Mac-Mahon",
+        "url": "/seance/salle_gen_csalle=C0172.html",
+        "id": "C0172",
+        "address": "\n5, av. Mac-Mahon 75017 Paris 17e arrondissement\n",
+        "pos": null
+    },
+    "B0146": {
+        "name": "Le Scarron",
+        "url": "/seance/salle_gen_csalle=B0146.html",
+        "id": "B0146",
+        "address": "\n8, av. Jeanne-et-Maurice-Dolivet 92260 Fontenay-aux-Roses\n",
+        "pos": null
+    },
+    "B0100": {
+        "name": "Cine Andre-Malraux",
+        "url": "/seance/salle_gen_csalle=B0100.html",
+        "id": "B0100",
+        "address": "\n29, av. de Verdun 92390 Villeneuve-la-Garenne\n",
+        "pos": null
+    },
+    "B0083": {
+        "name": "MJC-Théâtre",
+        "url": "/seance/salle_gen_csalle=B0083.html",
+        "id": "B0083",
+        "address": "\n96-98 rue Saint-Denis 92700 Colombes\n",
+        "pos": null
     }
 }

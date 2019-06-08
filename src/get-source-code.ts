@@ -1,8 +1,9 @@
 import * as puppeteer from 'puppeteer';
-import { browserOptions } from './main';
+import { browserOptions, Key, nbCinePageSourceToGet, chunkSizeForSourceGetter } from './main';
 import { asyncAllLimit } from './utils/asyncLimit';
 import * as fs from 'fs';
 import * as tmp from './utils/temp';
+import { logger } from './utils/logger';
 
 const advertiseSelector = '#wbdds_insertion_116888_interstitial_close_button';
 const isAdvertisePage = (_page: puppeteer.Page) => _page.evaluate(selector => Boolean(document.querySelector(selector)), advertiseSelector);
@@ -15,9 +16,9 @@ const abortUselessRequests = (request: puppeteer.Request) => {
     }
 };
 
-const getSourceCodeOnOnePage = async(url: string, browser: puppeteer.Browser): Promise<string> => {
+const getSourceCodeOnOnePage = async(url: string, browser: puppeteer.Browser): Promise<Key> => {
     // try to get result from ram first
-    const tempResult = await tmp.get(url);
+    const tempResult = await tmp.get(url, true);
     if (tempResult) {
         return tempResult;
     }
@@ -30,44 +31,41 @@ const getSourceCodeOnOnePage = async(url: string, browser: puppeteer.Browser): P
     if (await isAdvertisePage(page)) {
         await page.click(advertiseSelector);
     }
-    // get source
+    // get source and save it in tmp
     const source = await page.content();
-    // save in ram in case it crashes
-    tmp.save(source, url);
-    return source;
+    return tmp.saveAndGetKey(source, url);
 };
 
-const getSourceCode = async(urls: string[]): Promise<string[]> => {
+const getSourceCode = async(urls: string[]): Promise<Key[]> => {
     const browser = await puppeteer.launch(browserOptions);
     return Promise.all(urls
-    // get the sources on all pages in parallel
+    // save the sources on all pages in parallel
+    // and return their Keys
     .map(url => getSourceCodeOnOnePage(url, browser)))
 
     // once job has been done on all pages
-    // close the browser and return the results
+    // close the browser and return the Keys
     .then(sources => {
         browser.close();
         return sources;
     })
 
     // if it fails, we should close the browser too
-    .catch(() => {
+    .catch((error) => {
         browser.close();
-        return Promise.reject();
+        return Promise.reject(error);
     });
 };
 
-
-const n = 22;
-export const getAllSourceCodes = async(): Promise<string[]> => {
-    console.log('starting to get source code');
-    const urls =  [...Array(n).keys()].map(nb => `http://www.allocine.fr/salle/cinemas-pres-de-115755/?page=${nb}`);
-    return asyncAllLimit(getSourceCode, urls, 5);
+export const getAllSourceCodes = async(): Promise<Key[]> => {
+    logger.info('starting to get source code');
+    const urls =  [...Array(nbCinePageSourceToGet).keys()].map(nb => `http://www.allocine.fr/salle/cinemas-pres-de-115755/?page=${nb}`);
+    return asyncAllLimit(getSourceCode, urls, chunkSizeForSourceGetter);
 };
 
 
 // another scenario. not used yet
-export const getAllSourceCodesByGoingOnEachCinemaPage = async(): Promise<string[]> => {
+export const getAllSourceCodesByGoingOnEachCinemaPage = async(): Promise<Key[]> => {
     const cinefile = fs.readFileSync('./cinemas.json', 'utf8');
     const cines = JSON.parse(cinefile);
     const cineUrls = Object.keys(cines).map(cineId => `http://www.allocine.fr/${cines[cineId].url}`);

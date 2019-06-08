@@ -4,12 +4,14 @@ import * as rimraf from 'rimraf';
 import { getOldMovies, getRetrospectives, getRecentMovies } from './utils/cluster';
 import { Movie, Cinema, Schedule } from './clean-and-save';
 import * as sharp from 'sharp';
+import { logger } from './utils/logger';
 
 const exportFolder = './export';
 interface Movies { [id: string]: Movie; }
 interface Schedules { [id: string]: Schedule; }
 interface Cinemas { [id: string]: Cinema; }
 export const bakeForFront = () => {
+    logger.info('baking front package');
     const cinemasForFront = getParisianCinemas();
     const schedulesForFront = getSchedulesForFront(cinemasForFront);
     const moviesForFront = getMoviesForFront(schedulesForFront);
@@ -75,7 +77,7 @@ function bakeImagesForFront(mvs: Movies): void {
             return;
         }
         if (!fs.existsSync(`./posters/${moviePoster}`)) {
-            console.log(`./posters/${moviePoster} does not exist, this is weird!`);
+            logger.error(`./posters/${moviePoster} does not exist, this is weird!`);
             return;
         }
         sharp(`./posters/${moviePoster}`)
