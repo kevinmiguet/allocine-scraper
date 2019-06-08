@@ -2,15 +2,22 @@ import * as cheerio from 'cheerio';
 import { allocineScrap, acMovieTime } from './clean-and-save';
 import { Key } from './main';
 import * as tmp from './utils/temp';
+import { logger } from './utils/logger';
 
 const jsonIfy = (input: any): JSON => {
     if (typeof input === 'string') {
         // was jsonIfied by cheerio because some chars were not escaped. doing this.
+        // [""] > []
         input = input.replace(/\[""\]/gi, '[]');
+        // e " > e \"
         input = input.replace(/([\w ]) "/gi, '$1 \\"');
+        // " e
         input = input.replace(/" ([\w ])/gi, '\\" $1');
-        input = input.replace(/"(")/gi, '\\"$1');
-        return JSON.parse(input);
+        try {
+            return JSON.parse(input);
+        } catch (err) {
+            logger.error(`error during jsonIfy() of ${input}: ${err}`);
+        }
     }
     return input;
 };

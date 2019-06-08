@@ -8,5 +8,6 @@ movies.json
 schedules.json
 build/
 .vscode
+tmp/
 node_modules/
 tmp/

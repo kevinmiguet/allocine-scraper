@@ -1489,5 +1489,19 @@
         "id": "B0083",
         "address": "\n96-98 rue Saint-Denis 92700 Colombes\n",
         "pos": null
+    },
+    "C0071": {
+        "name": "Ecoles 21 ",
+        "url": "/seance/salle_gen_csalle=C0071.html",
+        "id": "C0071",
+        "address": "\n23, rue des Ecoles 75005 Paris 5e arrondissement\n",
+        "pos": null
+    },
+    "W7506": {
+        "name": "Institut Hongrois de Paris",
+        "url": "/seance/salle_gen_csalle=W7506.html",
+        "id": "W7506",
+        "address": "\n92, rue Bonaparte 75006 Paris 6e arrondissement\n",
+        "pos": null
     }
 }

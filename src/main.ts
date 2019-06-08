@@ -9,7 +9,7 @@ import { logger } from './utils/logger';
 import { asyncAllLimit } from './utils/asyncLimit';
 
 export const browserOptions: puppeteer.LaunchOptions = {
-    headless: true,
+    headless: false,
     timeout: 1000 * 60 * 5,
 };
 export const nbCinePageSourceToGet = 22;
@@ -43,10 +43,5 @@ async function main(): Promise<void> {
         });
 }
 
-// getAllSourceCodesByGoingOnEachCinemaPage()
-//     // get source code of pages (on the website)
-//     .then(sourceCodes => Promise.all(sourceCodes.map(sourceCode => scrapForMoviePage(sourceCode))));
-// tmp.clean();
-
-tmp.clean()
+tmp.clean();
 main();
