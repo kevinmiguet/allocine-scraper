@@ -1,6 +1,6 @@
 import * as puppeteer from 'puppeteer';
 import * as fs from 'fs';
-import { browserOptions } from './main';
+import { browserOptions, chunkSizeForEnrich } from './main';
 import { getMovie, setMovie, writeDatabases, database } from './utils/database';
 import { Movie } from './clean-and-save';
 import { asyncAllLimit } from './utils/asyncLimit';
@@ -14,7 +14,7 @@ export const enrich = async (): Promise<any> => {
     const movies = movieIds
         .map(movieId => getMovie(movieId))
         .filter(movie => doesMovieNeedPoster(movie));
-    return asyncAllLimit(getPosters, movies, 5);
+    return asyncAllLimit(getPosters, movies, chunkSizeForEnrich);
 };
 
 const getPosters = async (movies: Movie[]): Promise<void> => {
