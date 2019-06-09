@@ -67,18 +67,15 @@ export interface Cinema {
     };
 }
 export interface Week {
-    lundi: string[];
-    mardi: string[];
-    mercredi: string[];
-    jeudi: string[];
-    vendredi: string[];
-    samedi: string[];
-    dimanche: string[];
+    [dayname: string]: {
+        VO?: string[];
+        VF?: string[];
+    };
 }
 export interface Schedule {
     movieId: string;
     cineId: string;
-    schedule: Week;
+    week: Week;
 }
 export interface MoviesById {[movieId: string]: Movie; }
 export interface Database {
@@ -142,19 +139,19 @@ function cleanAndSaveScheduleData(scrapedDataFromOnePage: allocineScrap): void {
                 scheduleToModify = setSchedule({
                     cineId,
                     movieId,
-                    schedule: {},
+                    week: {},
                 } as Schedule);
             }
             // monday, tuesday ....
             const dayName = dayIdToDayName[scheduleOfOneDay.dayId];
             const thisMovieScheduleForThisDay = scheduleOfOneDay.movieTimes[i];
             const normalizedScheduleForThisDay = thisMovieScheduleForThisDay.map(schedule => schedule.debut);
-            scheduleToModify.schedule = {
-                ...scheduleToModify.schedule,
+            scheduleToModify.week = {
+                ...scheduleToModify.week,
                 // we may have already saved something for this day,
                 // ie if the same movie in another version
                 [dayName]: {
-                    ...scheduleToModify.schedule[dayName],
+                    ...scheduleToModify.week[dayName],
                     [movieData.version]: normalizedScheduleForThisDay,
                 },
             };

@@ -28,8 +28,11 @@ const getVersion = (els: CheerioElement[], $: CheerioStatic): string => {
         return match !== null;
     });
     const value = $(node).text();
+    if (value.indexOf('VO') > -1) {
+        return 'VO';
+    }
     // VF by default
-    return node ? value.replace('En ', '') : 'VF';
+    return 'VF';
 };
 /*
 Schema - Allocine
