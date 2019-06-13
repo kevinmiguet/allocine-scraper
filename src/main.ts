@@ -14,7 +14,7 @@ export const browserOptions: puppeteer.LaunchOptions = {
 };
 export const nbCinePageSourceToGet = 22;
 export const chunkSizeForSourceGetter = 3;
-export const chunkSizeForScrap = 3;
+export const chunkSizeForScrap = 2;
 export const chunkSizeForEnrich = 3;
 
 export type Key = string;
