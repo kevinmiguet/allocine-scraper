@@ -1,4 +1,4 @@
-import { getMovie, getCine, setCine, setMovie, getSchedule, setSchedule, writeDatabases } from './utils/database';
+import { getMovie, getCine, setCine, setMovie, getSchedule, setSchedule, writeDatabases, setMoviePoster } from './utils/database';
 import { Key } from './main';
 import { get } from './utils/temp';
 import { logger } from './utils/logger';
@@ -54,7 +54,7 @@ export interface Movie {
     actors: string[];
     directors: string[];
     genres: string[];
-    poster: string;
+    poster?: string;
 }
 export interface Cinema {
     id: string;
@@ -98,8 +98,10 @@ function cleanAndSaveMovieData (scrapedDataFromOnePage: allocineScrap): void {
                 year: parseInt(movieData.movie.year, 10),
                 actors: movieToBeSaved.actors,
                 genres: movieToBeSaved.genre,
-                poster: movieToBeSaved.poster,
             });
+            if (movieToBeSaved.poster && movieToBeSaved.poster !== '') {
+                setMoviePoster(movieToBeSaved.id, movieToBeSaved.poster);
+            }
         }
     }));
 }

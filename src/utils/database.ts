@@ -24,6 +24,12 @@ export const setMovie = (movie: Movie): Movie => {
     database.movies[movie.id] = movie;
     return getMovie(movie.id);
 };
+export const setMoviePoster = (movieId: string, poster: string) => {
+    if (!database.movies[movieId]) {
+        throw new Error('trying to set movie poster of non existing movie ..');
+    }
+    database.movies[movieId].poster = poster;
+};
 export const setCine = (cinema: Cinema): Cinema => {
     database.cinemas[cinema.id] = cinema;
     return getCine(cinema.id);
@@ -52,7 +58,7 @@ type getSchedulesArgs = {
 };
 export const getScheduleId = (schedule: Schedule): string => {
     return `${schedule.movieId}-${schedule.cineId}`;
-}
+};
 export const setSchedule = (schedule: Schedule): Schedule => {
     const scheduleId = getScheduleId(schedule);
     database.schedules[scheduleId] = schedule;

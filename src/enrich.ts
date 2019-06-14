@@ -30,11 +30,13 @@ const getPosters = async (movies: Movie[]): Promise<void> => {
                         poster: filename,
                     });
                 } else {
-                    logger.error(`did not find poster at ${url}`);
+                    delete movie.poster;
+                    setMovie(movie);
+                    console.log(`could not find ${movie.title} poster !`);
                 }
             });
     }))
-
+    // once all movies are done
     .then(() => {
         // close the browser
         browser.close();
@@ -43,7 +45,7 @@ const getPosters = async (movies: Movie[]): Promise<void> => {
         return Promise.resolve();
     });
 };
-const getImageAndSaveIt = async (url: string, filename: string, _browser: puppeteer.Browser): Promise<boolean> => {
+const getImageAndSaveIt = async (url: string, filename: string, _browser: puppeteer.Browser, n: number = 0): Promise<boolean> => {
     const FILESTOSAVE = ['jpg', 'png', 'gif', 'jpeg'];
     const IMAGE_FOLDER = './posters';
     let newPosterPath: string = '';
@@ -66,6 +68,18 @@ const getImageAndSaveIt = async (url: string, filename: string, _browser: puppet
     const page = await _browser.newPage();
     await page.on('response', _saveImageOnResponse);
     await page.goto(url, { waitUntil: 'networkidle0' })
+        .then(() => {
+            if (foundImage) {
+                return Promise.resolve(foundImage);
+            }
+            if (n === 3) {
+                // we tried three times already, just stop
+                // it's ok even if we found nothing
+                return Promise.resolve(foundImage);
+            }
+            // otherwise, try again
+            getImageAndSaveIt(url, filename, _browser, n + 1);
+        })
         .catch(error => {
             logger.error(error);
         });
