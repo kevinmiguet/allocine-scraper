@@ -1,7 +1,9 @@
+import * as fs from 'fs';
 import { getMovie, getCine, setCine, setMovie, getSchedule, setSchedule, writeDatabases, setMoviePoster } from './utils/database';
 import { Key } from './main';
 import { get } from './utils/temp';
-import { allocineScrap, acPosition, Cinema, OpenDataFranceReply, Schedule } from './types'
+import { allocineScrap, Cinema, Schedule } from './types'
+import { getPositionForCine } from './utils/positionHelper'
 
 function cleanAndSaveMovieData (scrapedDataFromOnePage: allocineScrap): void {
     scrapedDataFromOnePage.schedule
@@ -25,14 +27,36 @@ function cleanAndSaveMovieData (scrapedDataFromOnePage: allocineScrap): void {
     }));
 }
 
-function cleanAndSaveCineData (scrapedDataFromOnePage: allocineScrap): void {
+async function cleanAndSaveCineData (scrapedDataFromOnePage: allocineScrap): Promise<void> {
     const cineData = scrapedDataFromOnePage.cinemaData;
     const cineShouldBeSaved = !getCine(cineData.id);
     if (cineShouldBeSaved) {
-        setCine({
+        let cine = {
             ...cineData,
-            pos: null,
-        });
+            pos: null
+        } as Cinema
+        // clean address to be as compatible as possible with cinePositions.json
+        // removing starting '\n'
+        cine.address = cine.address.replace(/^\n*/, '')
+        // removing ending '\n'
+        cine.address = cine.address.replace(/\n*$/, '')
+        // replacing middle '\n' with ', '
+        cine.address = cine.address.replace('\n', ', ')
+        // add zipCode
+        const zipCode = cine.address.match('/ 750\d{2} /')
+        if (zipCode && zipCode.length > 0) {
+            cine.zipCode = zipCode[0].substr(1, 5)
+            console.log('found zipcode: ' + cine.zipCode)
+        }
+        // add position
+        try {
+            const pos = await getPositionForCine(cine)
+            cine.pos = {
+                lat: pos.latitude,
+                lng: pos.longitude
+            }
+        } catch(err){}
+        setCine(cine);
     }
 }
 
@@ -85,11 +109,11 @@ export interface CleanerOutput {
 }
 export async function cleaner(scrapedDataKey: Key): Promise<void> {
     const scrapedData: any[] = await get(scrapedDataKey);
-    scrapedData.forEach((scrapedDataFromOnePage: allocineScrap) => {
+    scrapedData.forEach(async (scrapedDataFromOnePage: allocineScrap) => {
         // add data to movies database
         cleanAndSaveMovieData(scrapedDataFromOnePage);
         // add data to cinema database
-        cleanAndSaveCineData(scrapedDataFromOnePage);
+        await cleanAndSaveCineData(scrapedDataFromOnePage);
         // add data to schedule database
         cleanAndSaveScheduleData(scrapedDataFromOnePage);
         // force to write database to files
