@@ -1,5 +1,5 @@
 import * as cheerio from 'cheerio';
-import { allocineScrap, acMovieTime } from './clean-and-save';
+import { allocineScrap, acMovieTime } from './types';
 import { Key } from './main';
 import * as tmp from './utils/temp';
 import { logger } from './utils/utils';

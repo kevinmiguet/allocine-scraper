@@ -1,93 +1,7 @@
 import { getMovie, getCine, setCine, setMovie, getSchedule, setSchedule, writeDatabases, setMoviePoster } from './utils/database';
 import { Key } from './main';
 import { get } from './utils/temp';
-import { logger } from './utils/utils';
-
-/// IN
-export type allocineScrap = {
-    cinemaData: acCinema;
-    days: acDay[]
-    schedule: acSchedule[];
-};
-export type acDay = {
-    day: string;
-    weekday: string;
-};
-export type acCinema = {
-    name: string;
-    url: string;
-    id: string;
-    address: string;
-};
-export type acMovieTime = {
-    debut: string;
-    fin: string;
-};
-export type acSchedule = {
-    dayId: string;
-    movieDatas: acMovieData[]
-    movieTimes: acMovieTime[][]
-};
-export type acMovieData = {
-    movie: acMovie;
-    version: string;
-    quality: string;
-};
-export type acMovie = {
-    id: string;
-    title: string;
-    year: string;
-    page: string;
-    trailer: string;
-    poster: string;
-    directors: string[],
-    actors: string[],
-    genre: string[],
-    distributor: string
-};
-
-/// OUT
-export interface Movie {
-    id: string;
-    title: string;
-    year: number;
-    actors: string[];
-    directors: string[];
-    genres: string[];
-    poster?: string;
-    releaseDate?: string;
-    countries?: string[];
-    summary?: string;
-}
-export interface Cinema {
-    id: string;
-    name: string;
-    url?: string;
-    address: string;
-    pos: {
-        lat: number;
-        lng: number;
-    };
-}
-export interface Week {
-    [dayname: string]: {
-        VO?: string[];
-        VF?: string[];
-    };
-}
-export interface Schedule {
-    movieId: string;
-    cineId: string;
-    week: Week;
-}
-export interface MoviesById {[movieId: string]: Movie; }
-export interface ScheduleById {[scheduleId: string]: Schedule; }
-
-export interface Database {
-    schedules: ScheduleById;
-    movies: MoviesById;
-    cinemas: {[cinemaId: string]: Cinema};
-}
+import { allocineScrap, acPosition, Cinema, OpenDataFranceReply, Schedule } from './types'
 
 function cleanAndSaveMovieData (scrapedDataFromOnePage: allocineScrap): void {
     scrapedDataFromOnePage.schedule
@@ -170,7 +84,6 @@ export interface CleanerOutput {
     cineIds: string[];
 }
 export async function cleaner(scrapedDataKey: Key): Promise<void> {
-    logger.info(`cleaning data`);
     const scrapedData: any[] = await get(scrapedDataKey);
     scrapedData.forEach((scrapedDataFromOnePage: allocineScrap) => {
         // add data to movies database
