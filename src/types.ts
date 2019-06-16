@@ -41,7 +41,7 @@ export type acMovie = {
     distributor: string
 };
 export type acPosition = {
-    index: Number,
+    cineId: string,
     name: string,
     address: string,
     latitude: number,

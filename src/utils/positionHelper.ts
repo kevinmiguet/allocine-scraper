@@ -15,8 +15,12 @@ interface OpenDataFranceReply {
 let positions: acPosition[] = require('./cinePositions.json');
 let cinemas: { [id: string]: Cinema } = require('../../cinemas.json');
 
+function getPositionInDatabase(cine: Cinema): acPosition {
+    return positions.find((_cine: any) => _cine.id === cine.id)
+}
+
 export async function getPositionForCine(cine: Cinema): Promise<acPosition> {
-    let pos: acPosition = positions.find((_cine: any) => _cine.address === cine.address )
+    let pos = getPositionInDatabase(cine)
     if (pos) {
         return pos
     }
@@ -31,7 +35,7 @@ export async function getPositionForCine(cine: Cinema): Promise<acPosition> {
             const reply = await rawReply.json() as OpenDataFranceReply
             if (reply) {
                 pos = {
-                    index: positions.length + 1,
+                    cineId: cine.id,
                     name: cine.name,
                     address: cine.address,
                     latitude: reply.lat,
@@ -40,6 +44,8 @@ export async function getPositionForCine(cine: Cinema): Promise<acPosition> {
 
                 positions.push(pos)
             }
+        } else {
+            console.error('error getting position')
         }
     } catch (err) {
         console.error(err)
@@ -73,7 +79,18 @@ export async function addPositions() {
     for (let id in cinemas) {
         let cine = cinemas[id]
         if (cine.pos !== null) {
-            // continue
+            if (!getPositionInDatabase(cine)) {
+                // add missing position to cinePositions.json
+                const pos = {
+                    cineId: cine.id,
+                    name: cine.name,
+                    address: cine.address,
+                    latitude: cine.pos.lat,
+                    longitude: cine.pos.lng
+                }
+                positions.push(pos)
+            }
+            continue
         }
         const pos = await getPositionForCine(cinemas[id])
         if (pos !== null && pos !== undefined) {
@@ -94,3 +111,6 @@ export async function addPositions() {
     fs.writeFileSync('./export/cinemas_pos.json', JSON.stringify(cinemasWithPos, null, 4))
     fs.writeFileSync('./export/cinemas_missing.json', JSON.stringify(missing, null, 4))
 }
+
+addPositions()
+.then(() => console.log('done'))
