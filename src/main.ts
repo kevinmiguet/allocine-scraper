@@ -9,7 +9,7 @@ import { logger } from './utils/logger';
 import { asyncAllLimit } from './utils/asyncLimit';
 
 export const browserOptions: puppeteer.LaunchOptions = {
-    headless: true,
+    headless: false,
     timeout: 1000 * 60 * 5,
 };
 export const nbCinePageSourceToGet = 22;

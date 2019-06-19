@@ -78,8 +78,10 @@ export interface Schedule {
     week: Week;
 }
 export interface MoviesById {[movieId: string]: Movie; }
+export interface ScheduleById {[scheduleId: string]: Schedule; }
+
 export interface Database {
-    schedules: {[scheduleId: string]: Schedule};
+    schedules: ScheduleById;
     movies: MoviesById;
     cinemas: {[cinemaId: string]: Cinema};
 }

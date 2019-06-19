@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { Database, Cinema, Movie, Schedule } from '../clean-and-save';
+import { Database, Cinema, Movie, Schedule, ScheduleById } from '../clean-and-save';
 
 export const paths = {
     // based on where the script is launched
@@ -38,19 +38,24 @@ export const setCine = (cinema: Cinema): Cinema => {
 interface IndexedScheduleIds  {
     [id: string]: string[];
 }
-const scheduleIds = Object.keys(database.schedules);
-const indexedScheduleIds: IndexedScheduleIds = scheduleIds.reduce((_indexedScheduleIds, scheduleId) => {
-    const schedule = database.schedules[scheduleId];
-    if (!_indexedScheduleIds[schedule.cineId]) {
-        _indexedScheduleIds[schedule.cineId] = [];
-    }
-    if (!_indexedScheduleIds[schedule.movieId]) {
-        _indexedScheduleIds[schedule.movieId] = [];
-    }
-    _indexedScheduleIds[schedule.cineId].push(scheduleId);
-    _indexedScheduleIds[schedule.movieId].push(scheduleId);
-    return _indexedScheduleIds;
-}, {});
+
+export const getIndexedScheduleIds = (schedules: ScheduleById): IndexedScheduleIds => {
+    return Object.keys(schedules)
+    .reduce((_indexedScheduleIds, scheduleId) => {
+        const schedule = schedules[scheduleId];
+        if (!_indexedScheduleIds[schedule.cineId]) {
+            _indexedScheduleIds[schedule.cineId] = [];
+        }
+        if (!_indexedScheduleIds[schedule.movieId]) {
+            _indexedScheduleIds[schedule.movieId] = [];
+        }
+        _indexedScheduleIds[schedule.cineId].push(scheduleId);
+        _indexedScheduleIds[schedule.movieId].push(scheduleId);
+        return _indexedScheduleIds;
+    }, {});
+};
+
+const indexedScheduleIds = getIndexedScheduleIds(database.schedules);
 
 type getSchedulesArgs = {
     movieId?: string;

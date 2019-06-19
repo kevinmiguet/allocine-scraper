@@ -1,13 +1,19 @@
-import { MoviesById } from '../clean-and-save';
+import { MoviesById, ScheduleById } from '../clean-and-save';
+import { getIndexedScheduleIds } from './database';
 
 interface MovieCluster {
     // type: 'carousel' | 'classic';
     movieIds: string[];
     title: string;
 }
-export const getRecentMovies = (movies: MoviesById): MovieCluster[] => {
+export const getRecentMovies = (movies: MoviesById, schedulesForFront: ScheduleById): MovieCluster[] => {
+    const indexedScheduleIds = getIndexedScheduleIds(schedulesForFront);
+
     const recentMovieIds = Object.keys(movies)
-        .filter(movieId => movies[movieId].year && movies[movieId].year >= 2018);
+        .filter(movieId => movies[movieId].year && movies[movieId].year >= 2018)
+        // put movies with more schedules first
+        .sort((movieIdA, movieIdB) => indexedScheduleIds[movieIdA].length - indexedScheduleIds[movieIdB].length);
+
     return [{
         movieIds: recentMovieIds,
         title: '',

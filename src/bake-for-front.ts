@@ -17,7 +17,7 @@ export const bakeForFront = () => {
     const moviesForFront = getMoviesForFront(schedulesForFront);
     // clusters are movie Ids grouped by theme for front
     let clusters = {
-        recent: getRecentMovies(moviesForFront),
+        recent: getRecentMovies(moviesForFront, schedulesForFront),
         old: getOldMovies(moviesForFront),
         retro: getRetrospectives(moviesForFront),
         all: null as any,
