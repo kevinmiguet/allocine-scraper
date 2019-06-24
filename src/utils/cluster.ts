@@ -8,11 +8,10 @@ interface MovieCluster {
 }
 export const getRecentMovies = (movies: MoviesById, schedulesForFront: ScheduleById): MovieCluster[] => {
     const indexedScheduleIds = getIndexedScheduleIds(schedulesForFront);
-
     const recentMovieIds = Object.keys(movies)
         .filter(movieId => movies[movieId].year && movies[movieId].year >= 2018)
-        // put movies with more schedules first
-        .sort((movieIdA, movieIdB) => indexedScheduleIds[movieIdA].length - indexedScheduleIds[movieIdB].length);
+        // put movies with more schedules last (so tyhat they appear on top)
+        .sort((movieIdA, movieIdB) => indexedScheduleIds[movieIdB].length - indexedScheduleIds[movieIdA].length);
 
     return [{
         movieIds: recentMovieIds,
@@ -27,7 +26,7 @@ export const getOldMovies = (movies: MoviesById): MovieCluster[] => {
     // @TODO: add a button to sort movies by release date on front
     return [{
         movieIds: oldMovieIds,
-        title: 'old movies',
+        title: 'vieux films',
     }];
 };
 
