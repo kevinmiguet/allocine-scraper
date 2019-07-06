@@ -20,8 +20,18 @@ if (fs.existsSync(paths.cinemasDb)) {
 }
 export const getMovie = (movieId: string): Movie => database.movies[movieId];
 export const getCine = (cineId: string): Cinema => database.cinemas[cineId];
-export const setMovie = (movie: Movie): Movie => {
-    database.movies[movie.id] = movie;
+export const setMovie = (movie: Partial<Movie>): Movie => {
+    if (!movie.id) {
+        throw new Error('should provide an id when using setMovie !');
+    }
+    if (!database.movies[movie.id])  {
+        database.movies[movie.id] = movie as Movie;
+    } else {
+        database.movies[movie.id] = {
+            ...database.movies[movie.id],
+            ...movie,
+        };
+    }
     return getMovie(movie.id);
 };
 export const setMoviePoster = (movieId: string, poster: string) => {

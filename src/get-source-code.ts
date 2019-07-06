@@ -1,9 +1,9 @@
 import * as puppeteer from 'puppeteer';
 import { browserOptions, Key, nbCinePageSourceToGet, chunkSizeForSourceGetter } from './main';
-import { asyncAllLimit } from './utils/asyncLimit';
+import { asyncAllLimitForBrowserFunction } from './utils/asyncLimit';
 import * as fs from 'fs';
 import * as tmp from './utils/temp';
-import { logger } from './utils/logger';
+import { logger } from './utils/utils';
 
 const advertiseSelector = '#wbdds_insertion_116888_interstitial_close_button';
 const isAdvertisePage = (_page: puppeteer.Page) => _page.evaluate(selector => Boolean(document.querySelector(selector)), advertiseSelector);
@@ -57,17 +57,22 @@ const getSourceCode = async(urls: string[]): Promise<Key[]> => {
     });
 };
 
-export const getAllSourceCodes = async(): Promise<Key[]> => {
-    logger.info('starting to get source code');
+export const getAllSchedulePageSourceCodes = async(): Promise<Key[]> => {
+    logger.info('starting to get Schedule pages source code');
     const urls =  [...Array(nbCinePageSourceToGet).keys()].map(nb => `http://www.allocine.fr/salle/cinemas-pres-de-115755/?page=${nb}`);
-    return asyncAllLimit(getSourceCode, urls, chunkSizeForSourceGetter);
+    return asyncAllLimitForBrowserFunction(getSourceCode, urls, chunkSizeForSourceGetter);
 };
 
+export const getMovieDetailsPageSourceCodes = async(movieIds: string[]): Promise<Key[]> => {
+    logger.info('starting to get Movie Details pages source code');
+    const urls = movieIds.map(movieId => `http://www.allocine.fr/film/fichefilm_gen_cfilm=${movieId}.html`);
+    return asyncAllLimitForBrowserFunction(getSourceCode, urls, chunkSizeForSourceGetter);
+};
 
 // another scenario. not used yet
-export const getAllSourceCodesByGoingOnEachCinemaPage = async(): Promise<Key[]> => {
+export const getAllSchedulePageSourceCodesByGoingOnEachCinemaPage = async(): Promise<Key[]> => {
     const cinefile = fs.readFileSync('./cinemas.json', 'utf8');
     const cines = JSON.parse(cinefile);
     const cineUrls = Object.keys(cines).map(cineId => `http://www.allocine.fr/${cines[cineId].url}`);
-    return asyncAllLimit(getSourceCode, [cineUrls[3]], 10);
+    return asyncAllLimitForBrowserFunction(getSourceCode, [cineUrls[3]], 10);
 };

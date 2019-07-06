@@ -11,14 +11,21 @@ function chunkArray(arr: any[], chunkSize: number): any[][] {
     }
     return tempArray;
 }
+export const asyncAllLimit = (_fn: AsyncFunction, arr: any[], limit: number) => {
+    async function fn(els: any[]): Promise<any[]> {
+        return Promise.all(els.map(el => _fn(el)));
+    }
+    return asyncAllLimitForBrowserFunction(fn, arr, limit);
 
-export async function asyncAllLimit(asyncFn: AsyncFunction, arr: any[], limit: number): Promise<any[]> {
+};
+export async function asyncAllLimitForBrowserFunction(asyncFn: AsyncFunction, arr: any[], limit: number): Promise<any[]> {
     if (arr.length === 0) {
         return Promise.resolve([]);
     }
     const chunkedArray = chunkArray(arr, limit);
     const _pipeAsyncStuff = (_chunkedArray: any[][], i: number, asyncFunc: AsyncFunction, acc: any[] = []): Promise<any[]> => {
-        console.log(`treating chunk ${i}...`);
+        console.log(`${asyncFunc.name}: treating chunk ${i}...`);
+
         return asyncFunc(_chunkedArray[i])
         // launch async function on all elements of first chunk
         // do it on next chunk or resolve promise if there is none

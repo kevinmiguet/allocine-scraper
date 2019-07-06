@@ -3,7 +3,7 @@ const tempFolder = './tmp/';
 import * as hash from 'object-hash';
 import * as rimraf from 'rimraf';
 import { Key } from '../main';
-import { logger } from './logger';
+import { logger } from './utils';
 
 const getFileLocation = (key: string) => `${tempFolder}${key}.json`;
 function createTmpFolderIfNecessary(): void {

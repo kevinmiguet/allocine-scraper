@@ -4,7 +4,7 @@ import * as rimraf from 'rimraf';
 import { getOldMovies, getRetrospectives, getRecentMovies } from './utils/cluster';
 import { Movie, Cinema, Schedule } from './clean-and-save';
 import * as sharp from 'sharp';
-import { logger } from './utils/logger';
+import { logger } from './utils/utils';
 
 const exportFolder = './export';
 interface Movies { [id: string]: Movie; }
@@ -73,7 +73,7 @@ function bakeImagesForFront(mvs: Movies): void {
     fs.mkdirSync(`${exportFolder}/posters/`);
     Object.keys(mvs).forEach(movieId => {
         const moviePoster = mvs[movieId].poster;
-        if (moviePoster === '' || fs.existsSync(`${exportFolder}/posters/${moviePoster}`)) {
+        if (!moviePoster || moviePoster === '' || fs.existsSync(`${exportFolder}/posters/${moviePoster}`)) {
             return;
         }
         if (!fs.existsSync(`./posters/${moviePoster}`)) {

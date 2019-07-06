@@ -1,7 +1,7 @@
 import { getMovie, getCine, setCine, setMovie, getSchedule, setSchedule, writeDatabases, setMoviePoster } from './utils/database';
 import { Key } from './main';
 import { get } from './utils/temp';
-import { logger } from './utils/logger';
+import { logger } from './utils/utils';
 
 /// IN
 export type allocineScrap = {
@@ -55,6 +55,9 @@ export interface Movie {
     directors: string[];
     genres: string[];
     poster?: string;
+    releaseDate?: string;
+    countries?: string[];
+    summary?: string;
 }
 export interface Cinema {
     id: string;

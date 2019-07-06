@@ -2,7 +2,7 @@ import * as cheerio from 'cheerio';
 import { allocineScrap, acMovieTime } from './clean-and-save';
 import { Key } from './main';
 import * as tmp from './utils/temp';
-import { logger } from './utils/logger';
+import { logger } from './utils/utils';
 
 const jsonIfy = (input: any): JSON => {
     if (typeof input === 'string') {
