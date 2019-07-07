@@ -1,6 +1,6 @@
 import { Movie } from '../clean-and-save';
 import { getMovieDetailsPageSourceCodes } from '../get-source-code';
-import { Key, chunkSizeForScrap } from '../main';
+import { chunkSizeForScrap } from '../main';
 import { asyncAllLimit } from '../utils/asyncLimit';
 import * as tmp from '../utils/temp';
 import { setMovie, writeDatabases } from '../utils/database';
@@ -8,15 +8,15 @@ import * as cheerio from 'cheerio';
 import { normalizeText } from '../utils/utils';
 
 
-export const getMoviesExtraInfo = async (movies: Movie[]) => {
+export const getMoviesDetails = async (movies: Movie[]) => {
     const movieIds = movies.map(m => m.id);
     return getMovieDetailsPageSourceCodes(movieIds)
-    .then(keys => asyncAllLimit(scrapeMovieDetailPages, keys, chunkSizeForScrap))
+    .then(keys => asyncAllLimit(scrapeMovieDetailsPages, keys, chunkSizeForScrap))
     .then(keys => Promise.all(keys.map(cleanAndSaveMovieDetails)))
     .then(() => writeDatabases());
 };
 
-const scrapeMovieDetailPages = async (key: string): Promise<any> => {
+const scrapeMovieDetailsPages = async (key: string): Promise<any> => {
     const html = await tmp.get(key);
     const $ = cheerio.load(html);
     return tmp.saveAndGetKey({
