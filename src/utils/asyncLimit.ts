@@ -24,7 +24,7 @@ export async function asyncAllLimitForBrowserFunction(asyncFn: AsyncFunction, ar
     }
     const chunkedArray = chunkArray(arr, limit);
     const _pipeAsyncStuff = (_chunkedArray: any[][], i: number, asyncFunc: AsyncFunction, acc: any[] = []): Promise<any[]> => {
-        console.log(`${asyncFunc.name}: treating chunk ${i}...`);
+        console.log(`${asyncFunc.name}: treating chunk ${i + 1}/${_chunkedArray.length}...`);
 
         return asyncFunc(_chunkedArray[i])
         // launch async function on all elements of first chunk

@@ -1,10 +1,10 @@
-import { database, getScheduleId } from './utils/database';
+import { database, getScheduleId } from '../utils/database';
 import * as fs from 'fs';
 import * as rimraf from 'rimraf';
-import { getOldMovies, getRetrospectives, getRecentMovies } from './utils/cluster';
-import { Movie, Cinema, Schedule } from './clean-and-save';
+import { getOldMovies, getRetrospectives, getRecentMovies } from './cluster';
+import { Movie, Cinema, Schedule } from '../clean-and-save';
 import * as sharp from 'sharp';
-import { logger } from './utils/utils';
+import { logger } from '../utils/utils';
 
 const exportFolder = './export';
 interface Movies { [id: string]: Movie; }

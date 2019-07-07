@@ -3,7 +3,7 @@ import { cleaner } from './clean-and-save';
 import { enrich } from './enrich/enrich';
 import * as puppeteer from 'puppeteer';
 import { getAllSchedulePageSourceCodes } from './get-source-code';
-import { bakeForFront } from './bake-for-front';
+import { bakeForFront } from './bake-for-front/bake-for-front';
 import * as tmp from './utils/temp';
 import { logger } from './utils/utils';
 import { asyncAllLimit } from './utils/asyncLimit';
@@ -12,7 +12,7 @@ export const browserOptions: puppeteer.LaunchOptions = {
     headless: true,
     timeout: 1000 * 60 * 5,
 };
-export const nbCinePageSourceToGet = 22;
+export const nbCinePageSourceToGet = 2;
 export const chunkSizeForSourceGetter = 3;
 export const chunkSizeForScrap = 3;
 export const chunkSizeForEnrich = 3;

@@ -1503,5 +1503,12 @@
         "id": "W7506",
         "address": "\n92, rue Bonaparte 75006 Paris 6e arrondissement\n",
         "pos": null
+    },
+    "B0219": {
+        "name": "Espace Carpeaux",
+        "url": "/seance/salle_gen_csalle=B0219.html",
+        "id": "B0219",
+        "address": "\n15, bd. Aristide-Briand 92400 Courbevoie\n",
+        "pos": null
     }
 }

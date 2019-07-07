@@ -1,38 +1,52 @@
 import { MoviesById, ScheduleById } from '../clean-and-save';
-import { getIndexedScheduleIds } from './database';
+import { getIndexedScheduleIds } from '../utils/database';
+import { getPreviousWednesday, isSameDay } from '../utils/utils';
 
 interface MovieCluster {
-    // type: 'carousel' | 'classic';
     movieIds: string[];
     title: string;
 }
+const currentYear = new Date().getFullYear();
 export const getRecentMovies = (movies: MoviesById, schedulesForFront: ScheduleById): MovieCluster[] => {
     const indexedScheduleIds = getIndexedScheduleIds(schedulesForFront);
-    const recentMovieIds = Object.keys(movies)
-        .filter(movieId => movies[movieId].year && movies[movieId].year >= 2018)
-        // put movies with more schedules last (so tyhat they appear on top)
-        .sort((movieIdA, movieIdB) => indexedScheduleIds[movieIdB].length - indexedScheduleIds[movieIdA].length);
+    // put movies with more schedules last (so that they appear on top)
+    const sortByNbOfSchedules = ((movieIdA: string, movieIdB: string) => indexedScheduleIds[movieIdB].length - indexedScheduleIds[movieIdA].length);
+    const previousWednesday = getPreviousWednesday(new Date());
+    const weeklyReleaseMovieIds = Object.keys(movies)
+        .filter(movieId => isSameDay(movies[movieId].releaseDate, previousWednesday))
+        .sort(sortByNbOfSchedules);
 
-    return [{
-        movieIds: recentMovieIds,
-        title: '',
-    }];
+    const otherRecentMovieIds = Object.keys(movies)
+        .filter(movieId => movies[movieId].releaseDate && new Date(movies[movieId].releaseDate).getFullYear() >= currentYear - 1
+            && weeklyReleaseMovieIds.indexOf(movieId) === -1)
+        .sort(sortByNbOfSchedules);
+
+    return [
+        {
+            movieIds: weeklyReleaseMovieIds,
+            title: 'Les sorties de la semaine',
+        },
+        {
+            movieIds: otherRecentMovieIds,
+            title: 'Autres films récents',
+        }];
 };
 
 export const getOldMovies = (movies: MoviesById): MovieCluster[] => {
     const oldMovieIds = Object.keys(movies)
-        .filter(movieId => movies[movieId].year && movies[movieId].year < 2018);
+        .filter(movieId => movies[movieId].releaseDate && new Date(movies[movieId].releaseDate).getFullYear() < currentYear - 1);
+
     // for now we return one big cluster containing all old movies
     // @TODO: add a button to sort movies by release date on front
     return [{
         movieIds: oldMovieIds,
-        title: 'vieux films',
+        title: 'Vieux films',
     }];
 };
 
 export const getRetrospectives = (movies: MoviesById): MovieCluster[] => {
     // group movies by directors
-    const movieIdsByDirector: {[director: string]: string[]} = {};
+    const movieIdsByDirector: { [director: string]: string[] } = {};
     Object.keys(movies).forEach(movieId => {
         const director = movies[movieId].directors[0];
         if (director === '') {

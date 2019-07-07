@@ -13,10 +13,10 @@ export const enrich = async (): Promise<any> => {
     const movieIds = Object.keys(database.movies);
     const movies = movieIds.map(getMovie);
 
-    const doesMovieNeedPoster = ((movie: Movie) => movie.poster && movie.poster.indexOf('http://') > -1);
+    const doesMovieNeedPoster = (movie: Movie) => movie.poster && movie.poster.indexOf('http://') > -1;
     await asyncAllLimitForBrowserFunction(getPosters, movies.filter(doesMovieNeedPoster), chunkSizeForEnrich);
 
-    const doesMovieNeedExtraInfo = ((movie: Movie) => !movie.summary || !movie.releaseDate);
+    const doesMovieNeedExtraInfo = ((movie: Movie) => !movie.countries && !movie.summary && !movie.releaseDate);
     await getMoviesDetails(movies.filter(doesMovieNeedExtraInfo));
 
     return Promise.resolve();

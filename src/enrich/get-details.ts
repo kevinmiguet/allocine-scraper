@@ -5,7 +5,7 @@ import { asyncAllLimit } from '../utils/asyncLimit';
 import * as tmp from '../utils/temp';
 import { setMovie, writeDatabases } from '../utils/database';
 import * as cheerio from 'cheerio';
-import { normalizeText } from '../utils/utils';
+import { normalizeText, normalizeDate } from '../utils/utils';
 
 
 export const getMoviesDetails = async (movies: Movie[]) => {
@@ -31,7 +31,7 @@ const cleanAndSaveMovieDetails = async (key: string): Promise<void> => {
     const movieInfo = await tmp.get(key);
     setMovie({
         id: movieInfo.id,
-        releaseDate: movieInfo.releaseDate,
+        releaseDate: movieInfo.releaseDate && normalizeDate(movieInfo.releaseDate),
         countries: movieInfo.countries && normalizeText(movieInfo.countries).split(' '),
         summary: movieInfo.summary && normalizeText(movieInfo.summary),
     });
