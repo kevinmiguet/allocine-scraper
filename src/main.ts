@@ -12,10 +12,10 @@ export const browserOptions: puppeteer.LaunchOptions = {
     headless: true,
     timeout: 1000 * 60 * 5,
 };
-export const nbCinePageSourceToGet = 2;
-export const chunkSizeForSourceGetter = 5;
-export const chunkSizeForScrap = 10;
-export const chunkSizeForEnrich = 10;
+export const nbCinePageSourceToGet = 22;
+export const chunkSizeForSourceGetter = 3;
+export const chunkSizeForScrap = 3;
+export const chunkSizeForEnrich = 3;
 
 export type Key = string;
 
