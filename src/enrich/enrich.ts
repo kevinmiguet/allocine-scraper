@@ -5,7 +5,7 @@ import { logger } from '../utils/utils';
 import { database, getMovie } from '../utils/database';
 import { getPosters } from './get-posters';
 import { chunkSizeForEnrich } from '../main';
-import { getMoviesDetails } from './get-extra-infos';
+import { getMoviesDetails } from './get-details';
 // use http://www.allocine.fr/film/fichefilm_gen_cfilm=273905.html
 // to get release date and nationality
 export const enrich = async (): Promise<any> => {
