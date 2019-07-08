@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import { Cinema, acPosition } from '../types';
 import fetch from 'cross-fetch'
+import { promisify } from 'util';
 
 interface OpenDataFranceReply {
     lat:         number;
@@ -15,19 +16,20 @@ interface OpenDataFranceReply {
 let positions: acPosition[] = require('./cinePositions.json');
 let cinemas: { [id: string]: Cinema } = require('../../cinemas.json');
 
+const writeFileAsync = promisify(fs.writeFile)
+
 function getPositionInDatabase(cine: Cinema): acPosition {
     return positions.find((_cine: any) => _cine.id === cine.id)
 }
 
-export async function getPositionForCine(cine: Cinema): Promise<acPosition> {
-    let pos = getPositionInDatabase(cine)
-    if (pos) {
+export async function fecthCineAddress(cine: Cinema) : Promise<acPosition> {
+    let pos = undefined
+
+    // skip cinemas without zipcode
+    if (!cine.zipCode) {
         return pos
     }
-    // look for geoloc for Paris cinemas
-    if (!cine.zipCode) {
-        return null
-    }
+
     try {
         const rawReply = await fetch(`https://koumoul.com/s/geocoder/api/v1/coord?q=${cine.address}&postcode=${cine.zipCode}&city=Paris`)
     
@@ -43,6 +45,7 @@ export async function getPositionForCine(cine: Cinema): Promise<acPosition> {
                 }
 
                 positions.push(pos)
+                await writeFileAsync('./src/utils/cinePositions.json', JSON.stringify(positions, null, 4))
             }
         } else {
             console.error('error getting position')
@@ -50,7 +53,6 @@ export async function getPositionForCine(cine: Cinema): Promise<acPosition> {
     } catch (err) {
         console.error(err)
     }
-
     return pos
 }
 
@@ -92,25 +94,32 @@ export async function addPositions() {
             }
             continue
         }
-        const pos = await getPositionForCine(cinemas[id])
-        if (pos !== null && pos !== undefined) {
-            cine.pos = {
-                lat: pos.latitude,
-                lng: pos.longitude
-            }
-            cinemasWithPos[id] = cine
+        let pos = getPositionInDatabase(cinemas[id])
+        if (pos !== null && pos !== undefined) {            
+            updateCinePos(cine, pos, cinemasWithPos, id);
         } else {
-            if (cine.zipCode) {
+            pos = await fecthCineAddress(cinemas[id])
+            if (pos !== null && pos !== undefined) {
+                updateCinePos(cine, pos, cinemasWithPos, id);
+            } else if (cine.zipCode) {
                 missing[id] = cine
             }
         }
     }
 
-    fs.writeFileSync('./src/utils/cinePositions.json', JSON.stringify(positions, null, 4))
-    fs.writeFileSync('./cinemas.json', JSON.stringify(cinemas, null, 4))
-    fs.writeFileSync('./export/cinemas_pos.json', JSON.stringify(cinemasWithPos, null, 4))
-    fs.writeFileSync('./export/cinemas_missing.json', JSON.stringify(missing, null, 4))
+    await writeFileAsync('./src/utils/cinePositions.json', JSON.stringify(positions, null, 4))
+    await writeFileAsync('./cinemas.json', JSON.stringify(cinemas, null, 4))
+    await writeFileAsync('./export/cinemas_pos.json', JSON.stringify(cinemasWithPos, null, 4))
+    await writeFileAsync('./export/cinemas_missing.json', JSON.stringify(missing, null, 4))
 }
 
 addPositions()
 .then(() => console.log('done'))
+
+function updateCinePos(cine: Cinema, pos: acPosition, cinemasWithPos: { [id: string]: Cinema; }, id: string) {
+    cine.pos = {
+        lat: pos.latitude,
+        lng: pos.longitude
+    };
+    cinemasWithPos[id] = cine;
+}
