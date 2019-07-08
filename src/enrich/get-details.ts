@@ -1,4 +1,4 @@
-import { Movie } from '../clean-and-save';
+import { Movie } from '../types';
 import { getMovieDetailsPageSourceCodes } from '../get-source-code';
 import { chunkSizeForScrap } from '../main';
 import { asyncAllLimit } from '../utils/asyncLimit';
