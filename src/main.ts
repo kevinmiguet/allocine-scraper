@@ -25,7 +25,7 @@ async function main(): Promise<void> {
         // analyze and extract information from it (offline)
         .then(sourceCodesKeys => asyncAllLimit(scrap, sourceCodesKeys, chunkSizeForScrap))
         // structure this information properly and save it
-        .then(scrappedKeys => Promise.all(scrappedKeys.map(scrappedKey => cleaner(scrappedKey))))
+        .then(scrappedKeys => Promise.all(scrappedKeys.map(async scrappedKey => await cleaner(scrappedKey))))
         // get extra information and download images (on the website)
         .then(() => enrich())
         // format it for front (offline)

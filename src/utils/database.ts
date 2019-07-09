@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { Database, Cinema, Movie, Schedule, ScheduleById } from '../clean-and-save';
+import { Database, Cinema, Movie, Schedule, ScheduleById } from '../types';
 
 export const paths = {
     // based on where the script is launched

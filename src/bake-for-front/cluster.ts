@@ -1,4 +1,4 @@
-import { MoviesById, ScheduleById } from '../clean-and-save';
+import { MoviesById, ScheduleById } from '../types';
 import { getIndexedScheduleIds } from '../utils/database';
 import { getPreviousWednesday, isSameDay } from '../utils/utils';
 

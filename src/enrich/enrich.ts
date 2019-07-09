@@ -1,5 +1,5 @@
 
-import { Movie } from '../clean-and-save';
+import { Movie } from '../types';
 import { asyncAllLimitForBrowserFunction } from '../utils/asyncLimit';
 import { logger } from '../utils/utils';
 import { database, getMovie } from '../utils/database';

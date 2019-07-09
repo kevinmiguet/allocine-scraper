@@ -1,9 +1,10 @@
 import * as puppeteer from 'puppeteer';
 import * as fs from 'fs';
-import { Movie } from '../clean-and-save';
-import { browserOptions } from '../main';
-import { setMovie, writeDatabases } from '../utils/database';
-import { logger } from '../utils/utils';
+
+import { browserOptions, chunkSizeForEnrich } from '../main';
+import { getMovie, setMovie, writeDatabases, database } from '../utils/database';
+import { Movie } from '../types';
+import { asyncAllLimit } from '../utils/asyncLimit';
 
 export const getPosters = async (movies: Movie[]): Promise<void> => {
     const browser = await puppeteer.launch(browserOptions);
@@ -73,7 +74,6 @@ const getImageAndSaveIt = async (url: string, filename: string, _browser: puppet
             getImageAndSaveIt(url, filename, _browser, n + 1);
         })
         .catch(error => {
-            logger.error(error);
         });
     return Promise.resolve(foundImage);
 };
