@@ -1,6 +1,4 @@
-import * as fs from 'fs';
-import { Cinema, acPosition } from '../types';
-import { promisify } from 'util';
+import { Cinema, Pos } from '../types';
 import { database, getCine } from './database';
 import { logger } from './utils';
 
@@ -14,17 +12,10 @@ interface OpenDataFranceReply {
     housenumber: string;
 }
 
-const writeFileAsync = promisify(fs.writeFile);
-
-export function getPositionInDatabase(cine: Cinema): acPosition {
-    return database.positions.find((positionData: acPosition) => positionData.cineId === cine.id);
-}
-
-export async function fetchCineAddress(cine: Cinema): Promise<acPosition> {
-    let pos;
-
+export async function fetchCinePos(cine: Cinema): Promise<Pos> {
     // skip cinemas without zipcode
     if (!cine.zipCode) {
+        logger.error(`cine ${cine.name} has no zipcode, can't get fetch its position !`);
         return;
     }
 
@@ -41,88 +32,29 @@ export async function fetchCineAddress(cine: Cinema): Promise<acPosition> {
             logger.error('error with rawReply.json()');
             return;
         }
-        pos = {
-            cineId: cine.id,
-            name: cine.name,
-            address: cine.address,
-            latitude: reply.lat,
-            longitude: reply.lon,
+        return {
+            lat: reply.lat,
+            lng: reply.lon,
         };
-        // add cineAddress to cinePositions
-        database.positions.push(pos);
-        await writeFileAsync('./src/utils/cinePositions.json', JSON.stringify(database.positions, null, 4));
     } catch (err) {
         console.error(err);
     }
-    return pos;
 }
 
-export function fixAddress(): void {
-    // tslint:disable-next-line:forin
-    for (let id in database.cinemas) {
-        let cine = getCine(id);
+export function cleanAddress(rawAddress: string): string {
         // clean address to be as compatible as possible with cinePositions.json
         // removing starting '\n'
-        cine.address = cine.address.replace(/^\n*/, '');
+        return rawAddress.replace(/^\n*/, '')
         // removing ending '\n'
-        cine.address = cine.address.replace(/\n*$/, '');
+        .replace(/\n*$/, '')
         // replacing middle '\n' with ', '
-        cine.address = cine.address.replace('\n', ', ');
-        // set zipcode for Paris cinemas [750xx]
-        const zipCode = cine.address.match(/750\d{2}/);
-        if (zipCode && zipCode.length > 0) {
-            cine.zipCode = zipCode[0];
-        }
+        .replace('\n', ', ');
+}
+export function extractZipcode(address: string): string {
+    // set zipcode for Paris cinemas [750xx]
+    const zipCode = address.match(/750\d{2}/);
+    if (zipCode && zipCode.length > 0) {
+        return zipCode[0];
     }
-}
-export async function addPositions(): Promise<void> {
-    let cinemasWithPos: { [id: string]: Cinema } = {};
-    let missing: { [id: string]: Cinema } = {};
-    const { cinemas } = database;
-
-    Object.keys(cinemas).forEach(async (id) => {
-        let cine = getCine(id);
-        const cineHasPos = cine.pos !== null;
-        if (cineHasPos) {
-            const shouldUpdateDatabase = !getPositionInDatabase(cine);
-            if (shouldUpdateDatabase) {
-                // add missing position to cinePositions.json
-                database.positions.push({
-                    cineId: cine.id,
-                    name: cine.name,
-                    address: cine.address,
-                    latitude: cine.pos.lat,
-                    longitude: cine.pos.lng,
-                });
-            }
-            return;
-        }
-        let pos = getPositionInDatabase(cine);
-        if (pos) {
-            updateCinePos(cine, pos, cinemasWithPos, id);
-        } else {
-            pos = await fetchCineAddress(cine);
-            if (pos) {
-                updateCinePos(cine, pos, cinemasWithPos, id);
-            } else if (cine.zipCode) {
-                missing[id] = cine;
-            }
-        }
-    });
-
-    await writeFileAsync('./src/utils/cinePositions.json', JSON.stringify(database.positions, null, 4));
-    await writeFileAsync('./cinemas.json', JSON.stringify(cinemas, null, 4));
-    await writeFileAsync('./export/cinemas_pos.json', JSON.stringify(cinemasWithPos, null, 4));
-    await writeFileAsync('./export/cinemas_missing.json', JSON.stringify(missing, null, 4));
-}
-
-addPositions()
-    .then(() => console.log('done'));
-
-function updateCinePos(cine: Cinema, pos: acPosition, cinemasWithPos: { [id: string]: Cinema; }, id: string): void {
-    cine.pos = {
-        lat: pos.latitude,
-        lng: pos.longitude,
-    };
-    cinemasWithPos[id] = cine;
+    return null;
 }

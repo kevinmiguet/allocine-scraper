@@ -49,12 +49,12 @@ export type acPosition = {
 };
 
 export type OpenDataFranceReply = {
-    lat:         number;
-    lon:         number;
-    citycode:    string;
-    city:        string;
-    name:        string;
-    postcode:    string;
+    lat: number;
+    lon: number;
+    citycode: string;
+    city: string;
+    name: string;
+    postcode: string;
     housenumber: string;
 };
 
@@ -71,15 +71,17 @@ export interface Movie {
     countries?: string[];
     summary?: string;
 }
+
+export interface Pos {
+    lat: number;
+    lng: number;
+}
 export interface Cinema {
     id: string;
     name: string;
     url?: string;
     address: string;
-    pos: {
-        lat: number;
-        lng: number;
-    };
+    pos: Pos;
     zipCode?: string;
 }
 export interface Week {
@@ -93,12 +95,12 @@ export interface Schedule {
     cineId: string;
     week: Week;
 }
-export interface MoviesById {[movieId: string]: Movie; }
-export interface ScheduleById {[scheduleId: string]: Schedule; }
+export interface MoviesById { [movieId: string]: Movie; }
+export interface ScheduleById { [scheduleId: string]: Schedule; }
 
 export interface Database {
-    schedules: {[scheduleId: string]: Schedule};
+    schedules: { [scheduleId: string]: Schedule };
     movies: MoviesById;
-    cinemas: {[cinemaId: string]: Cinema};
+    cinemas: { [cinemaId: string]: Cinema };
     positions: acPosition[];
 }

@@ -1,9 +1,8 @@
-import * as fs from 'fs';
 import { getMovie, getCine, setCine, setMovie, getSchedule, setSchedule, writeDatabases, setMoviePoster } from './utils/database';
 import { Key } from './main';
 import { get } from './utils/temp';
 import { allocineScrap, Cinema, Schedule } from './types';
-import { getPositionInDatabase } from './utils/positionHelper';
+import { fetchCinePos, cleanAddress, extractZipcode } from './utils/positionHelper';
 
 function cleanAndSaveMovieData (scrapedDataFromOnePage: allocineScrap): void {
     scrapedDataFromOnePage.schedule
@@ -33,29 +32,15 @@ async function cleanAndSaveCineData (scrapedDataFromOnePage: allocineScrap): Pro
     if (cineShouldBeSaved) {
         let cine = {
             ...cineData,
-            pos: null,
+            address: cleanAddress(cineData.address),
+            zipCode: extractZipcode(cineData.address),
         } as Cinema;
-        // clean address to be as compatible as possible with cinePositions.json
-        // removing starting '\n'
-        cine.address = cine.address.replace(/^\n*/, '');
-        // removing ending '\n'
-        cine.address = cine.address.replace(/\n*$/, '');
-        // replacing middle '\n' with ', '
-        cine.address = cine.address.replace('\n', ', ');
-        // add zipCode
-        const zipCode = cine.address.match('/ 750\d{2} /');
-        if (zipCode && zipCode.length > 0) {
-            cine.zipCode = zipCode[0].substr(1, 5);
-            console.log('found zipcode: ' + cine.zipCode);
-        }
+
         // add position
         try {
-            const pos = await getPositionInDatabase(cine);
+            const pos = await fetchCinePos(cine);
             if (pos) {
-                cine.pos = {
-                    lat: pos.latitude,
-                    lng: pos.longitude,
-                };
+                cine.pos = pos;
             }
         } catch (err) {
             //

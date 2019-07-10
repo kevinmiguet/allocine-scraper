@@ -1,7 +1,7 @@
 import { database, getScheduleId } from '../utils/database';
 import * as fs from 'fs';
 import * as rimraf from 'rimraf';
-import { getOldMovies, getRetrospectives, getRecentMovies } from '../utils/cluster';
+import { getOldMovies, getRetrospectives, getRecentMovies } from './cluster';
 import { Movie, Cinema, Schedule } from '../types';
 import * as sharp from 'sharp';
 import { logger } from '../utils/utils';
@@ -17,7 +17,7 @@ export const bakeForFront = () => {
     const moviesForFront = getMoviesForFront(schedulesForFront);
     // clusters are movie Ids grouped by theme for front
     let clusters = {
-        recent: getRecentMovies(moviesForFront),
+        recent: getRecentMovies(moviesForFront, schedulesForFront),
         old: getOldMovies(moviesForFront),
         retro: getRetrospectives(moviesForFront),
         all: null as any,
