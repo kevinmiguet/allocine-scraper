@@ -19,7 +19,7 @@ let positions: acPosition[] = require('./cinePositions.json');
 
 const writeFileAsync = promisify(fs.writeFile);
 
-function getPositionInDatabase(cine: Cinema): acPosition {
+export function getPositionInDatabase(cine: Cinema): acPosition {
     return positions.find((positionData: acPosition) => positionData.cineId === cine.id);
 }
 
@@ -62,8 +62,8 @@ export async function fetchCineAddress(cine: Cinema): Promise<acPosition> {
 
 export function fixAddress(): void {
     // tslint:disable-next-line:forin
-    for (let id in cinemas) {
-        let cine = cinemas[id];
+    for (let id in database.cinemas) {
+        let cine = getCine(id);
         // clean address to be as compatible as possible with cinePositions.json
         // removing starting '\n'
         cine.address = cine.address.replace(/^\n*/, '');
@@ -76,7 +76,6 @@ export function fixAddress(): void {
         if (zipCode && zipCode.length > 0) {
             cine.zipCode = zipCode[0];
         }
-        cinemas[id] = cine;
     }
 }
 export async function addPositions(): Promise<void> {

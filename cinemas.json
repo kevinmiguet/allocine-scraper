@@ -11,742 +11,1060 @@
         "url": "/seance/salle_gen_csalle=C0013.html",
         "id": "C0013",
         "address": "\n20, rue du Temple 75004 Paris 4e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.85741,
+            "lng": 2.35756
+        }
     },
     "C0117": {
         "name": "Espace Saint-Michel",
         "url": "/seance/salle_gen_csalle=C0117.html",
         "id": "C0117",
         "address": "\n7, place Saint-Michel 75005 Paris 5e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.85317,
+            "lng": 2.344308
+        }
     },
     "C0016": {
         "name": "Studio Galande",
         "url": "/seance/salle_gen_csalle=C0016.html",
         "id": "C0016",
         "address": "\n42, rue Galande 75005 Paris 5e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.851674,
+            "lng": 2.347011
+        }
     },
     "C0127": {
         "name": "Centre Georges-Pompidou",
         "url": "/seance/salle_gen_csalle=C0127.html",
         "id": "C0127",
         "address": "\npl. Georges-Pompidou 75004 Paris 4e arrondissement\nMétro Hotel-de-Ville, Rambuteau.\n",
-        "pos": null
+        "pos": {
+            "lat": 48.860879,
+            "lng": 2.35424
+        }
     },
     "C0100": {
         "name": "Saint-André des Arts ",
         "url": "/seance/salle_gen_csalle=C0100.html",
         "id": "C0100",
         "address": "\n30 rue Saint-André-des-Arts: caisse, salles 1 & 2 - 12 rue Gît-le-Cœur, Salle 3 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.853452,
+            "lng": 2.340567
+        }
     },
     "C0092": {
         "name": "MK2 Odéon (Côté St Michel)",
         "url": "/seance/salle_gen_csalle=C0092.html",
         "id": "C0092",
         "address": "\n7, rue Hautefeuille 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.852193,
+            "lng": 2.34267
+        }
     },
     "C0050": {
         "name": "MK2 Beaubourg",
         "url": "/seance/salle_gen_csalle=C0050.html",
         "id": "C0050",
         "address": "\n50, rue Rambuteau 75003 Paris 3e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.861185,
+            "lng": 2.353789
+        }
     },
     "C0015": {
         "name": "Christine 21",
         "url": "/seance/salle_gen_csalle=C0015.html",
         "id": "C0015",
         "address": "\n4, rue Christine 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.854537,
+            "lng": 2.339884
+        }
     },
     "W0375": {
         "name": "Centre Culturel Suisse",
         "url": "/seance/salle_gen_csalle=W0375.html",
         "id": "W0375",
         "address": "\n38 rue des Francs-Bourgeois 75003 Paris 3e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.857981,
+            "lng": 2.360266
+        }
     },
     "C0073": {
         "name": "Le Champo - Espace Jacques Tati",
         "url": "/seance/salle_gen_csalle=C0073.html",
         "id": "C0073",
         "address": "\n51, rue des Ecoles 75005 Paris 5e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.848781,
+            "lng": 2.348293
+        }
     },
     "C0041": {
         "name": "Nouvel Odéon ",
         "url": "/seance/salle_gen_csalle=C0041.html",
         "id": "C0041",
         "address": "\n6, rue de l'Ecole-de-Medecine 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.850773,
+            "lng": 2.341185
+        }
     },
     "C0119": {
         "name": "Forum des images",
         "url": "/seance/salle_gen_csalle=C0119.html",
         "id": "C0119",
         "address": "\nForum des Halles, 2 rue du Cinéma 75001 Paris 1er arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.862409,
+            "lng": 2.345181
+        }
     },
     "C0104": {
         "name": "UGC Odéon",
         "url": "/seance/salle_gen_csalle=C0104.html",
         "id": "C0104",
         "address": "\n124, bd Saint-Germain 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.852798,
+            "lng": 2.336771
+        }
     },
     "C0159": {
         "name": "UGC Ciné Cité Les Halles",
         "url": "/seance/salle_gen_csalle=C0159.html",
         "id": "C0159",
         "address": "\n7, place de la Rotonde 75001 Paris 1er arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.862429,
+            "lng": 2.34393
+        }
     },
     "C0074": {
         "name": "Reflet Medicis",
         "url": "/seance/salle_gen_csalle=C0074.html",
         "id": "C0074",
         "address": "\n3 rue Champollion 75005 Paris 5e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.849504,
+            "lng": 2.342788
+        }
     },
     "C0020": {
         "name": "Filmothèque du Quartier Latin",
         "url": "/seance/salle_gen_csalle=C0020.html",
         "id": "C0020",
         "address": "\n9, rue Champollion 75005 Paris 5e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.849504,
+            "lng": 2.342788
+        }
     },
     "C0102": {
         "name": "UGC Danton",
         "url": "/seance/salle_gen_csalle=C0102.html",
         "id": "C0102",
         "address": "\n99, bd Saint-Germain 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.852798,
+            "lng": 2.336771
+        }
     },
     "C0097": {
         "name": "MK2 Odéon (Côté St Germain)",
         "url": "/seance/salle_gen_csalle=C0097.html",
         "id": "C0097",
         "address": "\n113, bd Saint-Germain 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.852798,
+            "lng": 2.336771
+        }
     },
     "C0072": {
         "name": "Le Grand Action",
         "url": "/seance/salle_gen_csalle=C0072.html",
         "id": "C0072",
         "address": "\n5, rue des Ecoles 75005 Paris 5e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.848781,
+            "lng": 2.348293
+        }
     },
     "W7505": {
         "name": "Studio Luxembourg Accattone",
         "url": "/seance/salle_gen_csalle=W7505.html",
         "id": "W7505",
         "address": "\n20 rue Cujas 75005 Paris 5e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.847667,
+            "lng": 2.342646
+        }
     },
     "C0169": {
         "name": "Auditorium du Louvre",
         "url": "/seance/salle_gen_csalle=C0169.html",
         "id": "C0169",
         "address": "\nMusée du Louvre 75001 Paris 1er arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.862674,
+            "lng": 2.341883
+        }
     },
     "C0095": {
         "name": "Les 3 Luxembourg",
         "url": "/seance/salle_gen_csalle=C0095.html",
         "id": "C0095",
         "address": "\n67, rue Monsieur-le-Prince 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.849538,
+            "lng": 2.340092
+        }
     },
     "C0076": {
         "name": "Cinéma du Panthéon",
         "url": "/seance/salle_gen_csalle=C0076.html",
         "id": "C0076",
         "address": "\n13, rue Victor-Cousin 75005 Paris 5e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.847767,
+            "lng": 2.342341
+        }
     },
     "C0096": {
         "name": "Etoile Saint-Germain-des-Prés (Beau Regard)",
         "url": "/seance/salle_gen_csalle=C0096.html",
         "id": "C0096",
         "address": "\n22, Rue Guillaume Apollinaire 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.854611,
+            "lng": 2.333294
+        }
     },
     "C0140": {
         "name": "MK2 Bastille (côté Beaumarchais)",
         "url": "/seance/salle_gen_csalle=C0140.html",
         "id": "C0140",
         "address": "\n4, boulevard Beaumarchais 75011 Paris 11e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.857255,
+            "lng": 2.368412
+        }
     },
     "C0054": {
         "name": "L'Arlequin",
         "url": "/seance/salle_gen_csalle=C0054.html",
         "id": "C0054",
         "address": "\n76 rue de Rennes 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.848597,
+            "lng": 2.328205
+        }
     },
     "C0139": {
         "name": "Majestic Bastille",
         "url": "/seance/salle_gen_csalle=C0139.html",
         "id": "C0139",
         "address": "\n4 boulevard Richard Lenoir 75011 Paris 11e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.859824,
+            "lng": 2.371726
+        }
     },
     "C0083": {
         "name": "Studio des Ursulines",
         "url": "/seance/salle_gen_csalle=C0083.html",
         "id": "C0083",
         "address": "\n10, rue des Ursulines 75005 Paris 5e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.842615,
+            "lng": 2.342102
+        }
     },
     "C0040": {
         "name": "MK2 Bastille (côté Fg St Antoine)",
         "url": "/seance/salle_gen_csalle=C0040.html",
         "id": "C0040",
         "address": "\n5, rue du Faubourg-Saint-Antoine 75011 Paris 11e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.850598,
+            "lng": 2.379757
+        }
     },
     "C0042": {
         "name": "Epée de Bois",
         "url": "/seance/salle_gen_csalle=C0042.html",
         "id": "C0042",
         "address": "\n100, rue Mouffetard 75005 Paris 5e arrondissement\nMétro Censier-Daubenton.\n",
-        "pos": null
+        "pos": {
+            "lat": 48.839722,
+            "lng": 2.353583
+        }
     },
     "C0134": {
         "name": "L'Archipel - PARIS CINE",
         "url": "/seance/salle_gen_csalle=C0134.html",
         "id": "C0134",
         "address": "\n17 bd de Strasbourg 75010 Paris 10e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.872684,
+            "lng": 2.355912
+        }
     },
     "C0065": {
         "name": "Le Grand Rex",
         "url": "/seance/salle_gen_csalle=C0065.html",
         "id": "C0065",
         "address": "\n1, bd Poissonniere 75002 Paris 2e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.869439,
+            "lng": 2.347881
+        }
     },
     "C0089": {
         "name": "Max Linder Panorama",
         "url": "/seance/salle_gen_csalle=C0089.html",
         "id": "C0089",
         "address": "\n24, bd Poissonniere 75009 Paris 9e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.871101,
+            "lng": 2.345621
+        }
     },
     "C0023": {
         "name": "Le Brady Cinema & Théâtre",
         "url": "/seance/salle_gen_csalle=C0023.html",
         "id": "C0023",
         "address": "\n39, bd de Strasbourg 75010 Paris 10e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.872684,
+            "lng": 2.355912
+        }
     },
     "C0093": {
         "name": "Lucernaire",
         "url": "/seance/salle_gen_csalle=C0093.html",
         "id": "C0093",
         "address": "\n53, rue Notre-Dame-des-Champs 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.843014,
+            "lng": 2.331524
+        }
     },
     "C0099": {
         "name": "MK2 Parnasse",
         "url": "/seance/salle_gen_csalle=C0099.html",
         "id": "C0099",
         "address": "\n11, rue Jules Chaplain 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.842914,
+            "lng": 2.330718
+        }
     },
     "C0126": {
         "name": "UGC Opéra",
         "url": "/seance/salle_gen_csalle=C0126.html",
         "id": "C0126",
         "address": "\n32, bd des Italiens 75009 Paris 9e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.871345,
+            "lng": 2.336033
+        }
     },
     "C0060": {
         "name": "Gaumont Opéra (côté Premier)",
         "url": "/seance/salle_gen_csalle=C0060.html",
         "id": "C0060",
         "address": "\n32, rue Louis Legrand 75002 Paris 2e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.869375,
+            "lng": 2.332962
+        }
     },
     "C0125": {
         "name": "Gaumont Opéra (côté Capucines)",
         "url": "/seance/salle_gen_csalle=C0125.html",
         "id": "C0125",
         "address": "\n2, bd des Capucines - 38, bd des Italiens - 32, rue Louis Legrand 75009 Paris 9e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.871733,
+            "lng": 2.33583
+        }
     },
     "C0147": {
         "name": "Escurial",
         "url": "/seance/salle_gen_csalle=C0147.html",
         "id": "C0147",
         "address": "\n11 boulevard de Port Royal 75013 Paris 13e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.837277,
+            "lng": 2.346264
+        }
     },
     "C0105": {
         "name": "UGC Rotonde",
         "url": "/seance/salle_gen_csalle=C0105.html",
         "id": "C0105",
         "address": "\n103, bd du Montparnasse 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.84341,
+            "lng": 2.325946
+        }
     },
     "C0025": {
         "name": "Sept Parnassiens",
         "url": "/seance/salle_gen_csalle=C0025.html",
         "id": "C0025",
         "address": "\n98, bd du Montparnasse 75014 Paris 14e arrondissement\nMétro Vavin.\n",
-        "pos": null
+        "pos": {
+            "lat": 48.84143,
+            "lng": 2.330679
+        }
     },
     "C0103": {
         "name": "UGC Montparnasse",
         "url": "/seance/salle_gen_csalle=C0103.html",
         "id": "C0103",
         "address": "\n83, bd du Montparnasse 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.84341,
+            "lng": 2.325946
+        }
     },
     "C0049": {
         "name": "Bretagne",
         "url": "/seance/salle_gen_csalle=C0049.html",
         "id": "C0049",
         "address": "\n73, bd du Montparnasse 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.84341,
+            "lng": 2.325946
+        }
     },
     "C0158": {
         "name": "Gaumont Parnasse",
         "url": "/seance/salle_gen_csalle=C0158.html",
         "id": "C0158",
         "address": "\n3, rue d'Odessa 75014 Paris 14e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.842408,
+            "lng": 2.324431
+        }
     },
     "C0052": {
         "name": "Gaumont Parnasse côté Montparnos",
         "url": "/seance/salle_gen_csalle=C0052.html",
         "id": "C0052",
         "address": "\n16 Rue d'Odessa 75014 Paris 14e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.842408,
+            "lng": 2.324431
+        }
     },
     "C0024": {
         "name": "Gaumont Les Fauvettes",
         "url": "/seance/salle_gen_csalle=C0024.html",
         "id": "C0024",
         "address": "\n58, av. des Gobelins 75013 Paris 13e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.836414,
+            "lng": 2.352181
+        }
     },
     "W7513": {
         "name": "Fondation Jerome Seydoux - Pathé",
         "url": "/seance/salle_gen_csalle=W7513.html",
         "id": "W7513",
         "address": "\n73 avenue des Gobelins 75013 Paris 13e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.834848,
+            "lng": 2.353281
+        }
     },
     "C0150": {
         "name": "UGC Gobelins",
         "url": "/seance/salle_gen_csalle=C0150.html",
         "id": "C0150",
         "address": "\n66bis, av. des Gobelins 75013 Paris 13e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.836414,
+            "lng": 2.352181
+        }
     },
     "C0012": {
         "name": "Les Cinq Caumartin",
         "url": "/seance/salle_gen_csalle=C0012.html",
         "id": "C0012",
         "address": "\n101, rue Saint-Lazare 75009 Paris 9e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.87679,
+            "lng": 2.33325
+        }
     },
     "C0153": {
         "name": "Cinéma Chaplin Denfert",
         "url": "/seance/salle_gen_csalle=C0153.html",
         "id": "C0153",
         "address": "\n24, place Denfert-Rochereau 75014 Paris 14e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.833799,
+            "lng": 2.331528
+        }
     },
     "W7508": {
         "name": "MK2 Grand Palais",
         "url": "/seance/salle_gen_csalle=W7508.html",
         "id": "W7508",
         "address": "\nA l'intérieur du Grand Palais: à l'angle du Cours de la Reine et de l'Avenue Winston-Churchill / Entrée par les marches de la Rotonde Alexandre 3, à côté du restaurant Mini Palais. 75008 Paris 8e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.86609,
+            "lng": 2.313763
+        }
     },
     "W7510": {
         "name": "Le Louxor - Palais du cinéma",
         "url": "/seance/salle_gen_csalle=W7510.html",
         "id": "W7510",
         "address": "\n170 Boulevard de Magenta 75010 Paris 10e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.876029,
+            "lng": 2.356543
+        }
     },
     "C1559": {
         "name": "La Cinémathèque française",
         "url": "/seance/salle_gen_csalle=C1559.html",
         "id": "C1559",
         "address": "\n51 rue de Bercy 75012 Paris 12e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.841379,
+            "lng": 2.377464
+        }
     },
     "C2954": {
         "name": "MK2 Bibliothèque",
         "url": "/seance/salle_gen_csalle=C2954.html",
         "id": "C2954",
         "address": "\n128-162 avenue de France 75013 Paris 13e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.830712,
+            "lng": 2.376812
+        }
     },
     "C0037": {
         "name": "Gaumont Alésia",
         "url": "/seance/salle_gen_csalle=C0037.html",
         "id": "C0037",
         "address": "\n73, av. du Gal-Leclerc 75014 Paris 14e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.828651,
+            "lng": 2.327876
+        }
     },
     "C0005": {
         "name": "L'Entrepôt",
         "url": "/seance/salle_gen_csalle=C0005.html",
         "id": "C0005",
         "address": "\n7-9, rue Francis-de-Pressense 75014 Paris 14e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.833775,
+            "lng": 2.316531
+        }
     },
     "C1621": {
         "name": "MK2 Quai de Loire",
         "url": "/seance/salle_gen_csalle=C1621.html",
         "id": "C1621",
         "address": "\n7 quai de Loire 75019 Paris 19e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.885571,
+            "lng": 2.375345
+        }
     },
     "C0007": {
         "name": "Gaumont Champs-Elysées - Marignan",
         "url": "/seance/salle_gen_csalle=C0007.html",
         "id": "C0007",
         "address": "\n27-33 avenue des Champs-Elysées 75008 Paris 8e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.871088,
+            "lng": 2.303634
+        }
     },
     "C0004": {
         "name": "Le Cinéma des Cinéastes",
         "url": "/seance/salle_gen_csalle=C0004.html",
         "id": "C0004",
         "address": "\n7, av. de Clichy 75017 Paris 17e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.889967,
+            "lng": 2.321005
+        }
     },
     "C0179": {
         "name": "Pathé Wepler",
         "url": "/seance/salle_gen_csalle=C0179.html",
         "id": "C0179",
         "address": "\n140, bd de Clichy et 8, av de Clichy 75018 Paris 18e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.883667,
+            "lng": 2.333761
+        }
     },
     "C0061": {
         "name": "Cinéma Studio 28",
         "url": "/seance/salle_gen_csalle=C0061.html",
         "id": "C0061",
         "address": "\n10, rue Tholoze 75018 Paris 18e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.886576,
+            "lng": 2.33551
+        }
     },
     "C0003": {
         "name": "MK2 Quai de Seine",
         "url": "/seance/salle_gen_csalle=C0003.html",
         "id": "C0003",
         "address": "\n14, quai de la Seine 75019 Paris 19e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.886466,
+            "lng": 2.373834
+        }
     },
     "C0026": {
         "name": "UGC Ciné Cité Bercy",
         "url": "/seance/salle_gen_csalle=C0026.html",
         "id": "C0026",
         "address": "\n2, cour Saint-Emilion 75012 Paris 12e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.833595,
+            "lng": 2.38604
+        }
     },
     "C0108": {
         "name": "Elysées Lincoln",
         "url": "/seance/salle_gen_csalle=C0108.html",
         "id": "C0108",
         "address": "\n14, rue Lincoln 75008 Paris 8e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.870199,
+            "lng": 2.30266
+        }
     },
     "C0192": {
         "name": "MK2 Gambetta",
         "url": "/seance/salle_gen_csalle=C0192.html",
         "id": "C0192",
         "address": "\n6, rue Belgrand 75020 Paris 20e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.864707,
+            "lng": 2.404536
+        }
     },
     "W7515": {
         "name": "Cinéma Chaplin Saint Lambert",
         "url": "/seance/salle_gen_csalle=W7515.html",
         "id": "W7515",
         "address": "\n6, rue Péclet 75015 Paris 15e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.842524,
+            "lng": 2.299126
+        }
     },
     "C0010": {
         "name": "UGC Normandie",
         "url": "/seance/salle_gen_csalle=C0010.html",
         "id": "C0010",
         "address": "\n116Bis, Avenue des Champs-Elysées 75008 Paris 8e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.871088,
+            "lng": 2.303634
+        }
     },
     "C0009": {
         "name": "Le Balzac",
         "url": "/seance/salle_gen_csalle=C0009.html",
         "id": "C0009",
         "address": "\n1, rue Balzac 75008 Paris 8e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.873951,
+            "lng": 2.300816
+        }
     },
     "C0112": {
         "name": "UGC George V",
         "url": "/seance/salle_gen_csalle=C0112.html",
         "id": "C0112",
         "address": "\n146, av. des Champs-Elysees 75008 Paris 8e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.871088,
+            "lng": 2.303634
+        }
     },
     "C6336": {
         "name": "Publicis Cinémas",
         "url": "/seance/salle_gen_csalle=C6336.html",
         "id": "C6336",
         "address": "\n129, av. des Champs-Elysees 75008 Paris 8e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.871088,
+            "lng": 2.303634
+        }
     },
     "C0161": {
         "name": "Gaumont Convention",
         "url": "/seance/salle_gen_csalle=C0161.html",
         "id": "C0161",
         "address": "\n27, rue Alain-Chartier 75015 Paris 15e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.838091,
+            "lng": 2.295763
+        }
     },
     "B0258": {
         "name": "Pathé Quai d'Ivry IMAX",
         "url": "/seance/salle_gen_csalle=B0258.html",
         "id": "B0258",
         "address": "\n2, quai Marcel Boyer 94200 Ivry-sur-Seine\n",
-        "pos": null
+        "pos": {
+            "lat": 48.82495,
+            "lng": 2.3889400000000003
+        }
     },
     "W7517": {
         "name": "Club de l'Etoile",
         "url": "/seance/salle_gen_csalle=W7517.html",
         "id": "W7517",
         "address": "\n14 rue troyon 75017 Paris 17e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.876027,
+            "lng": 2.295446
+        }
     },
     "C0120": {
         "name": "Majestic Passy",
         "url": "/seance/salle_gen_csalle=C0120.html",
         "id": "C0120",
         "address": "\n18 rue de Passy 75016 Paris 16e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.857829,
+            "lng": 2.279921
+        }
     },
     "W7502": {
         "name": "Pathé Beaugrenelle",
         "url": "/seance/salle_gen_csalle=W7502.html",
         "id": "W7502",
         "address": "\n7 rue Linois 75015 Paris 15e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.847916,
+            "lng": 2.283699
+        }
     },
     "W7519": {
         "name": "CGR Paris Lilas",
         "url": "/seance/salle_gen_csalle=W7519.html",
         "id": "W7519",
         "address": "\nPlace du maquis du Vercors 75020 Paris 20e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.871529,
+            "lng": 2.392986
+        }
     },
     "B0089": {
         "name": "Cinéma Marcel-Pagnol",
         "url": "/seance/salle_gen_csalle=B0089.html",
         "id": "B0089",
         "address": "\n17 rue Béranger 92240 Malakoff\n",
-        "pos": null
+        "pos": {
+            "lat": 48.82091,
+            "lng": 2.30275
+        }
     },
     "P7517": {
         "name": "7 Batignolles",
         "url": "/seance/salle_gen_csalle=P7517.html",
         "id": "P7517",
         "address": "\n25 allée Colette-Heilbronner 75017 Paris 17e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.892802,
+            "lng": 2.310211
+        }
     },
     "B0104": {
         "name": "Cin'Hoche",
         "url": "/seance/salle_gen_csalle=B0104.html",
         "id": "B0104",
         "address": "\n6, rue Hoche 93170 Bagnolet\n",
-        "pos": null
+        "pos": {
+            "lat": 48.869240000000005,
+            "lng": 2.41703
+        }
     },
     "C0175": {
         "name": "UGC Maillot",
         "url": "/seance/salle_gen_csalle=C0175.html",
         "id": "C0175",
         "address": "\nporte Maillot, Palais des Congres 75017 Paris 17e arrondissement\nMétro Porte-Maillot\n",
-        "pos": null
+        "pos": {
+            "lat": 48.878577,
+            "lng": 2.283835
+        }
     },
     "W9230": {
         "name": "Pathé Levallois So Ouest ",
         "url": "/seance/salle_gen_csalle=W9230.html",
         "id": "W9230",
         "address": "\nCentre commercial So Ouest - 28, rue d'Alsace 92300 Levallois-Perret\n",
-        "pos": null
+        "pos": {
+            "lat": 48.89139,
+            "lng": 2.2957799999999997
+        }
     },
     "B0228": {
         "name": "Cinéma du Garde-Chasse",
         "url": "/seance/salle_gen_csalle=B0228.html",
         "id": "B0228",
         "address": "\n181 bis rue de Paris 93260 Les Lilas\n",
-        "pos": null
+        "pos": {
+            "lat": 48.88097,
+            "lng": 2.41984
+        }
     },
     "B0123": {
         "name": "Espace 1789 ",
         "url": "/seance/salle_gen_csalle=B0123.html",
         "id": "B0123",
         "address": "\n2-4, rue Alexandre-Bachelet 93400 Saint-Ouen\n",
-        "pos": null
+        "pos": {
+            "lat": 48.90804,
+            "lng": 2.3335
+        }
     },
     "B0098": {
         "name": "Cinéma De Vanves",
         "url": "/seance/salle_gen_csalle=B0098.html",
         "id": "B0098",
         "address": "\n12, rue Sadi-Carnot 92170 Vanves\n",
-        "pos": null
+        "pos": {
+            "lat": 48.82193,
+            "lng": 2.28622
+        }
     },
     "B0047": {
         "name": "Ciné 104",
         "url": "/seance/salle_gen_csalle=B0047.html",
         "id": "B0047",
         "address": "\n104, av. Jean-Lolive 93500 Pantin\n",
-        "pos": null
+        "pos": {
+            "lat": 48.892179999999996,
+            "lng": 2.4089099999999997
+        }
     },
     "C0116": {
         "name": "Gaumont Aquaboulevard",
         "url": "/seance/salle_gen_csalle=C0116.html",
         "id": "C0116",
         "address": "\n8-16, rue du Colonel-Pierre-Avia 75015 Paris 15e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.830113,
+            "lng": 2.276126
+        }
     },
     "W9222": {
         "name": "Théâtre-Cinéma Victor Hugo",
         "url": "/seance/salle_gen_csalle=W9222.html",
         "id": "W9222",
         "address": "\n14, Avenue Victor Hugo 92220 Bagneux\n",
-        "pos": null
+        "pos": {
+            "lat": 48.80406,
+            "lng": 2.3218099999999997
+        }
     },
     "B0148": {
         "name": "Le Vincennes",
         "url": "/seance/salle_gen_csalle=B0148.html",
         "id": "B0148",
         "address": "\n30 avenue de Paris 94300 Vincennes\n",
-        "pos": null
+        "pos": {
+            "lat": 48.8451,
+            "lng": 2.43427
+        }
     },
     "B0161": {
         "name": "Rutebeuf",
         "url": "/seance/salle_gen_csalle=B0161.html",
         "id": "B0161",
         "address": "\n16-18 allee Gambetta 92110 Clichy\n",
-        "pos": null
+        "pos": {
+            "lat": 48.902,
+            "lng": 2.3091
+        }
     },
     "B0101": {
         "name": "Le Studio",
         "url": "/seance/salle_gen_csalle=B0101.html",
         "id": "B0101",
         "address": "\n2, rue Edouard-Poisson 93300 Aubervilliers\n",
-        "pos": null
+        "pos": {
+            "lat": 48.91062,
+            "lng": 2.38484
+        }
     },
     "B0097": {
         "name": "Ciné d'Issy",
         "url": "/seance/salle_gen_csalle=B0097.html",
         "id": "B0097",
         "address": "\n11-13 rue Danton/mail Menand Métro Mairie d'Issy conservatoire de musique 92130 Issy-les-Moulineaux\n",
-        "pos": null
+        "pos": {
+            "lat": 48.82502,
+            "lng": 2.26946
+        }
     },
     "B0127": {
         "name": "La Pleiade",
         "url": "/seance/salle_gen_csalle=B0127.html",
         "id": "B0127",
         "address": "\n12, av. Cousin-de-Mericourt 94230 Cachan\n",
-        "pos": null
+        "pos": {
+            "lat": 48.7958,
+            "lng": 2.3353200000000003
+        }
     },
     "B0095": {
         "name": "Le Village",
         "url": "/seance/salle_gen_csalle=B0095.html",
         "id": "B0095",
         "address": "\n4, rue de Chezy 92200 Neuilly-sur-Seine\n",
-        "pos": null
+        "pos": {
+            "lat": 48.88536,
+            "lng": 2.26822
+        }
     },
     "B0116": {
         "name": "Georges Méliès",
         "url": "/seance/salle_gen_csalle=B0116.html",
         "id": "B0116",
         "address": "\n12, place Jean-Jaurès 93100 Montreuil\n",
-        "pos": null
+        "pos": {
+            "lat": 48.862590000000004,
+            "lng": 2.44214
+        }
     },
     "B0145": {
         "name": "Cinéma d'Art Romain Rolland",
         "url": "/seance/salle_gen_csalle=B0145.html",
         "id": "B0145",
         "address": "\n18 rue Eugène Varlin 94800 Villejuif\n",
-        "pos": null
+        "pos": {
+            "lat": 48.79343,
+            "lng": 2.3632
+        }
     },
     "B0084": {
         "name": "Abel Gance",
         "url": "/seance/salle_gen_csalle=B0084.html",
         "id": "B0084",
         "address": "\n184, bd. Saint-Denis 92400 Courbevoie\n",
-        "pos": null
+        "pos": {
+            "lat": 48.90124,
+            "lng": 2.27163
+        }
     },
     "B0151": {
         "name": "Les 3 Cinés - Robespierre",
         "url": "/seance/salle_gen_csalle=B0151.html",
         "id": "B0151",
         "address": "\n19, avenue Maximilien Robespierre 94400 Vitry-sur-Seine\n",
-        "pos": null
+        "pos": {
+            "lat": "",
+            "lng": ""
+        }
     },
     "P0140": {
         "name": "Pôle Culturel ",
         "url": "/seance/salle_gen_csalle=P0140.html",
         "id": "P0140",
         "address": "\n82, rue Marcel Bourdarias 94140 Alfortville\n",
-        "pos": null
+        "pos": {
+            "lat": 48.8056351,
+            "lng": 2.4234811
+        }
     },
     "B0242": {
         "name": "Gaumont Stade de France",
         "url": "/seance/salle_gen_csalle=B0242.html",
         "id": "B0242",
         "address": "\n8, rue du Mondial-1998 93200 Saint-Denis\n",
-        "pos": null
+        "pos": {
+            "lat": 48.9254,
+            "lng": 2.36312
+        }
     },
     "B0247": {
         "name": "Pathé Boulogne",
         "url": "/seance/salle_gen_csalle=B0247.html",
         "id": "B0247",
         "address": "\n26, rue Le Corbusier 92100 Boulogne-Billancourt\n",
-        "pos": null
+        "pos": {
+            "lat": 48.83765,
+            "lng": 2.23953
+        }
     },
     "B0227": {
         "name": "Cinéma Landowski",
         "url": "/seance/salle_gen_csalle=B0227.html",
         "id": "B0227",
         "address": "\n28, av. Andre-Morizet 92100 Boulogne-Billancourt\n",
-        "pos": null
+        "pos": {
+            "lat": 48.83591,
+            "lng": 2.23929
+        }
     },
     "W9470": {
         "name": "Théâtre Claude Debussy",
         "url": "/seance/salle_gen_csalle=W9470.html",
         "id": "W9470",
         "address": "\n116 avenue du Général de Gaulle 94700 Maisons-Alfort\n",
-        "pos": null
+        "pos": {
+            "lat": 48.80135,
+            "lng": 2.43108
+        }
     },
     "B0136": {
         "name": "La Tournelle",
         "url": "/seance/salle_gen_csalle=B0136.html",
         "id": "B0136",
         "address": "\n14, rue Dispan 94240 L' Haÿ-les-Roses\n",
-        "pos": null
+        "pos": {
+            "lat": 48.77975,
+            "lng": 2.33901
+        }
     },
     "B0110": {
         "name": "L'Etoile",
         "url": "/seance/salle_gen_csalle=B0110.html",
         "id": "B0110",
         "address": "\n1, allee du Progres 93120 La Courneuve\n",
-        "pos": null
+        "pos": {
+            "lat": 48.92715,
+            "lng": 2.3919200000000003
+        }
     },
     "B0134": {
         "name": "Le Kosmos",
         "url": "/seance/salle_gen_csalle=B0134.html",
         "id": "B0134",
         "address": "\n243 ter, av. de la Republique 94120 Fontenay-sous-Bois\n",
-        "pos": null
+        "pos": {
+            "lat": 48.85267,
+            "lng": 2.4670400000000003
+        }
     },
     "B0081": {
         "name": "Cinéma Jeanne Moreau",
@@ -760,63 +1078,90 @@
         "url": "/seance/salle_gen_csalle=B0239.html",
         "id": "B0239",
         "address": "\n44 Avenue de la Longue Bertrane 92390 Villeneuve-la-Garenne\n",
-        "pos": null
+        "pos": {
+            "lat": 48.930679999999995,
+            "lng": 2.3208900000000003
+        }
     },
     "B0077": {
         "name": "Salle Jean-Renoir",
         "url": "/seance/salle_gen_csalle=B0077.html",
         "id": "B0077",
         "address": "\n7 Villa des Aubépines 92270 Bois-Colombes\n",
-        "pos": null
+        "pos": {
+            "lat": 48.9151000976562,
+            "lng": 2.26845908164978
+        }
     },
     "W9280": {
         "name": "Le Central",
         "url": "/seance/salle_gen_csalle=W9280.html",
         "id": "W9280",
         "address": "\n136 rue de la République 92800 Puteaux\n",
-        "pos": null
+        "pos": {
+            "lat": 48.884409999999995,
+            "lng": 2.23725
+        }
     },
     "B0122": {
         "name": "L'Ecran",
         "url": "/seance/salle_gen_csalle=B0122.html",
         "id": "B0122",
         "address": "\n14 passage de l'Aqueduc 93200 Saint-Denis\n",
-        "pos": null
+        "pos": {
+            "lat": 48.936890000000005,
+            "lng": 2.35929
+        }
     },
     "B0203": {
         "name": "Cinéma Le Capitole",
         "url": "/seance/salle_gen_csalle=B0203.html",
         "id": "B0203",
         "address": "\n3, rue Ledru-Rollin 92150 Suresnes\n",
-        "pos": null
+        "pos": {
+            "lat": 48.8702907,
+            "lng": 2.2283171000000004
+        }
     },
     "B2619": {
         "name": "UGC Ciné Cité La Défense",
         "url": "/seance/salle_gen_csalle=B2619.html",
         "id": "B2619",
         "address": "\nLe Dôme - Centre commercial Les 4 Temps 92092 Paris - La Défense\n",
-        "pos": null
+        "pos": {
+            "lat": 48.888988494873,
+            "lng": 2.24124002456665
+        }
     },
     "B0086": {
         "name": "Jean-Vigo",
         "url": "/seance/salle_gen_csalle=B0086.html",
         "id": "B0086",
         "address": "\n1, rue Pierre-et-Marie-Curie 92230 Gennevilliers\n",
-        "pos": null
+        "pos": {
+            "lat": 48.928470000000004,
+            "lng": 2.2932099999999997
+        }
     },
     "B0195": {
         "name": "Magic Cinéma",
         "url": "/seance/salle_gen_csalle=B0195.html",
         "id": "B0195",
         "address": "\nCentre commercial 2, Rue du Chemin-Vert 93000 Bobigny\n",
-        "pos": null
+        "pos": {
+            "lat": 48.904924900000005,
+            "lng": 2.44563
+        }
     },
     "B0130": {
         "name": "Théâtre André Malraux",
         "url": "/seance/salle_gen_csalle=B0130.html",
         "id": "B0130",
         "address": "\n102, av. du General-de-Gaulle 94550 Chevilly-Larue\n",
-        "pos": null
+        "pos": {
+            "lat": 48.77043,
+            "lng": 2.3509599999999997
+        }
     },
     "B0197": {
         "name": "Cinéma Prévert",
@@ -830,21 +1175,30 @@
         "url": "/seance/salle_gen_csalle=B0029.html",
         "id": "B0029",
         "address": "\n15, boulevard des Nations Unies 92190 Meudon\n",
-        "pos": null
+        "pos": {
+            "lat": 48.8133,
+            "lng": 2.23583
+        }
     },
     "B0096": {
         "name": "Trianon",
         "url": "/seance/salle_gen_csalle=B0096.html",
         "id": "B0096",
         "address": "\n3 bis, rue Marguerite-Renaudin 92330 Sceaux\n",
-        "pos": null
+        "pos": {
+            "lat": 48.77771,
+            "lng": 2.29238
+        }
     },
     "B0094": {
         "name": "Les Trois Pierrots",
         "url": "/seance/salle_gen_csalle=B0094.html",
         "id": "B0094",
         "address": "\n6, rue du Mont-Valerien 92210 Saint-Cloud\n",
-        "pos": null
+        "pos": {
+            "lat": 48.85233,
+            "lng": 2.2164099999999998
+        }
     },
     "W9311": {
         "name": "Espace Georges Simenon",
@@ -865,105 +1219,150 @@
         "url": "/seance/salle_gen_csalle=B0230.html",
         "id": "B0230",
         "address": "\n10, av. Francis-de-Pressense 93350 Le Bourget\n",
-        "pos": null
+        "pos": {
+            "lat": 48.932359999999996,
+            "lng": 2.42486
+        }
     },
     "B0082": {
         "name": "L'Hélios",
         "url": "/seance/salle_gen_csalle=B0082.html",
         "id": "B0082",
         "address": "\n35, rue du Bournard 92700 Colombes\n",
-        "pos": null
+        "pos": {
+            "lat": 48.92322,
+            "lng": 2.25453
+        }
     },
     "B0091": {
         "name": "Ciné Gérard-Philipe",
         "url": "/seance/salle_gen_csalle=B0091.html",
         "id": "B0091",
         "address": "\n1 place Jane Rhodes 92350 Le Plessis-Robinson\n",
-        "pos": null
+        "pos": {
+            "lat": 48.781589508056605,
+            "lng": 2.26255989074707
+        }
     },
     "B0202": {
         "name": "Ciné-Sel",
         "url": "/seance/salle_gen_csalle=B0202.html",
         "id": "B0202",
         "address": "\n47-49 Grande-Rue 92310 Sèvres\n",
-        "pos": null
+        "pos": {
+            "lat": 48.8249,
+            "lng": 2.21477
+        }
     },
     "B0193": {
         "name": "Cinémas du palais, Armand-Badéyan",
         "url": "/seance/salle_gen_csalle=B0193.html",
         "id": "B0193",
         "address": "\n40, allee Parmentier 94000 Créteil\n",
-        "pos": null
+        "pos": {
+            "lat": 48.78608,
+            "lng": 2.4441900000000003
+        }
     },
     "B0189": {
         "name": "Royal Palace",
         "url": "/seance/salle_gen_csalle=B0189.html",
         "id": "B0189",
         "address": "\n165, grande rue Charles-de-Gaulle 94130 Nogent-sur-Marne\n",
-        "pos": null
+        "pos": {
+            "lat": 48.83833,
+            "lng": 2.48944
+        }
     },
     "B9370": {
         "name": "Espace Culturel du Parc",
         "url": "/seance/salle_gen_csalle=B9370.html",
         "id": "B9370",
         "address": "\n120 rue Sadi Carnot 93700 Drancy\n",
-        "pos": null
+        "pos": {
+            "lat": 48.926064200000006,
+            "lng": 2.4401704
+        }
     },
     "B0107": {
         "name": "Cinéma André-Malraux",
         "url": "/seance/salle_gen_csalle=B0107.html",
         "id": "B0107",
         "address": "\n25, cours de la Republique 93140 Bondy\n",
-        "pos": null
+        "pos": {
+            "lat": 48.9016,
+            "lng": 2.48009
+        }
     },
     "B0131": {
         "name": "Théâtre-Cinéma Paul-Eluard",
         "url": "/seance/salle_gen_csalle=B0131.html",
         "id": "B0131",
         "address": "\n4, av. de Villeneuve-Saint-Georges 94600 Choisy-le-Roi\n",
-        "pos": null
+        "pos": {
+            "lat": 48.76638,
+            "lng": 2.4147
+        }
     },
     "B0143": {
         "name": "Pathé Thiais - Belle Epine",
         "url": "/seance/salle_gen_csalle=B0143.html",
         "id": "B0143",
         "address": "\nCentre commercial Belle-Epine 94320 Thiais\n",
-        "pos": null
+        "pos": {
+            "lat": 48.760414123535206,
+            "lng": 2.3859620094299303
+        }
     },
     "W9250": {
         "name": "Ariel - Hauts de Rueil",
         "url": "/seance/salle_gen_csalle=W9250.html",
         "id": "W9250",
         "address": "\n58 avenue de Fouilleuses 92500 Rueil-Malmaison\n",
-        "pos": null
+        "pos": {
+            "lat": 48.86227,
+            "lng": 2.19508
+        }
     },
     "W9219": {
         "name": "Espace Culturel Robert Doisneau",
         "url": "/seance/salle_gen_csalle=W9219.html",
         "id": "W9219",
         "address": "\n16 avenue du Maréchal de Lattre de Tassigny 92360 MEUDON LA FORET\n",
-        "pos": null
+        "pos": {
+            "lat": 48.78693,
+            "lng": 2.23127
+        }
     },
     "B0132": {
         "name": "UGC Ciné Cité Créteil",
         "url": "/seance/salle_gen_csalle=B0132.html",
         "id": "B0132",
         "address": "\nCentre commercial -Soleil 94000 Créteil\n",
-        "pos": null
+        "pos": {
+            "lat": 48.7845268249512,
+            "lng": 2.45385599136353
+        }
     },
     "B0261": {
         "name": "CGR Epinay-sur-Seine",
         "url": "/seance/salle_gen_csalle=B0261.html",
         "id": "B0261",
         "address": "\n5, avenue Joffre 93800 Épinay-sur-Seine\n",
-        "pos": null
+        "pos": {
+            "lat": 48.95786,
+            "lng": 2.302
+        }
     },
     "B0141": {
         "name": "Centre des Bords-de-Marne",
         "url": "/seance/salle_gen_csalle=B0141.html",
         "id": "B0141",
         "address": "\n2, rue de la Prairie 94170 Le Perreux-sur-Marne\n",
-        "pos": null
+        "pos": {
+            "lat": 48.846920000000004,
+            "lng": 2.50965
+        }
     },
     "B0191": {
         "name": "Ciné Garches",
@@ -977,77 +1376,110 @@
         "url": "/seance/salle_gen_csalle=B0142.html",
         "id": "B0142",
         "address": "\n70, av. de la Republique 94100 Saint-Maur-des-Fossés\n",
-        "pos": null
+        "pos": {
+            "lat": 48.798429999999996,
+            "lng": 2.48582
+        }
     },
     "B0073": {
         "name": "Le Sélect",
         "url": "/seance/salle_gen_csalle=B0073.html",
         "id": "B0073",
         "address": "\n10, avenue de la Division Leclerc 92160 Antony\n",
-        "pos": null
+        "pos": {
+            "lat": 48.753029999999995,
+            "lng": 2.30478
+        }
     },
     "B0108": {
         "name": "La Fauvette",
         "url": "/seance/salle_gen_csalle=B0108.html",
         "id": "B0108",
         "address": "\n21, av. Daniel-Perdrige 93360 Neuilly-Plaisance\n",
-        "pos": null
+        "pos": {
+            "lat": 48.87307,
+            "lng": 2.51061
+        }
     },
     "B0079": {
         "name": "Le Rex",
         "url": "/seance/salle_gen_csalle=B0079.html",
         "id": "B0079",
         "address": "\n364, av. de la Division-Leclerc 92290 Châtenay-Malabry\n",
-        "pos": null
+        "pos": {
+            "lat": 48.765809999999995,
+            "lng": 2.25988
+        }
     },
     "B0014": {
         "name": "Les Lumières",
         "url": "/seance/salle_gen_csalle=B0014.html",
         "id": "B0014",
         "address": "\n49, rue Maurice-Thorez 92000 Nanterre\n",
-        "pos": null
+        "pos": {
+            "lat": 48.8926,
+            "lng": 2.1957299999999997
+        }
     },
     "W9241": {
         "name": "Le Colombier",
         "url": "/seance/salle_gen_csalle=W9241.html",
         "id": "W9241",
         "address": "\nPlace Charles de Gaulle 92410 Ville-d'Avray\n",
-        "pos": null
+        "pos": {
+            "lat": "",
+            "lng": ""
+        }
     },
     "B0133": {
         "name": "La Lucarne",
         "url": "/seance/salle_gen_csalle=B0133.html",
         "id": "B0133",
         "address": "\n100, rue Juliette Savar 94000 Créteil\n",
-        "pos": null
+        "pos": {
+            "lat": 48.777571,
+            "lng": 2.4667865
+        }
     },
     "W9510": {
         "name": "Centre culturel Le Figuier blanc",
         "url": "/seance/salle_gen_csalle=W9510.html",
         "id": "W9510",
         "address": "\n16-18 Rue Grégoire Collas 95100 Argenteuil\n",
-        "pos": null
+        "pos": {
+            "lat": 48.94328,
+            "lng": 2.24776
+        }
     },
     "B0129": {
         "name": "Studio 66",
         "url": "/seance/salle_gen_csalle=B0129.html",
         "id": "B0129",
         "address": "\n66, rue Jean-Jaures 94500 Champigny-sur-Marne\n",
-        "pos": null
+        "pos": {
+            "lat": 48.8144,
+            "lng": 2.50813
+        }
     },
     "B3516": {
         "name": "Cinéma Jean Gabin",
         "url": "/seance/salle_gen_csalle=B3516.html",
         "id": "B3516",
         "address": "\n12/14 boulevard Léon-Feix 95100 Argenteuil\n",
-        "pos": null
+        "pos": {
+            "lat": 48.946940000000005,
+            "lng": 2.24931
+        }
     },
     "B0235": {
         "name": "L'Atrium",
         "url": "/seance/salle_gen_csalle=B0235.html",
         "id": "B0235",
         "address": "\n3, parvis Robert-Schuman 92370 Chaville\n",
-        "pos": null
+        "pos": {
+            "lat": 48.81327,
+            "lng": 2.19246
+        }
     },
     "B0042": {
         "name": "UGC Ciné Cité Vélizy",
@@ -1061,77 +1493,110 @@
         "url": "/seance/salle_gen_csalle=B0092.html",
         "id": "B0092",
         "address": "\n97-99 av. Paul-Doumer 92500 Rueil-Malmaison\n",
-        "pos": null
+        "pos": {
+            "lat": 48.879909999999995,
+            "lng": 2.18105
+        }
     },
     "B0105": {
         "name": "Louis-Daquin",
         "url": "/seance/salle_gen_csalle=B0105.html",
         "id": "B0105",
         "address": "\n16, mail Debre Berhan - Place Gabriel Péri 93150 Le Blanc-Mesnil\n",
-        "pos": null
+        "pos": {
+            "lat": 48.93829,
+            "lng": 2.46371
+        }
     },
     "B0118": {
         "name": "Espace des Arts - Salle Philippe Noiret",
         "url": "/seance/salle_gen_csalle=B0118.html",
         "id": "B0118",
         "address": "\n144 avenue Jean Jaurès 93320 Les Pavillons-sous-Bois\n",
-        "pos": null
+        "pos": {
+            "lat": 48.90291,
+            "lng": 2.50806
+        }
     },
     "B0071": {
         "name": "Espace Bernard Mantienne",
         "url": "/seance/salle_gen_csalle=B0071.html",
         "id": "B0071",
         "address": "\n3 voie de l'Aulne 91370 Verrières-le-Buisson\n",
-        "pos": null
+        "pos": {
+            "lat": 48.75265,
+            "lng": 2.27053
+        }
     },
     "B0140": {
         "name": "Salle Aragon-Triolet",
         "url": "/seance/salle_gen_csalle=B0140.html",
         "id": "B0140",
         "address": "\n1, Place Gaston Viens 94310 Orly\n",
-        "pos": null
+        "pos": {
+            "lat": 48.74488,
+            "lng": 2.4079099999999998
+        }
     },
     "B0159": {
         "name": "UGC Enghien Le Français",
         "url": "/seance/salle_gen_csalle=B0159.html",
         "id": "B0159",
         "address": "\n38, rue du Général de Gaulle 95880 Enghien-les-Bains\n",
-        "pos": null
+        "pos": {
+            "lat": 48.97084,
+            "lng": 2.3071900000000003
+        }
     },
     "B1386": {
         "name": "Centre des Arts",
         "url": "/seance/salle_gen_csalle=B1386.html",
         "id": "B1386",
         "address": "\n12-16 rue de la Libération 95880 Enghien-les-Bains\n",
-        "pos": null
+        "pos": {
+            "lat": 48.97209,
+            "lng": 2.30544
+        }
     },
     "B0167": {
         "name": "Les Toiles",
         "url": "/seance/salle_gen_csalle=B0167.html",
         "id": "B0167",
         "address": "\nplace Francois-Truffaut 95210 Saint-Gratien\n",
-        "pos": null
+        "pos": {
+            "lat": 48.967909999999996,
+            "lng": 2.2848
+        }
     },
     "W7509": {
         "name": "UGC Ciné Cité Paris 19",
         "url": "/seance/salle_gen_csalle=W7509.html",
         "id": "W7509",
         "address": "\n166, boulevard Mac Donald 75019 Paris 19e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.87821,
+            "lng": 2.386789
+        }
     },
     "W7520": {
         "name": "Pathé La Villette",
         "url": "/seance/salle_gen_csalle=W7520.html",
         "id": "W7520",
         "address": "\n30 avenue Corentin Cariou 75019 Paris 19e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.896523,
+            "lng": 2.384208
+        }
     },
     "W9411": {
         "name": "Mégarama Arcueil",
         "url": "/seance/salle_gen_csalle=W9411.html",
         "id": "W9411",
         "address": "\n8 av du Président Allende 94110 Arcueil\n",
-        "pos": null
+        "pos": {
+            "lat": 48.81023,
+            "lng": 2.32817
+        }
     },
     "B0013": {
         "name": "Ciné Montrouge",
@@ -1145,7 +1610,10 @@
         "url": "/seance/salle_gen_csalle=B0137.html",
         "id": "B0137",
         "address": "\n77, av. Georges-Gosnat 94200 Ivry-sur-Seine\n",
-        "pos": null
+        "pos": {
+            "lat": 48.81362,
+            "lng": 2.3893400000000002
+        }
     },
     "W4949": {
         "name": "Cinéma Balad Images Noyant-Villages",
@@ -1159,21 +1627,30 @@
         "url": "/seance/salle_gen_csalle=C0146.html",
         "id": "C0146",
         "address": "\n12, rue de Lyon 75012 Paris 12e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.848499,
+            "lng": 2.370975
+        }
     },
     "B0126": {
         "name": "Espace municipal Jean Vilar",
         "url": "/seance/salle_gen_csalle=B0126.html",
         "id": "B0126",
         "address": "\n1, rue Paul Signac 94110 Arcueil\n",
-        "pos": null
+        "pos": {
+            "lat": 48.80135,
+            "lng": 2.3307
+        }
     },
     "B0119": {
         "name": "Le Trianon",
         "url": "/seance/salle_gen_csalle=B0119.html",
         "id": "B0119",
         "address": "\nPlace Carnot 93230 Romainville\n",
-        "pos": null
+        "pos": {
+            "lat": 48.8838,
+            "lng": 2.4405799999999997
+        }
     },
     "W9234": {
         "name": "Les Gémeaux - Scène nationale",
@@ -1187,119 +1664,170 @@
         "url": "/seance/salle_gen_csalle=B0155.html",
         "id": "B0155",
         "address": "\n162, rue Maurice-Berteaux 95870 Bezons\n",
-        "pos": null
+        "pos": {
+            "lat": 48.93116,
+            "lng": 2.20708
+        }
     },
     "B0002": {
         "name": "Jacques Brel",
         "url": "/seance/salle_gen_csalle=B0002.html",
         "id": "B0002",
         "address": "\n1, place de l'Hotel-de-Ville 95140 Garges-lès-Gonesse\n",
-        "pos": null
+        "pos": {
+            "lat": 48.97187,
+            "lng": 2.3998
+        }
     },
     "B0112": {
         "name": "Théâtre André-Malraux",
         "url": "/seance/salle_gen_csalle=B0112.html",
         "id": "B0112",
         "address": "\n1bis, rue Guillemeteau 93220 Gagny\n",
-        "pos": null
+        "pos": {
+            "lat": 48.883959999999995,
+            "lng": 2.5299400000000003
+        }
     },
     "B0103": {
         "name": "Théâtre et Cinéma Jacques-Prevert",
         "url": "/seance/salle_gen_csalle=B0103.html",
         "id": "B0103",
         "address": "\n134 avenue Anatole-France 93600 Aulnay-sous-Bois\n",
-        "pos": null
+        "pos": {
+            "lat": 48.94059,
+            "lng": 2.49629
+        }
     },
     "B0144": {
         "name": "Cinéma 4 Delta",
         "url": "/seance/salle_gen_csalle=B0144.html",
         "id": "B0144",
         "address": "\n81bis av. du Bac 94210 La Varenne-Saint-Hilaire\n",
-        "pos": null
+        "pos": {
+            "lat": 48.7936,
+            "lng": 2.51431
+        }
     },
     "B0099": {
         "name": "Normandy",
         "url": "/seance/salle_gen_csalle=B0099.html",
         "id": "B0099",
         "address": "\n72, bd de la Republique 92420 Vaucresson\n",
-        "pos": null
+        "pos": {
+            "lat": 48.83788,
+            "lng": 2.1575
+        }
     },
     "P9520": {
         "name": "CGR My Place",
         "url": "/seance/salle_gen_csalle=P9520.html",
         "id": "P9520",
         "address": "\n2, allée Henri Dunant 95200 Sarcelles\n",
-        "pos": null
+        "pos": {
+            "lat": 48.98375,
+            "lng": 2.3719200000000003
+        }
     },
     "B0215": {
         "name": "Cinémassy",
         "url": "/seance/salle_gen_csalle=B0215.html",
         "id": "B0215",
         "address": "\npl. de France 91300 Massy\n",
-        "pos": null
+        "pos": {
+            "lat": 48.73256,
+            "lng": 2.28976
+        }
     },
     "B0114": {
         "name": "UGC Ciné Cité Noisy-le-Grand",
         "url": "/seance/salle_gen_csalle=B0114.html",
         "id": "B0114",
         "address": "\nCentre commercial les Arcades 93160 Noisy-le-Grand\n",
-        "pos": null
+        "pos": {
+            "lat": 48.8327445983887,
+            "lng": 2.56930303573608
+        }
     },
     "B0147": {
         "name": "Le Casino",
         "url": "/seance/salle_gen_csalle=B0147.html",
         "id": "B0147",
         "address": "\n13, rue Guillaume Budé 94350 Villiers-sur-Marne\n",
-        "pos": null
+        "pos": {
+            "lat": 48.82607,
+            "lng": 2.5423400000000003
+        }
     },
     "B0021": {
         "name": "Louis-Jouvet",
         "url": "/seance/salle_gen_csalle=B0021.html",
         "id": "B0021",
         "address": "\n3, place Maurice-Berteaux 78400 Chatou\n",
-        "pos": null
+        "pos": {
+            "lat": 48.88677,
+            "lng": 2.1560900000000003
+        }
     },
     "W9360": {
         "name": "UGC Ciné Cité O'Parinor",
         "url": "/seance/salle_gen_csalle=W9360.html",
         "id": "W9360",
         "address": "\nCentre commercial O’Parinor Le Haut de Galy 93600 Aulnay-sous-Bois\n",
-        "pos": null
+        "pos": {
+            "lat": "",
+            "lng": ""
+        }
     },
     "B0074": {
         "name": "L'Alcazar",
         "url": "/seance/salle_gen_csalle=B0074.html",
         "id": "B0074",
         "address": "\n1, rue de la Station 92600 Asnières-sur-Seine\n",
-        "pos": null
+        "pos": {
+            "lat": 48.90633,
+            "lng": 2.28405
+        }
     },
     "B0080": {
         "name": "Cinéma de Châtillon",
         "url": "/seance/salle_gen_csalle=B0080.html",
         "id": "B0080",
         "address": "\n7bis, rue de la Mairie 92320 Châtillon\n",
-        "pos": null
+        "pos": {
+            "lat": 48.800287700000005,
+            "lng": 2.2888146000000003
+        }
     },
     "P9316": {
         "name": "Le Bijou",
         "url": "/seance/salle_gen_csalle=P9316.html",
         "id": "P9316",
         "address": "\n4 place de la libération 93160 Noisy-le-Grand\n",
-        "pos": null
+        "pos": {
+            "lat": 48.84885,
+            "lng": 2.5525599999999997
+        }
     },
     "W9516": {
         "name": "Cinéma l'Eden ",
         "url": "/seance/salle_gen_csalle=W9516.html",
         "id": "W9516",
         "address": "\n5 bis rue de Pontoise 95160 Montmorency\n",
-        "pos": null
+        "pos": {
+            "lat": 48.988820000000004,
+            "lng": 2.31809
+        }
     },
     "B0196": {
         "name": "Espace Jean-Marie Poirier",
         "url": "/seance/salle_gen_csalle=B0196.html",
         "id": "B0196",
         "address": "\n1 esplanade du 18 juin 1940 94370 Sucy-en-Brie\n",
-        "pos": null
+        "pos": {
+            "lat": 48.77071,
+            "lng": 2.51804
+        }
     },
     "B0022": {
         "name": "Cinema du Theatre",
@@ -1313,14 +1841,20 @@
         "url": "/seance/salle_gen_csalle=P9130.html",
         "id": "P9130",
         "address": "\n21, Place du Grand Ouest 91300 Massy\n",
-        "pos": null
+        "pos": {
+            "lat": 48.7236391,
+            "lng": 2.2628095
+        }
     },
     "B1540": {
         "name": "L'Avant-Scène",
         "url": "/seance/salle_gen_csalle=B1540.html",
         "id": "B1540",
         "address": "\n78-80 avenue d'Alsace Lorraine 91550 Paray-Vieille-Poste\n",
-        "pos": null
+        "pos": {
+            "lat": 48.71519,
+            "lng": 2.36026
+        }
     },
     "W9560": {
         "name": "L'Orange Bleue - Espace Culturel d'Eaubonne",
@@ -1341,14 +1875,20 @@
         "url": "/seance/salle_gen_csalle=B0226.html",
         "id": "B0226",
         "address": "\n3, rue Saint-Flaive prolongée 95120 Ermont\n",
-        "pos": null
+        "pos": {
+            "lat": 48.99072,
+            "lng": 2.2608099999999998
+        }
     },
     "B0211": {
         "name": "Cinéma Yves-Montand",
         "url": "/seance/salle_gen_csalle=B0211.html",
         "id": "B0211",
         "address": "\n36, rue Eugene-Masse 93190 Livry-Gargan\n",
-        "pos": null
+        "pos": {
+            "lat": 48.92579,
+            "lng": 2.5451200000000003
+        }
     },
     "P9443": {
         "name": "Ciné Pince Vent",
@@ -1362,21 +1902,30 @@
         "url": "/seance/salle_gen_csalle=B0046.html",
         "id": "B0046",
         "address": "\n59, bd. Carnot 78110 Le Vésinet\n",
-        "pos": null
+        "pos": {
+            "lat": 48.89399,
+            "lng": 2.13433
+        }
     },
     "B0035": {
         "name": "Cinéma Ventura",
         "url": "/seance/salle_gen_csalle=B0035.html",
         "id": "B0035",
         "address": "\n4, rue Samuel-Desbordes 91200 Athis-Mons\n",
-        "pos": null
+        "pos": {
+            "lat": 48.70962,
+            "lng": 2.38722
+        }
     },
     "P2540": {
         "name": "Salle Le Cormier ",
         "url": "/seance/salle_gen_csalle=P2540.html",
         "id": "P2540",
         "address": "\n123 Rue de Saint Germain 95240 Cormeilles-en-Parisis\n",
-        "pos": null
+        "pos": {
+            "lat": 48.95982,
+            "lng": 2.18915
+        }
     },
     "B0040": {
         "name": "CIN'HOCHE",
@@ -1432,42 +1981,60 @@
         "url": "/seance/salle_gen_csalle=B0003.html",
         "id": "B0003",
         "address": "\n22, av. de la Resistance 77500 Chelles\n",
-        "pos": null
+        "pos": {
+            "lat": 48.87787,
+            "lng": 2.5863400000000003
+        }
     },
     "B0113": {
         "name": "Espace Paul-Valery",
         "url": "/seance/salle_gen_csalle=B0113.html",
         "id": "B0113",
         "address": "\n72-74 av. Ardouin 94420 Le Plessis-Trévise\n",
-        "pos": null
+        "pos": {
+            "lat": 48.80534,
+            "lng": 2.57812
+        }
     },
     "B0256": {
         "name": "L'Atalante",
         "url": "/seance/salle_gen_csalle=B0256.html",
         "id": "B0256",
         "address": "\n48, rue du Prieuré 78600 Maisons-Laffitte\n",
-        "pos": null
+        "pos": {
+            "lat": 48.94636,
+            "lng": 2.1469400000000003
+        }
     },
     "B0232": {
         "name": "Cinéma Varda",
         "url": "/seance/salle_gen_csalle=B0232.html",
         "id": "B0232",
         "address": "\n37-39 Grande-Rue 91260 Juvisy-sur-Orge\n",
-        "pos": null
+        "pos": {
+            "lat": 48.69047,
+            "lng": 2.37512
+        }
     },
     "B0183": {
         "name": "Le Fontenelle",
         "url": "/seance/salle_gen_csalle=B0183.html",
         "id": "B0183",
         "address": "\nPlace de la Gare 78160 Marly-le-Roi\n",
-        "pos": null
+        "pos": {
+            "lat": 48.871179999999995,
+            "lng": 2.09705
+        }
     },
     "C0172": {
         "name": "Mac-Mahon",
         "url": "/seance/salle_gen_csalle=C0172.html",
         "id": "C0172",
         "address": "\n5, av. Mac-Mahon 75017 Paris 17e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.876401,
+            "lng": 2.294316
+        }
     },
     "B0146": {
         "name": "Le Scarron",
@@ -1495,14 +2062,20 @@
         "url": "/seance/salle_gen_csalle=C0071.html",
         "id": "C0071",
         "address": "\n23, rue des Ecoles 75005 Paris 5e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.848781,
+            "lng": 2.348293
+        }
     },
     "W7506": {
         "name": "Institut Hongrois de Paris",
         "url": "/seance/salle_gen_csalle=W7506.html",
         "id": "W7506",
         "address": "\n92, rue Bonaparte 75006 Paris 6e arrondissement\n",
-        "pos": null
+        "pos": {
+            "lat": 48.853281,
+            "lng": 2.333404
+        }
     },
     "B0219": {
         "name": "Espace Carpeaux",
