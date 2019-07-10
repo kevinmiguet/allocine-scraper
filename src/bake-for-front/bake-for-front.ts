@@ -31,10 +31,10 @@ export const bakeForFront = () => {
     fs.mkdirSync(exportFolder);
     // copy necessary posters
     bakeImagesForFront(moviesForFront);
-    fs.writeFileSync(`${exportFolder}/movies.json`, JSON.stringify(moviesForFront, null, 4));
-    fs.writeFileSync(`${exportFolder}/cinemas.json`, JSON.stringify(cinemasForFront, null, 4));
-    fs.writeFileSync(`${exportFolder}/schedules.json`, JSON.stringify(schedulesForFront, null, 4));
-    fs.writeFileSync(`${exportFolder}/clusters.json`, JSON.stringify(clusters, null, 4));
+    fs.writeFileSync(`${exportFolder}/movies.json`, JSON.stringify(moviesForFront));
+    fs.writeFileSync(`${exportFolder}/cinemas.json`, JSON.stringify(cinemasForFront));
+    fs.writeFileSync(`${exportFolder}/schedules.json`, JSON.stringify(schedulesForFront));
+    fs.writeFileSync(`${exportFolder}/clusters.json`, JSON.stringify(clusters));
 };
 
 const getParisianCinemas = (): Cinemas => {

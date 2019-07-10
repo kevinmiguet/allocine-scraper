@@ -3,6 +3,7 @@ import { Key } from './main';
 import { get } from './utils/temp';
 import { allocineScrap, Cinema, Schedule } from './types';
 import { fetchCinePos, cleanAddress, extractZipcode } from './utils/positionHelper';
+import { logger } from './utils/utils';
 
 function cleanAndSaveMovieData (scrapedDataFromOnePage: allocineScrap): void {
     scrapedDataFromOnePage.schedule
@@ -43,7 +44,7 @@ async function cleanAndSaveCineData (scrapedDataFromOnePage: allocineScrap): Pro
                 cine.pos = pos;
             }
         } catch (err) {
-            //
+            logger.error(err);
         }
         setCine(cine);
     }
