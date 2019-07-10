@@ -1,6 +1,5 @@
 import * as fs from 'fs';
 import { Cinema, acPosition } from '../types';
-import fetch from 'cross-fetch';
 import { promisify } from 'util';
 import { database, getCine } from './database';
 import { logger } from './utils';
@@ -15,12 +14,10 @@ interface OpenDataFranceReply {
     housenumber: string;
 }
 
-let positions: acPosition[] = require('./cinePositions.json');
-
 const writeFileAsync = promisify(fs.writeFile);
 
 export function getPositionInDatabase(cine: Cinema): acPosition {
-    return positions.find((positionData: acPosition) => positionData.cineId === cine.id);
+    return database.positions.find((positionData: acPosition) => positionData.cineId === cine.id);
 }
 
 export async function fetchCineAddress(cine: Cinema): Promise<acPosition> {
@@ -52,8 +49,8 @@ export async function fetchCineAddress(cine: Cinema): Promise<acPosition> {
             longitude: reply.lon,
         };
         // add cineAddress to cinePositions
-        positions.push(pos);
-        await writeFileAsync('./src/utils/cinePositions.json', JSON.stringify(positions, null, 4));
+        database.positions.push(pos);
+        await writeFileAsync('./src/utils/cinePositions.json', JSON.stringify(database.positions, null, 4));
     } catch (err) {
         console.error(err);
     }
@@ -90,7 +87,7 @@ export async function addPositions(): Promise<void> {
             const shouldUpdateDatabase = !getPositionInDatabase(cine);
             if (shouldUpdateDatabase) {
                 // add missing position to cinePositions.json
-                positions.push({
+                database.positions.push({
                     cineId: cine.id,
                     name: cine.name,
                     address: cine.address,
@@ -113,7 +110,7 @@ export async function addPositions(): Promise<void> {
         }
     });
 
-    await writeFileAsync('./src/utils/cinePositions.json', JSON.stringify(positions, null, 4));
+    await writeFileAsync('./src/utils/cinePositions.json', JSON.stringify(database.positions, null, 4));
     await writeFileAsync('./cinemas.json', JSON.stringify(cinemas, null, 4));
     await writeFileAsync('./export/cinemas_pos.json', JSON.stringify(cinemasWithPos, null, 4));
     await writeFileAsync('./export/cinemas_missing.json', JSON.stringify(missing, null, 4));

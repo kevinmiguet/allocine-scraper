@@ -100,4 +100,5 @@ export interface Database {
     schedules: {[scheduleId: string]: Schedule};
     movies: MoviesById;
     cinemas: {[cinemaId: string]: Cinema};
+    positions: acPosition[];
 }

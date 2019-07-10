@@ -1,8 +1,8 @@
 import * as puppeteer from 'puppeteer';
 import * as fs from 'fs';
 
-import { browserOptions, chunkSizeForEnrich } from '../main';
-import { getMovie, setMovie, writeDatabases, database } from '../utils/database';
+import { browserOptions } from '../main';
+import { setMovie, writeDatabases } from '../utils/database';
 import { Movie } from '../types';
 import { asyncAllLimit } from '../utils/asyncLimit';
 
@@ -74,6 +74,7 @@ const getImageAndSaveIt = async (url: string, filename: string, _browser: puppet
             getImageAndSaveIt(url, filename, _browser, n + 1);
         })
         .catch(error => {
+            //
         });
     return Promise.resolve(foundImage);
 };

@@ -5,18 +5,24 @@ export const paths = {
     // based on where the script is launched
     movieDb: './movies.json',
     cinemasDb: './cinemas.json',
+    positionsDb: './cinePositions.json',
 };
 
 export let database: Database = {
     cinemas: {},
     movies: {},
     schedules: {},
+    positions: [],
 };
+
 if (fs.existsSync(paths.movieDb)) {
     database.movies = JSON.parse(fs.readFileSync(paths.movieDb, 'utf8'));
 }
 if (fs.existsSync(paths.cinemasDb)) {
     database.cinemas = JSON.parse(fs.readFileSync(paths.cinemasDb, 'utf8'));
+}
+if (fs.existsSync(paths.positionsDb)) {
+    database.positions = JSON.parse(fs.readFileSync(paths.positionsDb, 'utf8'));
 }
 export const getMovie = (movieId: string): Movie => database.movies[movieId];
 export const getCine = (cineId: string): Cinema => database.cinemas[cineId];
