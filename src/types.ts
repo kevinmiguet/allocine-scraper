@@ -45,8 +45,8 @@ export type acPosition = {
     name: string,
     address: string,
     latitude: number,
-    longitude: number
-}
+    longitude: number,
+};
 
 export type OpenDataFranceReply = {
     lat:         number;
@@ -56,7 +56,7 @@ export type OpenDataFranceReply = {
     name:        string;
     postcode:    string;
     housenumber: string;
-}
+};
 
 /// OUT
 export interface Movie {
@@ -80,7 +80,7 @@ export interface Cinema {
         lat: number;
         lng: number;
     };
-    zipCode?: string
+    zipCode?: string;
 }
 export interface Week {
     [dayname: string]: {

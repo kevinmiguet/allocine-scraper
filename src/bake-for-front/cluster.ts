@@ -5,6 +5,7 @@ import { getPreviousWednesday, isSameDay } from '../utils/utils';
 interface MovieCluster {
     movieIds: string[];
     title: string;
+    id: string;
 }
 const currentYear = new Date().getFullYear();
 export const getRecentMovies = (movies: MoviesById, schedulesForFront: ScheduleById): MovieCluster[] => {
@@ -25,10 +26,12 @@ export const getRecentMovies = (movies: MoviesById, schedulesForFront: ScheduleB
         {
             movieIds: weeklyReleaseMovieIds,
             title: 'Les sorties de la semaine',
+            id: 'cluster-weekly',
         },
         {
             movieIds: otherRecentMovieIds,
             title: 'Autres films récents',
+            id: 'cluster-recent',
         }];
 };
 
@@ -41,6 +44,7 @@ export const getOldMovies = (movies: MoviesById): MovieCluster[] => {
     return [{
         movieIds: oldMovieIds,
         title: 'Vieux films',
+        id: 'cluster-old',
     }];
 };
 
@@ -61,9 +65,11 @@ export const getRetrospectives = (movies: MoviesById): MovieCluster[] => {
         .filter(director => movieIdsByDirector[director].length > 2)
         // return the right format
         .map(directorWithMoreThanTwoMovies => {
+            const camelCasedDirector = directorWithMoreThanTwoMovies.replace(/ /g, '');
             return {
                 title: directorWithMoreThanTwoMovies,
                 movieIds: movieIdsByDirector[directorWithMoreThanTwoMovies],
+                id: `cluster${camelCasedDirector}`,
             };
         })
         // and sort by number of movies
