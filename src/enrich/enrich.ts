@@ -3,7 +3,7 @@ import { Movie } from '../types';
 import { asyncAllLimitForBrowserFunction } from '../utils/asyncLimit';
 import { logger } from '../utils/utils';
 import { database, getMovie } from '../utils/database';
-import { getPosters } from './get-posters';
+import { getAndSavePosters } from './get-posters';
 import { chunkSizeForEnrich } from '../main';
 import { getMoviesDetails } from './get-details';
 // use http://www.allocine.fr/film/fichefilm_gen_cfilm=273905.html
@@ -14,7 +14,7 @@ export const enrich = async (): Promise<any> => {
     const movies = movieIds.map(getMovie);
 
     const doesMovieNeedPoster = (movie: Movie) => movie.poster && movie.poster.indexOf('http://') > -1;
-    await asyncAllLimitForBrowserFunction(getPosters, movies.filter(doesMovieNeedPoster), chunkSizeForEnrich);
+    await asyncAllLimitForBrowserFunction(getAndSavePosters, movies.filter(doesMovieNeedPoster), chunkSizeForEnrich);
 
     const doesMovieNeedExtraInfo = ((movie: Movie) => !movie.countries && !movie.summary && !movie.releaseDate);
     await getMoviesDetails(movies.filter(doesMovieNeedExtraInfo));

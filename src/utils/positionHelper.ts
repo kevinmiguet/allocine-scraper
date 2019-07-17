@@ -51,8 +51,7 @@ export function cleanAddress(rawAddress: string): string {
         .replace('\n', ', ');
 }
 export function extractZipcode(address: string): string {
-    // set zipcode for Paris cinemas [750xx]
-    const zipCode = address.match(/750\d{2}/);
+    const zipCode = address.match(/\d{5}/);
     if (zipCode && zipCode.length > 0) {
         return zipCode[0];
     }

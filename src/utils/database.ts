@@ -46,6 +46,9 @@ export const setMoviePoster = (movieId: string, poster: string) => {
     }
     database.movies[movieId].poster = poster;
 };
+export const removeMoviePoster = (movieId: string) => {
+    delete database.movies[movieId].poster;
+};
 export const setCine = (cinema: Cinema): Cinema => {
     database.cinemas[cinema.id] = cinema;
     return getCine(cinema.id);
