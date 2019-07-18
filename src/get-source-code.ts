@@ -68,6 +68,6 @@ export const getAllSchedulePageSourceCodes = async(): Promise<Key[]> => {
 export const getMovieDetailsPageSourceCodes = async(movieIds: string[]): Promise<Key[]> => {
     logger.info('starting to get Movie Details pages source code');
     const urls = movieIds.map(movieId => `http://www.allocine.fr/film/fichefilm_gen_cfilm=${movieId}.html`);
-    const _getSourceCode = (_urls: string[]) => getSourceCode(_urls, '.js-movie-list');
+    const _getSourceCode = (_urls: string[]) => getSourceCode(_urls, '#content-layout');
     return asyncAllLimitForBrowserFunction(_getSourceCode, urls, chunkSizeForSourceGetter);
 };
