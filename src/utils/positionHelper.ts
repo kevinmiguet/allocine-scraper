@@ -1,6 +1,6 @@
 import { Cinema, Pos } from '../types';
-import { database, getCine } from './database';
 import { logger } from './utils';
+import fetch from 'node-fetch';
 
 interface OpenDataFranceReply {
     lat: number;
@@ -20,7 +20,9 @@ export async function fetchCinePos(cine: Cinema): Promise<Pos> {
     }
 
     try {
-        const rawReply = await fetch(`https://koumoul.com/s/geocoder/api/v1/coord?q=${cine.address}&postcode=${cine.zipCode}&city=Paris`);
+        // tslint:disable-next-line:max-line-length
+        const url = `https://koumoul.com/s/geocoder/api/v1/coord?q=${cine.address.replace(/[^\w\d]+/g, '%20')}&postcode=${cine.zipCode}&city=Paris`.replace(/[ \,\-]/g, '%20');
+        const rawReply = await fetch(url);
 
         if (!rawReply.ok) {
             logger.error('error getting position');
