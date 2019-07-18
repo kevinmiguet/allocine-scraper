@@ -2083,5 +2083,75 @@
         "id": "B0219",
         "address": "\n15, bd. Aristide-Briand 92400 Courbevoie\n",
         "pos": null
+    },
+    "W7815": {
+        "name": " UGC Ciné Cité Parly",
+        "url": "/seance/salle_gen_csalle=W7815.html",
+        "id": "W7815",
+        "address": "Centre commercial Parly 2, 2 avenue Charles de Gaulle 78150 Le Chesnay",
+        "zipCode": "78150"
+    },
+    "B0064": {
+        "name": "Le Cyrano",
+        "url": "/seance/salle_gen_csalle=B0064.html",
+        "id": "B0064",
+        "address": "114, av. de la Republique 91230 Montgeron",
+        "zipCode": "91230"
+    },
+    "B0245": {
+        "name": "Paradiso",
+        "url": "/seance/salle_gen_csalle=B0245.html",
+        "id": "B0245",
+        "address": "2 rue Marc-Sangnier 91330 Yerres",
+        "zipCode": "91330"
+    },
+    "W7748": {
+        "name": "Mégarama Montigny les Cormeilles",
+        "url": "/seance/salle_gen_csalle=W7748.html",
+        "id": "W7748",
+        "address": "82 boulevard Victor Bordier 95370 Montigny-lès-Cormeilles",
+        "zipCode": "95370"
+    },
+    "B0158": {
+        "name": "Cinéma Domont",
+        "url": "/seance/salle_gen_csalle=B0158.html",
+        "id": "B0158",
+        "address": "12, allee Sainte-Therese 95330 Domont",
+        "zipCode": "95330"
+    },
+    "B0038": {
+        "name": "C2L",
+        "url": "/seance/salle_gen_csalle=B0038.html",
+        "id": "B0038",
+        "address": "25, rue du Vieux-Marche 78100 Saint-Germain-en-Laye",
+        "zipCode": "78100"
+    },
+    "B0072": {
+        "name": "Calypso",
+        "url": "/seance/salle_gen_csalle=B0072.html",
+        "id": "B0072",
+        "address": "38, rue Victor-Basch 91170 Viry-Châtillon",
+        "zipCode": "91170"
+    },
+    "W9329": {
+        "name": "Europacorp Aéroville",
+        "url": "/seance/salle_gen_csalle=W9329.html",
+        "id": "W9329",
+        "address": "30 rue des Buissons - Centre commercial Aéroville 95700 Roissy-en-France",
+        "zipCode": "95700"
+    },
+    "B0030": {
+        "name": "Cinéma Apollo",
+        "url": "/seance/salle_gen_csalle=B0030.html",
+        "id": "B0030",
+        "address": "62, av. de la Republique 77340 Pontault-Combault",
+        "zipCode": "77340"
+    },
+    "B0087": {
+        "name": "La Ferme du buisson",
+        "url": "/seance/salle_gen_csalle=B0087.html",
+        "id": "B0087",
+        "address": "allee de la Ferme 77186 Noisiel",
+        "zipCode": "77186"
     }
 }
