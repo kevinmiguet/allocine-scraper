@@ -23,7 +23,7 @@ const scrapeMovieDetailsPages = async (key: string): Promise<any> => {
         id: $('#content-layout').data('seance-geoloc-redir'),
         releaseDate: $('.date.blue-link').text(),
         countries: $('.blue-link.nationality').text(),
-        summary: $('.content-txt').text(),
+        summary: $('#synopsis-details .content-txt').text(),
     });
 };
 
