@@ -69,3 +69,9 @@ export const getPreviousWednesday = (date: Date): Date => {
 export const isSameDay = (date1: Date|string, date2: Date|string): boolean => {
     return new Date(date1).toDateString() === new Date(date2).toDateString();
 };
+// used by front to know week day numbers
+export const getWeekDayNumbers = (): number[] => {
+    const wednesday = getPreviousWednesday(new Date());
+    const date = new Date();
+    return [...Array(7)].map((d, i) => new Date((date.setDate(wednesday.getDate() + i))).getDate());
+};

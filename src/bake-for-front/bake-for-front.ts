@@ -4,7 +4,7 @@ import * as rimraf from 'rimraf';
 import { getOldMovies, getRetrospectives, getRecentMovies } from './cluster';
 import { Movie, Cinema, Schedule } from '../types';
 import * as sharp from 'sharp';
-import { logger } from '../utils/utils';
+import { logger, getWeekDayNumbers } from '../utils/utils';
 
 const exportFolder = './export';
 interface Movies { [id: string]: Movie; }
@@ -35,6 +35,7 @@ export const bakeForFront = () => {
     fs.writeFileSync(`${exportFolder}/cinemas.json`, JSON.stringify(cinemasForFront));
     fs.writeFileSync(`${exportFolder}/schedules.json`, JSON.stringify(schedulesForFront));
     fs.writeFileSync(`${exportFolder}/clusters.json`, JSON.stringify(clusters));
+    fs.writeFileSync(`${exportFolder}/dayNumbers.json`, JSON.stringify(getWeekDayNumbers()));
 };
 
 const getParisianCinemas = (): Cinemas => {
