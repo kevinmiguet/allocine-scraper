@@ -6,6 +6,7 @@ import { database, getMovie } from '../utils/database';
 import { getAndSavePosters } from './get-posters';
 import { chunkSizeForEnrich } from '../main';
 import { getMoviesDetails } from './get-details';
+import { getAndSaveTrailerIds } from './get-trailer-id';
 // use http://www.allocine.fr/film/fichefilm_gen_cfilm=273905.html
 // to get release date and nationality
 export const enrich = async (): Promise<any> => {
@@ -18,6 +19,9 @@ export const enrich = async (): Promise<any> => {
 
     const doesMovieNeedExtraInfo = ((movie: Movie) => !movie.countries && !movie.summary && !movie.releaseDate);
     await getMoviesDetails(movies.filter(doesMovieNeedExtraInfo));
+
+    const doesMovieNeedTrailerId = ((movie: Movie) => !movie.trailerId);
+    await getAndSaveTrailerIds(movies.filter(doesMovieNeedTrailerId));
 
     return Promise.resolve();
 };
