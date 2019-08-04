@@ -49,9 +49,8 @@ export const setMoviePoster = (movieId: string, poster: string) => {
 export const removeMoviePoster = (movieId: string) => {
     delete database.movies[movieId].poster;
 };
-export const setCine = (cinema: Cinema): Cinema => {
+export const setCine = (cinema: Cinema): void => {
     database.cinemas[cinema.id] = cinema;
-    return getCine(cinema.id);
 };
 
 interface IndexedScheduleIds  {

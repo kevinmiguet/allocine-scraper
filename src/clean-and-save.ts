@@ -1,4 +1,4 @@
-import { getMovie, getCine, setCine, setMovie, getSchedule, setSchedule, writeDatabases, setMoviePoster } from './utils/database';
+import { getMovie, setCine, setMovie, getSchedule, setSchedule, writeDatabases, setMoviePoster } from './utils/database';
 import { Key } from './main';
 import { get } from './utils/temp';
 import { allocineScrap, Cinema, Schedule } from './types';
@@ -29,25 +29,14 @@ function cleanAndSaveMovieData (scrapedDataFromOnePage: allocineScrap): void {
 
 async function cleanAndSaveCineData (scrapedDataFromOnePage: allocineScrap): Promise<void> {
     const cineData = scrapedDataFromOnePage.cinemaData;
-    const cineShouldBeSaved = !getCine(cineData.id);
-    if (cineShouldBeSaved) {
-        let cine = {
-            ...cineData,
-            address: cleanAddress(cineData.address),
-            zipCode: extractZipcode(cineData.address),
-        } as Cinema;
 
-        // add position
-        try {
-            const pos = await fetchCinePos(cine);
-            if (pos) {
-                cine.pos = pos;
-            }
-        } catch (err) {
-            logger.error(err);
-        }
-        setCine(cine);
-    }
+    let cine = {
+        ...cineData,
+        address: cleanAddress(cineData.address),
+        zipCode: extractZipcode(cineData.address),
+    } as Cinema;
+
+    setCine(cine);
 }
 
 function cleanAndSaveScheduleData(scrapedDataFromOnePage: allocineScrap): void {
