@@ -70,6 +70,7 @@ export interface Movie {
     releaseDate?: string;
     countries?: string[];
     summary?: string;
+    trailerId?: string;
 }
 
 export interface Pos {

@@ -40,7 +40,7 @@ export const normalizeDate = (stringDate: string): string => {
     ).toDateString();
 };
 // cf : https://stackoverflow.com/questions/990904/remove-accents-diacritics-in-a-string-in-javascript
-const removeDiacritics = (str: string): string => str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+export const removeDiacritics = (str: string): string => str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
 
 
