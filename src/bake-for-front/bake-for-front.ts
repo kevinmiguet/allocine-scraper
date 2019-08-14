@@ -5,13 +5,14 @@ import { getOldMovies, getRetrospectives, getRecentMovies } from './cluster';
 import { Movie, Cinema, Schedule } from '../types';
 import * as sharp from 'sharp';
 import { logger, getWeekDayNumbers } from '../utils/utils';
+import { nbCinePageSourceToGet } from '../main';
 
 const exportFolder = './export';
 interface Movies { [id: string]: Movie; }
 interface Schedules { [id: string]: Schedule; }
 interface Cinemas { [id: string]: Cinema; }
 export const bakeForFront = () => {
-    logger.info('baking front package');
+    logger.title('baking for front');
     const cinemasForFront = getParisianCinemas();
     const schedulesForFront = getSchedulesForFront(cinemasForFront);
     const moviesForFront = getMoviesForFront(schedulesForFront);
@@ -50,11 +51,20 @@ const getParisianCinemas = (): Cinemas => {
 };
 const getSchedulesForFront = (cinemasForFront: Cinemas): Schedules => {
     const cinemaToKeepIds = Object.keys(cinemasForFront);
-    return Object.keys(database.schedules)
+    // used for logging
+    let scheduledCinemas: string[] = [];
+    const schedules = Object.keys(database.schedules)
         .map(scId => database.schedules[scId])
         // only keep the schedule if it is in a cinema for front
-        .filter(sc => cinemaToKeepIds.includes(sc.cineId))
-        .reduce((schedulesForFront, schedule) => {
+        .filter(sc => {
+            // tslint:disable-next-line:no-unused-expression
+            !scheduledCinemas.includes(sc.cineId) && scheduledCinemas.push(sc.cineId);
+            return cinemaToKeepIds.includes(sc.cineId);
+        });
+        if (scheduledCinemas.length < nbCinePageSourceToGet * 5) {
+            logger.info(`only ${scheduledCinemas.length} for front, this is weird !`);
+        }
+    return schedules.reduce((schedulesForFront, schedule) => {
             schedulesForFront[getScheduleId(schedule)] = schedule;
             return schedulesForFront;
         }, {});

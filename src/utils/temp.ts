@@ -16,7 +16,7 @@ function createTmpFolderIfNecessary(): void {
 export async function saveAndGetKey(data: any, computeKeyFrom?: string): Promise<string> {
     const key = typeof computeKeyFrom === 'string' ? hash(computeKeyFrom) : hash(data);
     const fileLocation = getFileLocation(key);
-    logger.info(`writing tmp file ${typeof computeKeyFrom === 'string' ? computeKeyFrom : key}`);
+    logger.info(`writing tmp file ${key}.json for ${computeKeyFrom}`);
     createTmpFolderIfNecessary();
     fs.writeFileSync(fileLocation, JSON.stringify(data));
     return key;
@@ -29,7 +29,7 @@ export async function get(_keyOrStringToComputeKeyFrom: Key, notAKey?: boolean):
     if (!fileExists) {
         return false;
     }
-    logger.info(`getting tmp file ${_keyOrStringToComputeKeyFrom}`);
+    logger.info(`getting tmp file ${key}.json ${_keyOrStringToComputeKeyFrom}`);
     return JSON.parse(fs.readFileSync(fileLocation, 'utf8'));
 }
 

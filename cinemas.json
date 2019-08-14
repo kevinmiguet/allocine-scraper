@@ -2157,5 +2157,170 @@
             "lat": 48.828651,
             "lng": 2.327876
         }
+    },
+    "B0018": {
+        "name": "Espace Prevert",
+        "url": "/seance/salle_gen_csalle=B0018.html",
+        "id": "B0018",
+        "address": "Plessis-le-Roi 77176 Savigny-le-Temple",
+        "zipCode": "77176",
+        "pos": {
+            "lat": 48.597522,
+            "lng": 2.57428
+        }
+    },
+    "B0032": {
+        "name": "Cinéma Frédéric Dard",
+        "url": "/seance/salle_gen_csalle=B0032.html",
+        "id": "B0032",
+        "address": "77, rue Paul Doumer - 56, Boulevard Victor Hugo 78130 Les Mureaux",
+        "zipCode": "78130",
+        "pos": {
+            "lat": 48.994838,
+            "lng": 1.911397
+        }
+    },
+    "C0172": {
+        "name": "Mac-Mahon",
+        "url": "/seance/salle_gen_csalle=C0172.html",
+        "id": "C0172",
+        "address": "5, av. Mac-Mahon 75017 Paris 17e arrondissement",
+        "zipCode": "75017",
+        "pos": {
+            "lat": 48.876401,
+            "lng": 2.294316
+        }
+    },
+    "B0104": {
+        "name": "Cin'Hoche",
+        "url": "/seance/salle_gen_csalle=B0104.html",
+        "id": "B0104",
+        "address": "6, rue Hoche 93170 Bagnolet",
+        "zipCode": "93170",
+        "pos": {
+            "lat": 48.870164,
+            "lng": 2.415083
+        }
+    },
+    "B0101": {
+        "name": "Le Studio",
+        "url": "/seance/salle_gen_csalle=B0101.html",
+        "id": "B0101",
+        "address": "2, rue Edouard-Poisson 93300 Aubervilliers",
+        "zipCode": "93300",
+        "pos": {
+            "lat": 48.91085,
+            "lng": 2.382188
+        }
+    },
+    "B0073": {
+        "name": "Le Sélect",
+        "url": "/seance/salle_gen_csalle=B0073.html",
+        "id": "B0073",
+        "address": "10, avenue de la Division Leclerc 92160 Antony",
+        "zipCode": "92160",
+        "pos": {
+            "lat": 48.745145,
+            "lng": 2.303479
+        }
+    },
+    "W9241": {
+        "name": "Le Colombier",
+        "url": "/seance/salle_gen_csalle=W9241.html",
+        "id": "W9241",
+        "address": "Place Charles de Gaulle 92410 Ville-d'Avray",
+        "zipCode": "92410",
+        "pos": {
+            "lat": 48.826162,
+            "lng": 2.189961
+        }
+    },
+    "B0092": {
+        "name": "Ariel - Centre ville",
+        "url": "/seance/salle_gen_csalle=B0092.html",
+        "id": "B0092",
+        "address": "97-99 av. Paul-Doumer 92500 Rueil-Malmaison",
+        "zipCode": "92500",
+        "pos": {
+            "lat": 48.880866,
+            "lng": 2.18299
+        }
+    },
+    "B0167": {
+        "name": "Les Toiles",
+        "url": "/seance/salle_gen_csalle=B0167.html",
+        "id": "B0167",
+        "address": "place Francois-Truffaut 95210 Saint-Gratien",
+        "zipCode": "95210",
+        "pos": {
+            "lat": 48.970477,
+            "lng": 2.284079
+        }
+    },
+    "B0147": {
+        "name": "Le Casino",
+        "url": "/seance/salle_gen_csalle=B0147.html",
+        "id": "B0147",
+        "address": "13, rue Guillaume Budé 94350 Villiers-sur-Marne",
+        "zipCode": "94350",
+        "pos": {
+            "lat": 48.826124,
+            "lng": 2.542402
+        }
+    },
+    "B0087": {
+        "name": "La Ferme du buisson",
+        "url": "/seance/salle_gen_csalle=B0087.html",
+        "id": "B0087",
+        "address": "allee de la Ferme 77186 Noisiel",
+        "zipCode": "77186",
+        "pos": {
+            "lat": 48.844797,
+            "lng": 2.624763
+        }
+    },
+    "B0037": {
+        "name": "Cinéma Les Yeux d'Elsa",
+        "url": "/seance/salle_gen_csalle=B0037.html",
+        "id": "B0037",
+        "address": "11 bis av. Jean Jaurès 78210 Saint-Cyr-l'École",
+        "zipCode": "78210",
+        "pos": {
+            "lat": 48.800039,
+            "lng": 2.065328
+        }
+    },
+    "B0078": {
+        "name": "Cinés Carné",
+        "url": "/seance/salle_gen_csalle=B0078.html",
+        "id": "B0078",
+        "address": "place Marcel Carne 91240 Saint-Michel-sur-Orge",
+        "zipCode": "91240",
+        "pos": {
+            "lat": 48.638127,
+            "lng": 2.320671
+        }
+    },
+    "B0031": {
+        "name": "Salle Jacques-Brel",
+        "url": "/seance/salle_gen_csalle=B0031.html",
+        "id": "B0031",
+        "address": "4, rue de la Mare-aux-Carats 78180 Montigny-le-Bretonneux",
+        "zipCode": "78180",
+        "pos": {
+            "lat": 48.769559,
+            "lng": 2.034513
+        }
+    },
+    "B0186": {
+        "name": "Utopia Stella",
+        "url": "/seance/salle_gen_csalle=B0186.html",
+        "id": "B0186",
+        "address": "1, place Pierre-Mendes-France 95310 Saint-Ouen-l'Aumône",
+        "zipCode": "95310",
+        "pos": {
+            "lat": 49.044334,
+            "lng": 2.106823
+        }
     }
 }

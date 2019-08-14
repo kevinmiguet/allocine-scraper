@@ -53,6 +53,9 @@ http://www.allocine.fr/salle/cinemas-pres-de-115755/?page=n
 */
 export async function scrap(sourceCodeKey: Key): Promise<Key> {
     const html = await tmp.get(sourceCodeKey);
+    if (!html) {
+        logger.error(`trying to get ${sourceCodeKey}.json but there is nothing lol`);
+    }
     const $ = cheerio.load(html);
     const result: allocineScrap[] = $('.theaterblock.j_entity_container') // <Cinema>
     .map((id, cineNode) => {
@@ -111,7 +114,10 @@ export async function scrap(sourceCodeKey: Key): Promise<Key> {
             schedule,
         };
     }).get();
-
+    result.forEach((res) => logger.info(`scraped info for ${res.cinemaData.name}`));
+    if (result.length < 7) {
+        logger.info(`only found ${result.length} cinemas on this page. Maybe you should investigate ?`);
+    }
     return Promise.resolve(tmp.saveAndGetKey(result));
 }
 

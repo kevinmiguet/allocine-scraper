@@ -15,7 +15,7 @@ export async function searchYoutube(request: string): Promise<youtube_v3.Schema$
 
     .catch((err) => {
         if (err.message.includes('quota')) {
-            logger.error('youtube api quota error !');
+            logger.info('youtube api quota error !');
         }
         return Promise.reject();
     });

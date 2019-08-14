@@ -23,9 +23,15 @@ async function main(): Promise<void> {
     // get source code of pages (on the website)
     return getAllSchedulePageSourceCodes()
         // analyze and extract information from it (offline)
-        .then(sourceCodesKeys => asyncAllLimit(scrap, sourceCodesKeys, chunkSizeForScrap))
+        .then(sourceCodesKeys => {
+            logger.title('scraping');
+                return asyncAllLimit(scrap, sourceCodesKeys, chunkSizeForScrap);
+        })
         // structure this information properly and save it
-        .then(scrappedKeys => Promise.all(scrappedKeys.map(async scrappedKey => await cleaner(scrappedKey))))
+        .then(scrappedKeys => {
+            logger.title('cleaning and writing data');
+            return Promise.all(scrappedKeys.map(async scrappedKey => await cleaner(scrappedKey)))
+        })
         // get extra information and download images (on the website)
         .then(() => enrich())
         // format it for front (offline)

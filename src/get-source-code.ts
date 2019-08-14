@@ -59,14 +59,14 @@ const getSourceCode = async(urls: string[], waitForSelector: string): Promise<Ke
 };
 
 export const getAllSchedulePageSourceCodes = async(): Promise<Key[]> => {
-    logger.info('starting to get Schedule pages source code');
+    logger.title('getting schedule source code');
     const urls =  [...Array(nbCinePageSourceToGet).keys()].map(nb => `http://www.allocine.fr/salle/cinemas-pres-de-115755/?page=${nb}`);
     const _getSourceCode = (_urls: string[]) => getSourceCode(_urls, '.theaterblock.j_entity_container');
     return asyncAllLimitForBrowserFunction(_getSourceCode, urls, chunkSizeForSourceGetter);
 };
 
 export const getMovieDetailsPageSourceCodes = async(movieIds: string[]): Promise<Key[]> => {
-    logger.info('starting to get Movie Details pages source code');
+    logger.title('getting movie details source code');
     const urls = movieIds.map(movieId => `http://www.allocine.fr/film/fichefilm_gen_cfilm=${movieId}.html`);
     const _getSourceCode = (_urls: string[]) => getSourceCode(_urls, '#content-layout');
     return asyncAllLimitForBrowserFunction(_getSourceCode, urls, chunkSizeForSourceGetter);

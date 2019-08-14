@@ -21,11 +21,11 @@ export async function fetchCinePos(cine: Cinema): Promise<Pos> {
 
     try {
         // tslint:disable-next-line:max-line-length
-        const url = `https://koumoul.com/s/geocoder/api/v1/coord?q=${cine.address.replace(/[^\w\d]+/g, '%20')}&postcode=${cine.zipCode}&city=Paris`.replace(/[ \,\-]/g, '%20');
+        const url = `https://koumoul.com/s/geocoder/api/v1/coord?q=${cine.address.replace(/[^\w\d]+/g, '%20')}&postcode=${cine.zipCode}&city=Paris&apiKey=2a0ad960-d5dd-4321-984f-646a2a8078cd`.replace(/[ \,]/g, '%20');
         const rawReply = await fetch(url);
 
         if (!rawReply.ok) {
-            logger.error('error getting position');
+            logger.info(`error getting position: ${JSON.stringify(rawReply)}`);
             return;
         }
         const reply: OpenDataFranceReply = await rawReply.json();

@@ -5,7 +5,7 @@ import { asyncAllLimit } from '../utils/asyncLimit';
 import * as tmp from '../utils/temp';
 import { setMovie, writeDatabases } from '../utils/database';
 import * as cheerio from 'cheerio';
-import { normalizeText, normalizeDate } from '../utils/utils';
+import { normalizeText, normalizeDate, logger } from '../utils/utils';
 
 
 export const getMoviesDetails = async (movies: Movie[]) => {
@@ -29,6 +29,9 @@ const scrapeMovieDetailsPages = async (key: string): Promise<any> => {
 
 const cleanAndSaveMovieDetails = async (key: string): Promise<void> => {
     const movieInfo = await tmp.get(key);
+    if (!movieInfo) {
+        logger.error(`trying to get ${key}.json but there is nothing lol`);
+    }
     setMovie({
         id: movieInfo.id,
         releaseDate: movieInfo.releaseDate && normalizeDate(movieInfo.releaseDate),
