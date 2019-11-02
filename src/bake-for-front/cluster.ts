@@ -14,7 +14,7 @@ export const getRecentMovies = (movies: MoviesById, schedulesForFront: ScheduleB
     const sortByNbOfSchedules = ((movieIdA: string, movieIdB: string) => indexedScheduleIds[movieIdB].length - indexedScheduleIds[movieIdA].length);
     const previousWednesday = getPreviousWednesday(new Date());
     const weeklyReleaseMovieIds = Object.keys(movies)
-        .filter(movieId => isSameDay(movies[movieId].releaseDate, previousWednesday))
+        .filter(movieId => movies[movieId] && isSameDay(movies[movieId].releaseDate, previousWednesday))
         .sort(sortByNbOfSchedules);
 
     const otherRecentMovieIds = Object.keys(movies)

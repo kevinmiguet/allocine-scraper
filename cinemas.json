@@ -39,8 +39,8 @@
         "address": "6, rue de l'Ecole-de-Medecine 75006 Paris 6e arrondissement",
         "zipCode": "75006",
         "pos": {
-            "lat": 48.850773,
-            "lng": 2.341185
+            "lat": 48.850818,
+            "lng": 2.341348
         }
     },
     "C0104": {
@@ -50,8 +50,8 @@
         "address": "124, bd Saint-Germain 75006 Paris 6e arrondissement",
         "zipCode": "75006",
         "pos": {
-            "lat": 48.852798,
-            "lng": 2.336771
+            "lat": 48.852852,
+            "lng": 2.336556
         }
     },
     "C0117": {
@@ -61,8 +61,8 @@
         "address": "7, place Saint-Michel 75005 Paris 5e arrondissement",
         "zipCode": "75005",
         "pos": {
-            "lat": 48.85317,
-            "lng": 2.344308
+            "lat": 48.853405,
+            "lng": 2.34455
         }
     },
     "C0016": {
@@ -490,8 +490,8 @@
         "address": "136 rue de la République 92800 Puteaux",
         "zipCode": "92800",
         "pos": {
-            "lat": 48.884683,
-            "lng": 2.239186
+            "lat": 48.884776,
+            "lng": 2.239523
         }
     },
     "B0084": {
@@ -501,8 +501,8 @@
         "address": "184, bd. Saint-Denis 92400 Courbevoie",
         "zipCode": "92400",
         "pos": {
-            "lat": 48.899953,
-            "lng": 2.268365
+            "lat": 48.899989,
+            "lng": 2.268451
         }
     },
     "B0105": {
@@ -589,8 +589,8 @@
         "address": "3, rue Ledru-Rollin 92150 Suresnes",
         "zipCode": "92150",
         "pos": {
-            "lat": 48.871244,
-            "lng": 2.230115
+            "lat": 48.87125,
+            "lng": 2.230158
         }
     },
     "P9520": {
@@ -600,8 +600,8 @@
         "address": "2, allée Henri Dunant 95200 Sarcelles",
         "zipCode": "95200",
         "pos": {
-            "lat": 48.984111,
-            "lng": 2.372423
+            "lat": 48.983891,
+            "lng": 2.372232
         }
     },
     "B0099": {
@@ -622,7 +622,7 @@
         "address": "49, rue Maurice-Thorez 92000 Nanterre",
         "zipCode": "92000",
         "pos": {
-            "lat": 48.892682,
+            "lat": 48.892683,
             "lng": 2.195779
         }
     },
@@ -717,8 +717,8 @@
         "address": "66, rue Jean-Jaures 94500 Champigny-sur-Marne",
         "zipCode": "94500",
         "pos": {
-            "lat": 48.81492,
-            "lng": 2.507031
+            "lat": 48.814911,
+            "lng": 2.507068
         }
     },
     "B0040": {
@@ -739,8 +739,8 @@
         "address": "165, grande rue Charles-de-Gaulle 94130 Nogent-sur-Marne",
         "zipCode": "94130",
         "pos": {
-            "lat": 48.836981,
-            "lng": 2.483684
+            "lat": 48.836978,
+            "lng": 2.483441
         }
     },
     "P9316": {
@@ -794,8 +794,8 @@
         "address": "Centre commercial Régional Vélizy 2 78140 Vélizy-Villacoublay",
         "zipCode": "78140",
         "pos": {
-            "lat": 48.781115,
-            "lng": 2.220429
+            "lat": 48.781241,
+            "lng": 2.22063
         }
     },
     "B0091": {
@@ -805,8 +805,8 @@
         "address": "1 place Jane Rhodes 92350 Le Plessis-Robinson",
         "zipCode": "92350",
         "pos": {
-            "lat": 48.777526,
-            "lng": 2.254307
+            "lat": 48.777607,
+            "lng": 2.254424
         }
     },
     "B0144": {
@@ -871,7 +871,7 @@
         "address": "Centre commercial Belle-Epine 94320 Thiais",
         "zipCode": "94320",
         "pos": {
-            "lat": 48.756508,
+            "lat": 48.756509,
             "lng": 2.371928
         }
     },
@@ -879,11 +879,11 @@
         "name": "Gaumont Stade de France",
         "url": "/seance/salle_gen_csalle=B0242.html",
         "id": "B0242",
-        "address": "8, rue du Mondial-1998 93200 Saint-Denis",
-        "zipCode": "93200",
+        "address": "8, rue du Mondial 98 93210 Saint-Denis",
+        "zipCode": "93210",
         "pos": {
-            "lat": 48.915279,
-            "lng": 2.354477
+            "lat": 48.925331,
+            "lng": 2.363582
         }
     },
     "B0142": {
@@ -1472,8 +1472,8 @@
         "address": "39, bd de Strasbourg 75010 Paris 10e arrondissement",
         "zipCode": "75010",
         "pos": {
-            "lat": 48.872684,
-            "lng": 2.355912
+            "lat": 48.872448,
+            "lng": 2.356089
         }
     },
     "W7460": {
@@ -1513,7 +1513,7 @@
         "name": "Les 3 Luxembourg",
         "url": "/seance/salle_gen_csalle=C0095.html",
         "id": "C0095",
-        "address": "67, rue Monsieur-le-Prince 75006 Paris 6e arrondissement",
+        "address": "67 , rue Monsieur Le Prince 75006 Paris 6e arrondissement",
         "zipCode": "75006",
         "pos": {
             "lat": 48.849538,
@@ -1549,8 +1549,8 @@
         "address": "113, bd Saint-Germain 75006 Paris 6e arrondissement",
         "zipCode": "75006",
         "pos": {
-            "lat": 48.852798,
-            "lng": 2.336771
+            "lat": 48.852852,
+            "lng": 2.336556
         }
     },
     "C0072": {
@@ -1582,8 +1582,8 @@
         "address": "99, bd Saint-Germain 75006 Paris 6e arrondissement",
         "zipCode": "75006",
         "pos": {
-            "lat": 48.852798,
-            "lng": 2.336771
+            "lat": 48.852852,
+            "lng": 2.336556
         }
     },
     "C0054": {
@@ -1626,8 +1626,8 @@
         "address": "17 bd de Strasbourg 75010 Paris 10e arrondissement",
         "zipCode": "75010",
         "pos": {
-            "lat": 48.872684,
-            "lng": 2.355912
+            "lat": 48.872448,
+            "lng": 2.356089
         }
     },
     "C0093": {
@@ -1637,8 +1637,8 @@
         "address": "53, rue Notre-Dame-des-Champs 75006 Paris 6e arrondissement",
         "zipCode": "75006",
         "pos": {
-            "lat": 48.843014,
-            "lng": 2.331524
+            "lat": 48.843012,
+            "lng": 2.331491
         }
     },
     "C0089": {
@@ -1670,8 +1670,8 @@
         "address": "98, bd du Montparnasse 75014 Paris 14e arrondissement, Métro Vavin.",
         "zipCode": "75014",
         "pos": {
-            "lat": 48.84143,
-            "lng": 2.330679
+            "lat": 48.841367,
+            "lng": 2.330864
         }
     },
     "C0065": {
@@ -1730,7 +1730,7 @@
         }
     },
     "C0060": {
-        "name": "Gaumont Opéra (côté Premier)",
+        "name": "Pathé Opéra Premier",
         "url": "/seance/salle_gen_csalle=C0060.html",
         "id": "C0060",
         "address": "32, rue Louis Legrand 75002 Paris 2e arrondissement",
@@ -1747,8 +1747,8 @@
         "address": "7, av. de Clichy 75017 Paris 17e arrondissement",
         "zipCode": "75017",
         "pos": {
-            "lat": 48.889967,
-            "lng": 2.321005
+            "lat": 48.890097,
+            "lng": 2.320777
         }
     },
     "C0105": {
@@ -1956,8 +1956,8 @@
         "address": "27, rue Alain-Chartier 75015 Paris 15e arrondissement",
         "zipCode": "75015",
         "pos": {
-            "lat": 48.838091,
-            "lng": 2.295763
+            "lat": 48.838063,
+            "lng": 2.295828
         }
     },
     "B0258": {
@@ -2011,8 +2011,8 @@
         "address": "166, boulevard Mac Donald 75019 Paris 19e arrondissement",
         "zipCode": "75019",
         "pos": {
-            "lat": 48.87821,
-            "lng": 2.386789
+            "lat": 48.878224,
+            "lng": 2.386637
         }
     },
     "C0116": {
@@ -2044,8 +2044,8 @@
         "address": "25 allée Colette-Heilbronner 75017 Paris 17e arrondissement",
         "zipCode": "75017",
         "pos": {
-            "lat": 48.892802,
-            "lng": 2.310211
+            "lat": 48.893315,
+            "lng": 2.311503
         }
     },
     "W7520": {
@@ -2055,8 +2055,8 @@
         "address": "30 avenue Corentin Cariou 75019 Paris 19e arrondissement",
         "zipCode": "75019",
         "pos": {
-            "lat": 48.896523,
-            "lng": 2.384208
+            "lat": 48.896314,
+            "lng": 2.384409
         }
     },
     "B0148": {
@@ -2066,8 +2066,8 @@
         "address": "30 avenue de Paris 94300 Vincennes",
         "zipCode": "94300",
         "pos": {
-            "lat": 48.845447,
-            "lng": 2.429714
+            "lat": 48.845546,
+            "lng": 2.429404
         }
     },
     "C0175": {
@@ -2242,8 +2242,8 @@
         "address": "97-99 av. Paul-Doumer 92500 Rueil-Malmaison",
         "zipCode": "92500",
         "pos": {
-            "lat": 48.880866,
-            "lng": 2.18299
+            "lat": 48.880907,
+            "lng": 2.183107
         }
     },
     "B0167": {
@@ -2321,6 +2321,644 @@
         "pos": {
             "lat": 49.044334,
             "lng": 2.106823
+        }
+    },
+    "C0127": {
+        "name": "Centre Georges-Pompidou",
+        "url": "/seance/salle_gen_csalle=C0127.html",
+        "id": "C0127",
+        "address": "pl. Georges-Pompidou 75004 Paris 4e arrondissement, Métro Hotel-de-Ville, Rambuteau.",
+        "zipCode": "75004",
+        "pos": {
+            "lat": 48.860879,
+            "lng": 2.35424
+        }
+    },
+    "C0096": {
+        "name": "Beau Regard",
+        "url": "/seance/salle_gen_csalle=C0096.html",
+        "id": "C0096",
+        "address": "22, Rue Guillaume Apollinaire 75006 Paris 6e arrondissement",
+        "zipCode": "75006",
+        "pos": {
+            "lat": 48.854611,
+            "lng": 2.333294
+        }
+    },
+    "C0083": {
+        "name": "Studio des Ursulines",
+        "url": "/seance/salle_gen_csalle=C0083.html",
+        "id": "C0083",
+        "address": "10, rue des Ursulines 75005 Paris 5e arrondissement",
+        "zipCode": "75005",
+        "pos": {
+            "lat": 48.842615,
+            "lng": 2.342102
+        }
+    },
+    "W7513": {
+        "name": "Fondation Jerome Seydoux - Pathé",
+        "url": "/seance/salle_gen_csalle=W7513.html",
+        "id": "W7513",
+        "address": "73 avenue des Gobelins 75013 Paris 13e arrondissement",
+        "zipCode": "75013",
+        "pos": {
+            "lat": 48.834848,
+            "lng": 2.353281
+        }
+    },
+    "C1559": {
+        "name": "La Cinémathèque française",
+        "url": "/seance/salle_gen_csalle=C1559.html",
+        "id": "C1559",
+        "address": "51 rue de Bercy 75012 Paris 12e arrondissement",
+        "zipCode": "75012",
+        "pos": {
+            "lat": 48.841379,
+            "lng": 2.377464
+        }
+    },
+    "C0061": {
+        "name": "Cinéma Studio 28",
+        "url": "/seance/salle_gen_csalle=C0061.html",
+        "id": "C0061",
+        "address": "10, rue Tholoze 75018 Paris 18e arrondissement",
+        "zipCode": "75018",
+        "pos": {
+            "lat": 48.886576,
+            "lng": 2.33551
+        }
+    },
+    "W1675": {
+        "name": "Goethe Institut Paris",
+        "url": "/seance/salle_gen_csalle=W1675.html",
+        "id": "W1675",
+        "address": "17, Avenue d’Iéna 75116 Paris 16e arrondissement",
+        "zipCode": "75116",
+        "pos": {
+            "lat": 48.867242,
+            "lng": 2.295685
+        }
+    },
+    "B0089": {
+        "name": "Cinéma Marcel-Pagnol",
+        "url": "/seance/salle_gen_csalle=B0089.html",
+        "id": "B0089",
+        "address": "17 rue Béranger 92240 Malakoff",
+        "zipCode": "92240",
+        "pos": {
+            "lat": 48.816336,
+            "lng": 2.301383
+        }
+    },
+    "B0013": {
+        "name": "Ciné Montrouge",
+        "url": "/seance/salle_gen_csalle=B0013.html",
+        "id": "B0013",
+        "address": "88, rue Racine 92120 Montrouge",
+        "zipCode": "92120",
+        "pos": {
+            "lat": 48.812355,
+            "lng": 2.314095
+        }
+    },
+    "B0228": {
+        "name": "Cinéma du Garde-Chasse",
+        "url": "/seance/salle_gen_csalle=B0228.html",
+        "id": "B0228",
+        "address": "181 bis rue de Paris 93260 Les Lilas",
+        "zipCode": "93260",
+        "pos": {
+            "lat": 48.880291,
+            "lng": 2.417612
+        }
+    },
+    "B0123": {
+        "name": "Espace 1789 ",
+        "url": "/seance/salle_gen_csalle=B0123.html",
+        "id": "B0123",
+        "address": "2-4, rue Alexandre-Bachelet 93400 Saint-Ouen",
+        "zipCode": "93400",
+        "pos": {
+            "lat": 48.908683,
+            "lng": 2.334248
+        }
+    },
+    "B0098": {
+        "name": "Cinéma De Vanves",
+        "url": "/seance/salle_gen_csalle=B0098.html",
+        "id": "B0098",
+        "address": "12, rue Sadi-Carnot 92170 Vanves",
+        "zipCode": "92170",
+        "pos": {
+            "lat": 48.823624,
+            "lng": 2.292369
+        }
+    },
+    "B0047": {
+        "name": "Ciné 104",
+        "url": "/seance/salle_gen_csalle=B0047.html",
+        "id": "B0047",
+        "address": "104, av. Jean-Lolive 93500 Pantin",
+        "zipCode": "93500",
+        "pos": {
+            "lat": 48.892936,
+            "lng": 2.4114
+        }
+    },
+    "B0126": {
+        "name": "Espace municipal Jean Vilar",
+        "url": "/seance/salle_gen_csalle=B0126.html",
+        "id": "B0126",
+        "address": "1, rue Paul Signac 94110 Arcueil",
+        "zipCode": "94110",
+        "pos": {
+            "lat": 48.80163,
+            "lng": 2.329983
+        }
+    },
+    "B0161": {
+        "name": "Rutebeuf",
+        "url": "/seance/salle_gen_csalle=B0161.html",
+        "id": "B0161",
+        "address": "16-18 allee Gambetta 92110 Clichy",
+        "zipCode": "92110",
+        "pos": {
+            "lat": 48.902609,
+            "lng": 2.309516
+        }
+    },
+    "B0097": {
+        "name": "Ciné d'Issy",
+        "url": "/seance/salle_gen_csalle=B0097.html",
+        "id": "B0097",
+        "address": "11-13 rue Danton/mail Menand Métro Mairie d'Issy conservatoire de musique 92130 Issy-les-Moulineaux",
+        "zipCode": "92130",
+        "pos": {
+            "lat": 48.825198,
+            "lng": 2.271127
+        }
+    },
+    "B0127": {
+        "name": "La Pleiade",
+        "url": "/seance/salle_gen_csalle=B0127.html",
+        "id": "B0127",
+        "address": "12, av. Cousin-de-Mericourt 94230 Cachan",
+        "zipCode": "94230",
+        "pos": {
+            "lat": 48.796921,
+            "lng": 2.334237
+        }
+    },
+    "B0145": {
+        "name": "Cinéma d'Art Romain Rolland",
+        "url": "/seance/salle_gen_csalle=B0145.html",
+        "id": "B0145",
+        "address": "18 rue Eugène Varlin 94800 Villejuif",
+        "zipCode": "94800",
+        "pos": {
+            "lat": 48.793794,
+            "lng": 2.363108
+        }
+    },
+    "B0119": {
+        "name": "Le Trianon",
+        "url": "/seance/salle_gen_csalle=B0119.html",
+        "id": "B0119",
+        "address": "Place Carnot 93230 Romainville",
+        "zipCode": "93230",
+        "pos": {
+            "lat": 48.883919,
+            "lng": 2.440698
+        }
+    },
+    "B0080": {
+        "name": "Cinéma de Châtillon",
+        "url": "/seance/salle_gen_csalle=B0080.html",
+        "id": "B0080",
+        "address": "7bis, rue de la Mairie 92320 Châtillon",
+        "zipCode": "92320",
+        "pos": {
+            "lat": 48.800739,
+            "lng": 2.287909
+        }
+    },
+    "B0146": {
+        "name": "Le Scarron",
+        "url": "/seance/salle_gen_csalle=B0146.html",
+        "id": "B0146",
+        "address": "8, av. Jeanne-et-Maurice-Dolivet 92260 Fontenay-aux-Roses",
+        "zipCode": "92260",
+        "pos": {
+            "lat": 48.793504,
+            "lng": 2.290896
+        }
+    },
+    "B0227": {
+        "name": "Cinéma Landowski",
+        "url": "/seance/salle_gen_csalle=B0227.html",
+        "id": "B0227",
+        "address": "28, av. Andre-Morizet 92100 Boulogne-Billancourt",
+        "zipCode": "92100",
+        "pos": {
+            "lat": 48.837161,
+            "lng": 2.236214
+        }
+    },
+    "B0136": {
+        "name": "La Tournelle",
+        "url": "/seance/salle_gen_csalle=B0136.html",
+        "id": "B0136",
+        "address": "14, rue Dispan 94240 L' Haÿ-les-Roses",
+        "zipCode": "94240",
+        "pos": {
+            "lat": 48.779479,
+            "lng": 2.338771
+        }
+    },
+    "B0110": {
+        "name": "L'Etoile",
+        "url": "/seance/salle_gen_csalle=B0110.html",
+        "id": "B0110",
+        "address": "1, allee du Progres 93120 La Courneuve",
+        "zipCode": "93120",
+        "pos": {
+            "lat": 48.92678,
+            "lng": 2.391604
+        }
+    },
+    "W9300": {
+        "name": " Bourse du Travail de la Seine-Saint-Denis",
+        "url": "/seance/salle_gen_csalle=W9300.html",
+        "id": "W9300",
+        "address": "1, place de la Libération 93000 Bobigny",
+        "zipCode": "93000",
+        "pos": {
+            "lat": 48.906348,
+            "lng": 2.438927
+        }
+    },
+    "W9301": {
+        "name": "Conservatoire Jean Wiéner",
+        "url": "/seance/salle_gen_csalle=W9301.html",
+        "id": "W9301",
+        "address": "2, place de la Libération 93000 Bobigny",
+        "zipCode": "93000",
+        "pos": {
+            "lat": 48.906348,
+            "lng": 2.438927
+        }
+    },
+    "B0077": {
+        "name": "Salle Jean-Renoir",
+        "url": "/seance/salle_gen_csalle=B0077.html",
+        "id": "B0077",
+        "address": "7 Villa des Aubépines 92270 Bois-Colombes",
+        "zipCode": "92270",
+        "pos": {
+            "lat": 48.91998,
+            "lng": 2.278006
+        }
+    },
+    "W9303": {
+        "name": "Bibliothèque Elsa Triolet",
+        "url": "/seance/salle_gen_csalle=W9303.html",
+        "id": "W9303",
+        "address": "4, rue de l’Union 93000 Bobigny",
+        "zipCode": "93000",
+        "pos": {
+            "lat": 48.90914,
+            "lng": 2.442067
+        }
+    },
+    "B0081": {
+        "name": "Cinéma Jeanne Moreau",
+        "url": "/seance/salle_gen_csalle=B0081.html",
+        "id": "B0081",
+        "address": "Place Jules Hunebelle - Stade Hunebelle 92140 Clamart",
+        "zipCode": "92140",
+        "pos": {
+            "lat": 48.799975,
+            "lng": 2.260679
+        }
+    },
+    "B0122": {
+        "name": "L'Ecran",
+        "url": "/seance/salle_gen_csalle=B0122.html",
+        "id": "B0122",
+        "address": "14 passage de l'Aqueduc 93200 Saint-Denis",
+        "zipCode": "93200",
+        "pos": {
+            "lat": 48.936673,
+            "lng": 2.358912
+        }
+    },
+    "B0130": {
+        "name": "Théâtre André Malraux",
+        "url": "/seance/salle_gen_csalle=B0130.html",
+        "id": "B0130",
+        "address": "102, av. du General-de-Gaulle 94550 Chevilly-Larue",
+        "zipCode": "94550",
+        "pos": {
+            "lat": 48.772637,
+            "lng": 2.341191
+        }
+    },
+    "B0197": {
+        "name": "Cinéma Prévert",
+        "url": "/seance/salle_gen_csalle=B0197.html",
+        "id": "B0197",
+        "address": "23, rue de Paris 94340 Joinville-le-Pont",
+        "zipCode": "94340",
+        "pos": {
+            "lat": 48.816895,
+            "lng": 2.467858
+        }
+    },
+    "B0094": {
+        "name": "Les Trois Pierrots",
+        "url": "/seance/salle_gen_csalle=B0094.html",
+        "id": "B0094",
+        "address": "6, rue du Mont-Valerien 92210 Saint-Cloud",
+        "zipCode": "92210",
+        "pos": {
+            "lat": 48.85492,
+            "lng": 2.215469
+        }
+    },
+    "W9311": {
+        "name": "Espace Georges Simenon",
+        "url": "/seance/salle_gen_csalle=W9311.html",
+        "id": "W9311",
+        "address": "Place Carnot 93110 Rosny-sous-Bois",
+        "zipCode": "93110",
+        "pos": {
+            "lat": 48.873432,
+            "lng": 2.482651
+        }
+    },
+    "B0230": {
+        "name": "Centre culturel Andre-Malraux",
+        "url": "/seance/salle_gen_csalle=B0230.html",
+        "id": "B0230",
+        "address": "10, av. Francis-de-Pressense 93350 Le Bourget",
+        "zipCode": "93350",
+        "pos": {
+            "lat": 48.931939,
+            "lng": 2.425294
+        }
+    },
+    "B0193": {
+        "name": "Cinémas du palais, Armand-Badéyan",
+        "url": "/seance/salle_gen_csalle=B0193.html",
+        "id": "B0193",
+        "address": "40, allee Parmentier 94000 Créteil",
+        "zipCode": "94000",
+        "pos": {
+            "lat": 48.786505,
+            "lng": 2.445276
+        }
+    },
+    "B9370": {
+        "name": "Espace Culturel du Parc",
+        "url": "/seance/salle_gen_csalle=B9370.html",
+        "id": "B9370",
+        "address": "120 rue Sadi Carnot 93700 Drancy",
+        "zipCode": "93700",
+        "pos": {
+            "lat": 48.925171,
+            "lng": 2.441227
+        }
+    },
+    "B0107": {
+        "name": "Cinéma André-Malraux",
+        "url": "/seance/salle_gen_csalle=B0107.html",
+        "id": "B0107",
+        "address": "25, cours de la Republique 93140 Bondy",
+        "zipCode": "93140",
+        "pos": {
+            "lat": 48.901598,
+            "lng": 2.480089
+        }
+    },
+    "B0131": {
+        "name": "Théâtre-Cinéma Paul-Eluard",
+        "url": "/seance/salle_gen_csalle=B0131.html",
+        "id": "B0131",
+        "address": "4, av. de Villeneuve-Saint-Georges 94600 Choisy-le-Roi",
+        "zipCode": "94600",
+        "pos": {
+            "lat": 48.762938,
+            "lng": 2.418362
+        }
+    },
+    "W9219": {
+        "name": "Espace Culturel Robert Doisneau",
+        "url": "/seance/salle_gen_csalle=W9219.html",
+        "id": "W9219",
+        "address": "16 avenue du Maréchal de Lattre de Tassigny 92360 MEUDON LA FORET",
+        "zipCode": "92360",
+        "pos": {
+            "lat": 48.786902,
+            "lng": 2.23074
+        }
+    },
+    "B0141": {
+        "name": "Centre des Bords-de-Marne",
+        "url": "/seance/salle_gen_csalle=B0141.html",
+        "id": "B0141",
+        "address": "2, rue de la Prairie 94170 Le Perreux-sur-Marne",
+        "zipCode": "94170",
+        "pos": {
+            "lat": 48.84701,
+            "lng": 2.509921
+        }
+    },
+    "B0191": {
+        "name": "Ciné Garches",
+        "url": "/seance/salle_gen_csalle=B0191.html",
+        "id": "B0191",
+        "address": "86 Grande Rue 92380 Garches",
+        "zipCode": "92380",
+        "pos": {
+            "lat": 48.844239,
+            "lng": 2.188722
+        }
+    },
+    "B0108": {
+        "name": "La Fauvette",
+        "url": "/seance/salle_gen_csalle=B0108.html",
+        "id": "B0108",
+        "address": "21, av. Daniel-Perdrige 93360 Neuilly-Plaisance",
+        "zipCode": "93360",
+        "pos": {
+            "lat": 48.872554,
+            "lng": 2.512046
+        }
+    },
+    "B0079": {
+        "name": "Le Rex",
+        "url": "/seance/salle_gen_csalle=B0079.html",
+        "id": "B0079",
+        "address": "364, av. de la Division-Leclerc 92290 Châtenay-Malabry",
+        "zipCode": "92290",
+        "pos": {
+            "lat": 48.763737,
+            "lng": 2.272195
+        }
+    },
+    "B0133": {
+        "name": "La Lucarne",
+        "url": "/seance/salle_gen_csalle=B0133.html",
+        "id": "B0133",
+        "address": "100, rue Juliette Savar 94000 Créteil",
+        "zipCode": "94000",
+        "pos": {
+            "lat": 48.784076,
+            "lng": 2.463657
+        }
+    },
+    "B3516": {
+        "name": "Cinéma Jean Gabin",
+        "url": "/seance/salle_gen_csalle=B3516.html",
+        "id": "B3516",
+        "address": "12/14 boulevard Léon-Feix 95100 Argenteuil",
+        "zipCode": "95100",
+        "pos": {
+            "lat": 48.947291,
+            "lng": 2.250455
+        }
+    },
+    "B0235": {
+        "name": "L'Atrium",
+        "url": "/seance/salle_gen_csalle=B0235.html",
+        "id": "B0235",
+        "address": "3, parvis Robert-Schuman 92370 Chaville",
+        "zipCode": "92370",
+        "pos": {
+            "lat": 48.813094,
+            "lng": 2.192579
+        }
+    },
+    "B0118": {
+        "name": "Espace des Arts - Salle Philippe Noiret",
+        "url": "/seance/salle_gen_csalle=B0118.html",
+        "id": "B0118",
+        "address": "144 avenue Jean Jaurès 93320 Les Pavillons-sous-Bois",
+        "zipCode": "93320",
+        "pos": {
+            "lat": 48.904847,
+            "lng": 2.503339
+        }
+    },
+    "B0071": {
+        "name": "Espace Bernard Mantienne",
+        "url": "/seance/salle_gen_csalle=B0071.html",
+        "id": "B0071",
+        "address": "3 voie de l'Aulne 91370 Verrières-le-Buisson",
+        "zipCode": "91370",
+        "pos": {
+            "lat": 48.754993,
+            "lng": 2.269638
+        }
+    },
+    "B1386": {
+        "name": "Centre des Arts",
+        "url": "/seance/salle_gen_csalle=B1386.html",
+        "id": "B1386",
+        "address": "12-16 rue de la Libération 95880 Enghien-les-Bains",
+        "zipCode": "95880",
+        "pos": {
+            "lat": 48.969346,
+            "lng": 2.30751
+        }
+    },
+    "B0155": {
+        "name": "Ecrans Eluard",
+        "url": "/seance/salle_gen_csalle=B0155.html",
+        "id": "B0155",
+        "address": "162, rue Maurice-Berteaux 95870 Bezons",
+        "zipCode": "95870",
+        "pos": {
+            "lat": 48.928351,
+            "lng": 2.21015
+        }
+    },
+    "B0002": {
+        "name": "Jacques Brel",
+        "url": "/seance/salle_gen_csalle=B0002.html",
+        "id": "B0002",
+        "address": "1, place de l'Hotel-de-Ville 95140 Garges-lès-Gonesse",
+        "zipCode": "95140",
+        "pos": {
+            "lat": 48.971973,
+            "lng": 2.399848
+        }
+    },
+    "B0112": {
+        "name": "Théâtre André-Malraux",
+        "url": "/seance/salle_gen_csalle=B0112.html",
+        "id": "B0112",
+        "address": "1bis, rue Guillemeteau 93220 Gagny",
+        "zipCode": "93220",
+        "pos": {
+            "lat": 48.884524,
+            "lng": 2.53027
+        }
+    },
+    "B0103": {
+        "name": "Théâtre et Cinéma Jacques-Prevert",
+        "url": "/seance/salle_gen_csalle=B0103.html",
+        "id": "B0103",
+        "address": "134 avenue Anatole-France 93600 Aulnay-sous-Bois",
+        "zipCode": "93600",
+        "pos": {
+            "lat": 48.9365,
+            "lng": 2.49435
+        }
+    },
+    "B0021": {
+        "name": "Louis-Jouvet",
+        "url": "/seance/salle_gen_csalle=B0021.html",
+        "id": "B0021",
+        "address": "3, place Maurice-Berteaux 78400 Chatou",
+        "zipCode": "78400",
+        "pos": {
+            "lat": 48.886402,
+            "lng": 2.154818
+        }
+    },
+    "W9445": {
+        "name": "Atelier Barbara",
+        "url": "/seance/salle_gen_csalle=W9445.html",
+        "id": "W9445",
+        "address": "22 Avenue d'Alsace Lorraine 94450 Limeil-Brévannes",
+        "zipCode": "94450",
+        "pos": {
+            "lat": 48.754474,
+            "lng": 2.487809
+        }
+    },
+    "B0196": {
+        "name": "Espace Jean-Marie Poirier",
+        "url": "/seance/salle_gen_csalle=B0196.html",
+        "id": "B0196",
+        "address": "1 esplanade du 18 juin 1940 94370 Sucy-en-Brie",
+        "zipCode": "94370",
+        "pos": {
+            "lat": 48.768945,
+            "lng": 2.522428
+        }
+    },
+    "B0022": {
+        "name": "Cinema du Theatre",
+        "url": "/seance/salle_gen_csalle=B0022.html",
+        "id": "B0022",
+        "address": "8E, av. Charles-de-Gaulle (mairie) 78170 La Celle-Saint-Cloud",
+        "zipCode": "78170",
+        "pos": {
+            "lat": 48.847395,
+            "lng": 2.136035
         }
     }
 }

@@ -9,13 +9,14 @@ import { logger } from './utils/utils';
 import { asyncAllLimit } from './utils/asyncLimit';
 
 export const browserOptions: puppeteer.LaunchOptions = {
-    headless: true,
+    headless: false,
     timeout: 1000 * 60 * 5,
+    args: ['--no-sandbox', '--disable-dev-shm-usage']
 };
 export const nbCinePageSourceToGet = 22;
 export const chunkSizeForSourceGetter = 3;
 export const chunkSizeForScrap = 3;
-export const chunkSizeForEnrich = 3;
+export const chunkSizeForEnrich = 10;
 
 export type Key = string;
 

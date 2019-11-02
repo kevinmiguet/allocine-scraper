@@ -13,6 +13,8 @@ const jsonIfy = (input: any): JSON => {
         input = input.replace(/([\w ]) "/gi, '$1 \\"');
         // " e
         input = input.replace(/" ([\w ])/gi, '\\" $1');
+        //"title" : "Soirée "déjà demain"", 
+        input = input.replace(/([\w]+)""/gi, '$1\\""');
         try {
             return JSON.parse(input);
         } catch (err) {
